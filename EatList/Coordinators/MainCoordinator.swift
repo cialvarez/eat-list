@@ -16,8 +16,9 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        // TODO:
-        let eatListVC = EatListViewController()
+        guard let eatListVC = R.storyboard.eatList.instantiateInitialViewController() else {
+            fatalError("Expected an instantiable storyboard but got nil!")
+        }
         navigationController.pushViewController(eatListVC, animated: false)
     }
 }

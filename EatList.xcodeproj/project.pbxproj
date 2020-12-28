@@ -17,6 +17,8 @@
 		4FAF2725259A357A00218656 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2724259A357A00218656 /* Coordinator.swift */; };
 		4FAF272A259A35AF00218656 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2729259A35AF00218656 /* MainCoordinator.swift */; };
 		4FAF2736259A3A0500218656 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2735259A3A0500218656 /* R.generated.swift */; };
+		4FAF2756259A3F4E00218656 /* EatList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FAF2755259A3F4E00218656 /* EatList.storyboard */; };
+		4FAF2759259A3F5A00218656 /* TargetDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FAF2758259A3F5A00218656 /* TargetDetails.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		4FAF2724259A357A00218656 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		4FAF2729259A35AF00218656 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		4FAF2735259A3A0500218656 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		4FAF2755259A3F4E00218656 /* EatList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EatList.storyboard; sourceTree = "<group>"; };
+		4FAF2758259A3F5A00218656 /* TargetDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TargetDetails.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				4FAF271D259A34C200218656 /* EatListViewController.swift */,
+				4FAF2755259A3F4E00218656 /* EatList.storyboard */,
 			);
 			path = EatList;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				4FAF2720259A34D100218656 /* TargetDetailsViewController.swift */,
+				4FAF2758259A3F5A00218656 /* TargetDetails.storyboard */,
 			);
 			path = TargetDetails;
 			sourceTree = "<group>";
@@ -201,6 +207,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FAF2759259A3F5A00218656 /* TargetDetails.storyboard in Resources */,
+				4FAF2756259A3F4E00218656 /* EatList.storyboard in Resources */,
 				4FAF270E259A2F5D00218656 /* LaunchScreen.storyboard in Resources */,
 				4FAF270B259A2F5D00218656 /* Assets.xcassets in Resources */,
 			);
