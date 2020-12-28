@@ -12,9 +12,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    var coordinator: MainCoordinator?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let navigationController = UINavigationController()
+        setupCoordinator(with: navigationController)
+        setupWindow(with: navigationController)
         return true
+    }
+    
+    private func setupCoordinator(with navigationController: UINavigationController) {
+        coordinator = MainCoordinator(navigationController: navigationController)
+        coordinator?.start()
+    }
+    
+    private func setupWindow(with rootViewController: UIViewController) {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
     }
 
     // MARK: UISceneSession Lifecycle
