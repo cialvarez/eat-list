@@ -230,7 +230,7 @@
 		};
 		4FAF2748259A3B4000218656 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
