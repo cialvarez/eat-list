@@ -7,4 +7,8 @@ target 'EatList' do
 
   # Pods for EatList
   pod 'R.swift'
+  pod 'SwiftLint'
+  pod 'RealmSwift'
+  pod 'Moya', '~> 14.0'
+
 end
