@@ -13,5 +13,14 @@ struct SearchRequestParams: Codable, Parameterable {
     var q: String
     var start: Int
     var count: Int
+    var lat: Double
+    var lon: Double
+    var radius: Double
+    var cuisines: String
+    var establishmentType: String
+    var collectionId: String
+    var category: String
+    var sort: SortType
+    var order: OrderType
 }
 // swiftlint:enable identifier_name
