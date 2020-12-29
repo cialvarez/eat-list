@@ -33,6 +33,7 @@ class EatListViewController: UIViewController {
         tableView.register(UINib(resource: eatListCell), forCellReuseIdentifier: eatListCell.name)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .none
     }
 }
 
