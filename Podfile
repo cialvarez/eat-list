@@ -11,4 +11,7 @@ target 'EatList' do
   pod 'RealmSwift'
   pod 'Moya', '~> 14.0'
   pod 'Kingfisher', '~> 5.0'
+  pod 'NVActivityIndicatorView'
+  pod 'Hero'
+
 end
