@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="center" reuseIdentifier="PopularItem" id="gTV-IL-0wX" customClass="SimpleCarouselItemCell" customModule="EatList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="86" height="41"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="86" height="41"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LY5-58-e1h" customClass="CustomizableView" customModule="EatList" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="86" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dish" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sou-25-m05">
+                                <rect key="frame" x="3" y="3" width="80" height="35"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sou-25-m05" firstAttribute="top" secondItem="LY5-58-e1h" secondAttribute="top" constant="3" id="Pgn-k2-Y4a"/>
+                            <constraint firstItem="sou-25-m05" firstAttribute="leading" secondItem="LY5-58-e1h" secondAttribute="leading" constant="3" id="QLl-gk-hcw"/>
+                            <constraint firstAttribute="bottom" secondItem="sou-25-m05" secondAttribute="bottom" constant="3" id="mgQ-GP-kvE"/>
+                            <constraint firstAttribute="trailing" secondItem="sou-25-m05" secondAttribute="trailing" constant="3" id="zyX-yq-wJ0"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.80000000000000004"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LY5-58-e1h" secondAttribute="bottom" id="DdC-l9-CJe"/>
+                <constraint firstAttribute="trailing" secondItem="LY5-58-e1h" secondAttribute="trailing" id="aeA-si-Wfc"/>
+                <constraint firstItem="LY5-58-e1h" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qJz-YW-jpL"/>
+                <constraint firstItem="LY5-58-e1h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ysJ-Fb-nJn"/>
+            </constraints>
+            <size key="customSize" width="86" height="41"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                    <real key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="customizableView" destination="LY5-58-e1h" id="5l2-Ua-Rpu"/>
+                <outlet property="nameLabel" destination="sou-25-m05" id="a0W-JU-vFY"/>
+            </connections>
+            <point key="canvasLocation" x="37" y="94.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

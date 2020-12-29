@@ -148,15 +148,24 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
     /// Image `ArmyStar`.
     static let armyStar = Rswift.ImageResource(bundle: R.hostingBundle, name: "ArmyStar")
+    /// Image `star`.
+    static let star = Rswift.ImageResource(bundle: R.hostingBundle, name: "star")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "ArmyStar", bundle: ..., traitCollection: ...)`
     static func armyStar(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.armyStar, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "star", bundle: ..., traitCollection: ...)`
+    static func star(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.star, compatibleWith: traitCollection)
     }
     #endif
 
@@ -193,10 +202,38 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
   struct nib {
+    /// Nib `AddressDetailsTableViewCell`.
+    static let addressDetailsTableViewCell = _R.nib._AddressDetailsTableViewCell()
+    /// Nib `BaseDetailsTableViewCell`.
+    static let baseDetailsTableViewCell = _R.nib._BaseDetailsTableViewCell()
     /// Nib `EatListTableViewCell`.
     static let eatListTableViewCell = _R.nib._EatListTableViewCell()
+    /// Nib `HighlightsTableViewCell`.
+    static let highlightsTableViewCell = _R.nib._HighlightsTableViewCell()
+    /// Nib `ImageHeaderTableViewCell`.
+    static let imageHeaderTableViewCell = _R.nib._ImageHeaderTableViewCell()
+    /// Nib `SimpleCarouselItemCell`.
+    static let simpleCarouselItemCell = _R.nib._SimpleCarouselItemCell()
+    /// Nib `SimpleCarouselItemView`.
+    static let simpleCarouselItemView = _R.nib._SimpleCarouselItemView()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "AddressDetailsTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.addressDetailsTableViewCell) instead")
+    static func addressDetailsTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.addressDetailsTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "BaseDetailsTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.baseDetailsTableViewCell) instead")
+    static func baseDetailsTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.baseDetailsTableViewCell)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "EatListTableViewCell", in: bundle)`
@@ -206,9 +243,73 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "HighlightsTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.highlightsTableViewCell) instead")
+    static func highlightsTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.highlightsTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "ImageHeaderTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.imageHeaderTableViewCell) instead")
+    static func imageHeaderTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.imageHeaderTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "SimpleCarouselItemCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.simpleCarouselItemCell) instead")
+    static func simpleCarouselItemCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.simpleCarouselItemCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "SimpleCarouselItemView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.simpleCarouselItemView) instead")
+    static func simpleCarouselItemView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.simpleCarouselItemView)
+    }
+    #endif
+
+    static func addressDetailsTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AddressDetailsTableViewCell? {
+      return R.nib.addressDetailsTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AddressDetailsTableViewCell
+    }
+
+    static func baseDetailsTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> BaseDetailsTableViewCell? {
+      return R.nib.baseDetailsTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? BaseDetailsTableViewCell
+    }
+
     static func eatListTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EatListTableViewCell? {
       return R.nib.eatListTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EatListTableViewCell
     }
+
+    static func highlightsTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HighlightsTableViewCell? {
+      return R.nib.highlightsTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HighlightsTableViewCell
+    }
+
+    static func imageHeaderTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ImageHeaderTableViewCell? {
+      return R.nib.imageHeaderTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ImageHeaderTableViewCell
+    }
+
+    static func simpleCarouselItemCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SimpleCarouselItemCell? {
+      return R.nib.simpleCarouselItemCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SimpleCarouselItemCell
+    }
+
+    static func simpleCarouselItemView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.simpleCarouselItemView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `PopularItem`.
+    static let popularItem: Rswift.ReuseIdentifier<SimpleCarouselItemCell> = Rswift.ReuseIdentifier(identifier: "PopularItem")
 
     fileprivate init() {}
   }
@@ -242,6 +343,28 @@ struct _R: Rswift.Validatable {
       try _EatListTableViewCell.validate()
     }
 
+    struct _AddressDetailsTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "AddressDetailsTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AddressDetailsTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AddressDetailsTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _BaseDetailsTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "BaseDetailsTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> BaseDetailsTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? BaseDetailsTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
     struct _EatListTableViewCell: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "EatListTableViewCell"
@@ -254,6 +377,53 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "ArmyStar", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ArmyStar' is used in nib 'EatListTableViewCell', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _HighlightsTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HighlightsTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HighlightsTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HighlightsTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _ImageHeaderTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ImageHeaderTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ImageHeaderTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ImageHeaderTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _SimpleCarouselItemCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = SimpleCarouselItemCell
+
+      let bundle = R.hostingBundle
+      let identifier = "PopularItem"
+      let name = "SimpleCarouselItemCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SimpleCarouselItemCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SimpleCarouselItemCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _SimpleCarouselItemView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "SimpleCarouselItemView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
       }
 
       fileprivate init() {}

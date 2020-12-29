@@ -14,6 +14,7 @@ class EatListViewModel: NSObject {
     
     struct Output {
         var list: [EatListItem]
+        var restaurants: [Restaurant]
         var stateChanged: (State) -> Void
     }
     
@@ -54,6 +55,7 @@ class EatListViewModel: NSObject {
                 guard let self = self else { return }
                 switch result {
                 case .success(let response):
+                    self.output.restaurants = response.restaurants
                     self.output.list = self.mapToCellListItems(restaurantList: response.restaurants)
                     self.output.stateChanged(.finished)
                 case .failure(let error):

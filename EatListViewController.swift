@@ -45,6 +45,7 @@ class EatListViewController: UIViewController {
         viewModel.start(
             output: .init(
                 list: [],
+                restaurants: [],
                 stateChanged: { [weak self] state in
                     guard let self = self else { return }
                     switch state {
@@ -60,6 +61,13 @@ class EatListViewController: UIViewController {
 extension EatListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row < viewModel.output.restaurants.count else {
+            fatalError("Expected selected index to be lower than the restaurant count!")
+        }
+        output.wantsToViewRestaurant(viewModel.output.restaurants[indexPath.row].restaurant)
     }
 }
 

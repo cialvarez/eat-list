@@ -16,16 +16,22 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let eatListVC = createEatListVC()
+        showEatList()
+    }
+    
+    private func showEatList() {
+        let viewModel = EatListViewModel()
+        let input = EatListViewController.Input(viewModel: viewModel)
+        let output = EatListViewController.Output { [weak self] restaurantDetails in
+            self?.showDetails(restaurantDetails: restaurantDetails)
+        }
+        let eatListVC = EatListViewController.generateFromStoryboard(input: input, output: output)
         navigationController.pushViewController(eatListVC, animated: false)
     }
     
-    func createEatListVC() -> UIViewController {
-        let viewModel = EatListViewModel()
-        let input = EatListViewController.Input(viewModel: viewModel)
-        let output = EatListViewController.Output { restaurantDetails in
-            print("Wants to go to restaurant: \(restaurantDetails)")
-        }
-        return EatListViewController.generateFromStoryboard(input: input, output: output)
+    private func showDetails(restaurantDetails: RestaurantDetails) {
+        let input = TargetDetailsViewController.Input(restaurantDetails: restaurantDetails)
+        let targetDetailsVC = TargetDetailsViewController.generateFromStoryboard(input: input)
+        navigationController.pushViewController(targetDetailsVC, animated: true)
     }
 }
