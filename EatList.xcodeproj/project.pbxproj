@@ -36,6 +36,7 @@
 		4FAF27A5259A45C700218656 /* Parameterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF27A4259A45C700218656 /* Parameterable.swift */; };
 		4FC33A77259AD95B00618D34 /* RestaurantAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC33A76259AD95B00618D34 /* RestaurantAPIError.swift */; };
 		4FC33A7A259ADA0800618D34 /* RestaurantNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC33A79259ADA0800618D34 /* RestaurantNetworkService.swift */; };
+		4FC33A7E259B003900618D34 /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC33A7D259B003900618D34 /* CustomizableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		4FAF27A4259A45C700218656 /* Parameterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameterable.swift; sourceTree = "<group>"; };
 		4FC33A76259AD95B00618D34 /* RestaurantAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAPIError.swift; sourceTree = "<group>"; };
 		4FC33A79259ADA0800618D34 /* RestaurantNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantNetworkService.swift; sourceTree = "<group>"; };
+		4FC33A7D259B003900618D34 /* CustomizableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		4FAF2700259A2F5C00218656 /* EatList */ = {
 			isa = PBXGroup;
 			children = (
+				4FC33A7C259B003200618D34 /* Views */,
 				4F48C5FF259AD67B0003ADE6 /* Errors */,
 				4F48C5FA259AD6330003ADE6 /* Services */,
 				4F48C5DD259AC2730003ADE6 /* Extensions */,
@@ -266,6 +269,14 @@
 				4FAF27A4259A45C700218656 /* Parameterable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4FC33A7C259B003200618D34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FC33A7D259B003900618D34 /* CustomizableView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		83A4B2FF5A965924F456B629 /* Frameworks */ = {
@@ -439,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F48C602259AD6FE0003ADE6 /* PresentableError.swift in Sources */,
+				4FC33A7E259B003900618D34 /* CustomizableView.swift in Sources */,
 				4FAF27A5259A45C700218656 /* Parameterable.swift in Sources */,
 				4FAF272A259A35AF00218656 /* MainCoordinator.swift in Sources */,
 				4FAF2736259A3A0500218656 /* R.generated.swift in Sources */,
