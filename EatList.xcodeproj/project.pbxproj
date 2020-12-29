@@ -80,6 +80,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4F48C5E7259AC97B0003ADE6 /* RestaurantAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4FAF276B259A442E00218656 /* Search */,
+				4F48C5DA259ABDC00003ADE6 /* RestaurantAPI.swift */,
+			);
+			path = RestaurantAPI;
+			sourceTree = "<group>";
+		};
 		4FAF26F5259A2F5C00218656 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				4FAF27A3259A45BF00218656 /* Protocols */,
+				4F48C5E7259AC97B0003ADE6 /* RestaurantAPI */,
 				4FAF2767259A43FF00218656 /* CommonAPI */,
 			);
 			path = Networking;
@@ -180,9 +190,7 @@
 		4FAF2767259A43FF00218656 /* CommonAPI */ = {
 			isa = PBXGroup;
 			children = (
-				4FAF276B259A442E00218656 /* Search */,
 				4FAF2764259A422D00218656 /* CommonAPI.swift */,
-				4F48C5DA259ABDC00003ADE6 /* RestaurantAPI.swift */,
 			);
 			path = CommonAPI;
 			sourceTree = "<group>";
