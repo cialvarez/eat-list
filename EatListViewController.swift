@@ -9,20 +9,30 @@ import UIKit
 
 class EatListViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    struct Input {
+        var viewModel: EatListViewModel
+    }
 
-        // Do any additional setup after loading the view.
+    struct Output {
+        var wantsToViewRestaurant: (RestaurantDetails) -> Void
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var input: Input!
+    var output: Output!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
     }
-    */
+}
 
+extension EatListViewController: StoryboardInstantiable {
+    func generateFromStoryboard(input: Input,
+                                output: Output) -> UIViewController {
+        guard let eatListVC = R.storyboard.eatList.instantiateInitialViewController() else {
+            fatalError("Expected an instantiable storyboard but got nil!")
+        }
+        eatListVC.input = input
+        return eatListVC
+    }
 }
