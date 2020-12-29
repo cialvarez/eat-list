@@ -16,9 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="U6E-H4-chb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fnt-Bc-db0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hRb-om-dwW"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="hRb-om-dwW" firstAttribute="trailing" secondItem="fnt-Bc-db0" secondAttribute="trailing" id="OxC-VW-gk6"/>
+                            <constraint firstItem="fnt-Bc-db0" firstAttribute="top" secondItem="hRb-om-dwW" secondAttribute="top" id="lT6-pk-LZb"/>
+                            <constraint firstItem="hRb-om-dwW" firstAttribute="bottom" secondItem="fnt-Bc-db0" secondAttribute="bottom" id="sBh-wp-cK4"/>
+                            <constraint firstItem="fnt-Bc-db0" firstAttribute="leading" secondItem="hRb-om-dwW" secondAttribute="leading" id="xX1-cg-9e8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="fnt-Bc-db0" id="4Hg-5U-J74"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXY-OA-MlV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,8 +40,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

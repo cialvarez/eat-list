@@ -178,6 +178,26 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    /// Nib `EatListTableViewCell`.
+    static let eatListTableViewCell = _R.nib._EatListTableViewCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "EatListTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.eatListTableViewCell) instead")
+    static func eatListTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.eatListTableViewCell)
+    }
+    #endif
+
+    static func eatListTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EatListTableViewCell? {
+      return R.nib.eatListTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EatListTableViewCell
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -197,6 +217,23 @@ struct _R: Rswift.Validatable {
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib {
+    struct _EatListTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "EatListTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EatListTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EatListTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {

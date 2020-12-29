@@ -37,6 +37,8 @@
 		4FC33A77259AD95B00618D34 /* RestaurantAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC33A76259AD95B00618D34 /* RestaurantAPIError.swift */; };
 		4FC33A7A259ADA0800618D34 /* RestaurantNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC33A79259ADA0800618D34 /* RestaurantNetworkService.swift */; };
 		4FC33A7E259B003900618D34 /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC33A7D259B003900618D34 /* CustomizableView.swift */; };
+		4FC33A83259B046100618D34 /* EatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC33A81259B046100618D34 /* EatListTableViewCell.swift */; };
+		4FC33A84259B046100618D34 /* EatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FC33A82259B046100618D34 /* EatListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +76,8 @@
 		4FC33A76259AD95B00618D34 /* RestaurantAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAPIError.swift; sourceTree = "<group>"; };
 		4FC33A79259ADA0800618D34 /* RestaurantNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantNetworkService.swift; sourceTree = "<group>"; };
 		4FC33A7D259B003900618D34 /* CustomizableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableView.swift; sourceTree = "<group>"; };
+		4FC33A81259B046100618D34 /* EatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatListTableViewCell.swift; sourceTree = "<group>"; };
+		4FC33A82259B046100618D34 /* EatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EatListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 		4FAF271A259A340300218656 /* EatList */ = {
 			isa = PBXGroup;
 			children = (
+				4FC33A80259B044400618D34 /* Views */,
 				4FAF271D259A34C200218656 /* EatListViewController.swift */,
 				4FAF2755259A3F4E00218656 /* EatList.storyboard */,
 				4F48C5E9259AC9D20003ADE6 /* EatListViewModel.swift */,
@@ -279,6 +284,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4FC33A80259B044400618D34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FC33A81259B046100618D34 /* EatListTableViewCell.swift */,
+				4FC33A82259B046100618D34 /* EatListTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		83A4B2FF5A965924F456B629 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +375,7 @@
 				4FAF2756259A3F4E00218656 /* EatList.storyboard in Resources */,
 				4FAF270E259A2F5D00218656 /* LaunchScreen.storyboard in Resources */,
 				4FAF270B259A2F5D00218656 /* Assets.xcassets in Resources */,
+				4FC33A84259B046100618D34 /* EatListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +470,7 @@
 				4FAF272A259A35AF00218656 /* MainCoordinator.swift in Sources */,
 				4FAF2736259A3A0500218656 /* R.generated.swift in Sources */,
 				4F48C5E2259AC7BA0003ADE6 /* SortType.swift in Sources */,
+				4FC33A83259B046100618D34 /* EatListTableViewCell.swift in Sources */,
 				4F48C5DF259AC2830003ADE6 /* Encodable+ToDictionary.swift in Sources */,
 				4F48C5DB259ABDC00003ADE6 /* RestaurantAPI.swift in Sources */,
 				4FAF2702259A2F5C00218656 /* AppDelegate.swift in Sources */,
