@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum RestaurantAPI {
-    case search(parameters: SearchRequestParams)
+    case search(parameters: TrendingSearchRequestParams)
 }
 
 extension RestaurantAPI: TargetType {

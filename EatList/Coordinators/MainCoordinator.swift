@@ -16,9 +16,16 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        guard let eatListVC = R.storyboard.eatList.instantiateInitialViewController() else {
-            fatalError("Expected an instantiable storyboard but got nil!")
-        }
+        let eatListVC = createEatListVC()
         navigationController.pushViewController(eatListVC, animated: false)
+    }
+    
+    func createEatListVC() -> UIViewController {
+        let viewModel = EatListViewModel()
+        let input = EatListViewController.Input(viewModel: viewModel)
+        let output = EatListViewController.Output { restaurantDetails in
+            print("Wants to go to restaurant: \(restaurantDetails)")
+        }
+        return EatListViewController.generateFromStoryboard(input: input, output: output)
     }
 }

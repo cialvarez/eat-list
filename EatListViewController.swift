@@ -22,13 +22,13 @@ class EatListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        input.viewModel.start()
     }
 }
 
 extension EatListViewController: StoryboardInstantiable {
-    func generateFromStoryboard(input: Input,
-                                output: Output) -> UIViewController {
+    static func generateFromStoryboard(input: Input,
+                                       output: Output) -> UIViewController {
         guard let eatListVC = R.storyboard.eatList.instantiateInitialViewController() else {
             fatalError("Expected an instantiable storyboard but got nil!")
         }

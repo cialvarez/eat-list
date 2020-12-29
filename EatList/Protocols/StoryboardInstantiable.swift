@@ -11,5 +11,5 @@ import UIKit
 protocol StoryboardInstantiable: UIViewController {
     associatedtype Input
     associatedtype Output
-    func generateFromStoryboard(input: Input, output: Output) -> UIViewController
+    static func generateFromStoryboard(input: Input, output: Output) -> UIViewController
 }
