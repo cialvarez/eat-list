@@ -12,13 +12,18 @@ import CoreLocation
 
 class EatListViewModel: NSObject {
     
+    struct Output {
+        var list: [EatListItem]
+        var stateChanged: (State) -> Void
+    }
+    
     enum State {
         case loading
-        case error
+        case error(EatListError)
         case finished
     }
     
-    var stateChanged: (State) -> Void = { _ in }
+    var output: Output!
     private let networkService: RestaurantNetworkService
     private let locationManager = CLLocationManager()
     private var location: CLLocationCoordinate2D? {
@@ -35,20 +40,38 @@ class EatListViewModel: NSObject {
         self.networkService = RestaurantNetworkService(provider: provider)
     }
     
-    func start() {
+    func start(output: Output) {
         setupLocation()
+        self.output = output
     }
     
     private func refreshData(location: CLLocationCoordinate2D) {
+        output.stateChanged(.loading)
         networkService
             .fetchTrendingRestaurants(
                 parameters: .init(lat: location.latitude,
-                                  lon: location.longitude)) { result in
+                                  lon: location.longitude)) { [weak self] result in
+                guard let self = self else { return }
                 switch result {
-                case .success(let response): print("Success! \(response)")
-                case .failure(let error): print("Failed with error: \(error)")
+                case .success(let response):
+                    self.output.list = self.mapToCellListItems(restaurantList: response.restaurants)
+                    self.output.stateChanged(.finished)
+                case .failure(let error):
+                    self.output.stateChanged(.error(error))
                 }
             }
+    }
+    
+    private func mapToCellListItems(restaurantList: [Restaurant]) -> [EatListItem] {
+        return restaurantList.map { restaurant in
+            return EatListItem(imageUrl: URL(string: restaurant.restaurant.thumb),
+                               name: restaurant.restaurant.name,
+                               cuisine: restaurant.restaurant.cuisines,
+                               location: restaurant.restaurant.location.localityVerbose,
+                               rating: restaurant.restaurant.userRating.aggregateRating,
+                               averageCostForTwo: restaurant.restaurant.averageCostForTwo,
+                               currency: restaurant.restaurant.currency)
+        }
     }
     
     private func setupLocation() {

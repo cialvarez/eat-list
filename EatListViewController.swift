@@ -8,11 +8,11 @@
 import UIKit
 
 class EatListViewController: UIViewController {
-
+    
     struct Input {
         var viewModel: EatListViewModel
     }
-
+    
     struct Output {
         var wantsToViewRestaurant: (RestaurantDetails) -> Void
     }
@@ -20,12 +20,17 @@ class EatListViewController: UIViewController {
     var input: Input!
     var output: Output!
     
+    // MARK: - Convenience accessors
+    var viewModel: EatListViewModel {
+        return input.viewModel
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        input.viewModel.start()
+        setupViewModel()
     }
     
     private func setupTableView() {
@@ -34,6 +39,21 @@ class EatListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
+    }
+    
+    private func setupViewModel() {
+        viewModel.start(
+            output: .init(
+                list: [],
+                stateChanged: { [weak self] state in
+                    guard let self = self else { return }
+                    switch state {
+                    case .loading: print("Loading") // TODO: - Add loading indicator
+                    case .finished: self.tableView.reloadData()
+                    case .error(let error): print("Error occured with \(error)")
+                    }
+                }
+            ))
     }
 }
 
@@ -45,13 +65,15 @@ extension EatListViewController: UITableViewDelegate {
 
 extension EatListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.output.list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.eatListTableViewCell.name) as? EatListTableViewCell else {
-            fatalError("Expected an EatListTableViewCell instance but got something else!")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.eatListTableViewCell.name) as? EatListTableViewCell,
+              indexPath.row < viewModel.output.list.count else {
+            fatalError("EatListTableViewCell is not configured properly!")
         }
+        cell.configure(with: viewModel.output.list[indexPath.row])
         return cell
     }
     
@@ -64,6 +86,7 @@ extension EatListViewController: StoryboardInstantiable {
             fatalError("Expected an instantiable storyboard but got nil!")
         }
         eatListVC.input = input
+        eatListVC.output = output
         return eatListVC
     }
 }
