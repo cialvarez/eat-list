@@ -52,12 +52,15 @@ class EatListViewController: UIViewController {
                 self.dataSourceProvider.update(sections: skeletonCells)
                 self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
                 self.tableView.isUserInteractionEnabled = false
+                self.navigationItem.rightBarButtonItem?.isEnabled = false
             case .error(let error):
                 self.showError(error: error)
                 self.tableView.isUserInteractionEnabled = true
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
             case .finished(let sections):
                 self.dataSourceProvider.update(sections: sections)
-                self.tableView.isUserInteractionEnabled = true                
+                self.tableView.isUserInteractionEnabled = true
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
             }
         }
         viewModel.wantsToViewRestaurant = wantsToViewRestaurant
