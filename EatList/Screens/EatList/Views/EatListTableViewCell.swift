@@ -43,7 +43,7 @@ class EatListTableViewCell: UITableViewCell, NibReusable {
         toggleLoadingState(isLoading: false)
         featuredImageView.kf.indicatorType = .activity
         featuredImageView.kf.setImage(with: parameters.imageUrl,
-                                      placeholder: R.image.placeholderImage(),
+                                      placeholder: R.image.placeholder(),
                                       options: [.transition(.fade(1.0))],
                                       progressBlock: nil)
         featuredImageView.hero.id = parameters.imageHeroId

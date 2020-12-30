@@ -200,8 +200,8 @@ struct R: Rswift.Validatable {
     static let locationUpdate = Rswift.ImageResource(bundle: R.hostingBundle, name: "LocationUpdate")
     /// Image `Pizzannotation`.
     static let pizzannotation = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pizzannotation")
-    /// Image `PlaceholderImage`.
-    static let placeholderImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "PlaceholderImage")
+    /// Image `Placeholder`.
+    static let placeholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "Placeholder")
     /// Image `star`.
     static let star = Rswift.ImageResource(bundle: R.hostingBundle, name: "star")
 
@@ -248,9 +248,9 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "PlaceholderImage", bundle: ..., traitCollection: ...)`
-    static func placeholderImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.placeholderImage, compatibleWith: traitCollection)
+    /// `UIImage(named: "Placeholder", bundle: ..., traitCollection: ...)`
+    static func placeholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.placeholder, compatibleWith: traitCollection)
     }
     #endif
 
