@@ -7,16 +7,21 @@
 
 import UIKit
 
+protocol SectionUpdatable: UITableViewDataSource, UITableViewDelegate {
+    associatedtype TableViewCellType
+    func update(sections: [TableViewCellType])
+}
+
 // Inspired by: https://www.alfianlosari.com/posts/slim-view-controller-through-uitableview-datasource-delegate-encapsulation/
-class TableViewDataSourceController<U: TableViewCellTypeProtocol>: NSObject, UITableViewDataSource, UITableViewDelegate {
+class TableViewDataSourceController<U: TableViewCellTypeProtocol>: NSObject, UITableViewDataSource, UITableViewDelegate, SectionUpdatable {
     
     typealias TableViewCellType = U
     
-    let tableViewDataSource: TableViewDataManager<TableViewCellType>
-    var tableView: UITableView
+    private let tableViewDataSource: TableViewDataManager<TableViewCellType>
+    private var tableView: UITableView
     
-    init(dataManager: TableViewDataManager<TableViewCellType>, for tableView: UITableView) {
-        self.tableViewDataSource = dataManager
+    init(for tableView: UITableView) {
+        self.tableViewDataSource = TableViewDataManager<TableViewCellType>()
         self.tableView = tableView
         self.tableViewDataSource.reloadData = { [weak tableView] in
             guard let tableView = tableView else { return }
@@ -60,7 +65,7 @@ class TableViewDataSourceController<U: TableViewCellTypeProtocol>: NSObject, UIT
         return tableViewDataSource.dataSource[indexPath.row].rowHeight
     }
     
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         guard indexPath.row < tableViewDataSource.dataSource.count else {
             return .leastNormalMagnitude
         }
@@ -68,12 +73,18 @@ class TableViewDataSourceController<U: TableViewCellTypeProtocol>: NSObject, UIT
         return tableViewDataSource.dataSource[indexPath.row].rowHeight
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.row < tableViewDataSource.dataSource.count else {
             return
         }
         let cellDataSource = tableViewDataSource.dataSource[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath)
         cellDataSource.didSelectCell?(cell, indexPath)
+    }
+}
+
+extension TableViewDataSourceController {
+    public func update(sections: [TableViewCellType]) {
+        tableViewDataSource.setItems(sections: sections)
     }
 }

@@ -25,6 +25,8 @@ class EatListViewController: UIViewController {
         return input.viewModel
     }
     
+    private lazy var dataSourceProvider = TableViewDataSourceController<EatListSectionType>(for: tableView)
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {

@@ -21,8 +21,7 @@ class TargetDetailsViewController: UIViewController {
     
     @IBOutlet weak private var tableView: UITableView!
     
-    private var dataManager = TableViewDataManager<TargetDetailsSectionType>()
-    private lazy var dataSourceProvider = TableViewDataSourceController<TargetDetailsSectionType>(dataManager: dataManager, for: tableView)
+    private lazy var dataSourceProvider = TableViewDataSourceController<TargetDetailsSectionType>(for: tableView)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +50,7 @@ class TargetDetailsViewController: UIViewController {
     
     func setupViewModel() {
         let output = input.viewModel.transform(input: .init(restaurantDetails: input.restaurantDetails))
-        dataManager.setItems(sections: output.tableViewCellItems)
+        dataSourceProvider.update(sections: output.tableViewCellItems)
     }
 }
 
