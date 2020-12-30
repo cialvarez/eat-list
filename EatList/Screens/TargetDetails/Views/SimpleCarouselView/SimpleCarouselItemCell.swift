@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SimpleCarouselItemCell: UICollectionViewCell {
+class SimpleCarouselItemCell: UICollectionViewCell, NibReusable {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var customizableView: CustomizableView!

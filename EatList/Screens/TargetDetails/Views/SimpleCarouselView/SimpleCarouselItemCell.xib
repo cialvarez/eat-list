@@ -51,11 +51,6 @@
                 <constraint firstItem="LY5-58-e1h" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ysJ-Fb-nJn"/>
             </constraints>
             <size key="customSize" width="86" height="41"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
-                    <real key="value" value="5"/>
-                </userDefinedRuntimeAttribute>
-            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="customizableView" destination="LY5-58-e1h" id="5l2-Ua-Rpu"/>
                 <outlet property="nameLabel" destination="sou-25-m05" id="a0W-JU-vFY"/>

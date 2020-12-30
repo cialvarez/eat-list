@@ -16,8 +16,7 @@ class SimpleCarouselItemView: UIControl, UICollectionViewDelegateFlowLayout, UIC
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.backgroundColor = UIColor.clear.withAlphaComponent(0)
-            collectionView.register(R.nib.simpleCarouselItemCell(),
-                                    forCellWithReuseIdentifier: R.nib.simpleCarouselItemCell.identifier)
+            collectionView.register(SimpleCarouselItemCell.self)
         }
     }
     

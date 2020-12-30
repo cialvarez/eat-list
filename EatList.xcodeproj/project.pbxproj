@@ -44,7 +44,6 @@
 		4FAF2756259A3F4E00218656 /* EatList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FAF2755259A3F4E00218656 /* EatList.storyboard */; };
 		4FAF2759259A3F5A00218656 /* TargetDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FAF2758259A3F5A00218656 /* TargetDetails.storyboard */; };
 		4FAF2761259A40FA00218656 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2760259A40FA00218656 /* APIConstants.swift */; };
-		4FAF2765259A422D00218656 /* CommonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2764259A422D00218656 /* CommonAPI.swift */; };
 		4FAF2772259A446300218656 /* TrendingSearchRequestParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2771259A446300218656 /* TrendingSearchRequestParams.swift */; };
 		4FAF2775259A446A00218656 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2774259A446A00218656 /* SearchResponse.swift */; };
 		4FAF2779259A44BD00218656 /* LocationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2778259A44BD00218656 /* LocationType.swift */; };
@@ -70,6 +69,8 @@
 		4FC33A7E259B003900618D34 /* CustomizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC33A7D259B003900618D34 /* CustomizableView.swift */; };
 		4FC33A83259B046100618D34 /* EatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC33A81259B046100618D34 /* EatListTableViewCell.swift */; };
 		4FC33A84259B046100618D34 /* EatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FC33A82259B046100618D34 /* EatListTableViewCell.xib */; };
+		4FD8958B259CE7380035E6B8 /* UICollectionView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8958A259CE7380035E6B8 /* UICollectionView+NibReusable.swift */; };
+		4FD89590259CE7620035E6B8 /* NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8958F259CE7620035E6B8 /* NibReusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,7 +127,6 @@
 		4FAF2755259A3F4E00218656 /* EatList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EatList.storyboard; sourceTree = "<group>"; };
 		4FAF2758259A3F5A00218656 /* TargetDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TargetDetails.storyboard; sourceTree = "<group>"; };
 		4FAF2760259A40FA00218656 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
-		4FAF2764259A422D00218656 /* CommonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAPI.swift; sourceTree = "<group>"; };
 		4FAF2771259A446300218656 /* TrendingSearchRequestParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingSearchRequestParams.swift; sourceTree = "<group>"; };
 		4FAF2774259A446A00218656 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		4FAF2778259A44BD00218656 /* LocationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationType.swift; sourceTree = "<group>"; };
@@ -152,6 +152,8 @@
 		4FC33A7D259B003900618D34 /* CustomizableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizableView.swift; sourceTree = "<group>"; };
 		4FC33A81259B046100618D34 /* EatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatListTableViewCell.swift; sourceTree = "<group>"; };
 		4FC33A82259B046100618D34 /* EatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EatListTableViewCell.xib; sourceTree = "<group>"; };
+		4FD8958A259CE7380035E6B8 /* UICollectionView+NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+NibReusable.swift"; sourceTree = "<group>"; };
+		4FD8958F259CE7620035E6B8 /* NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibReusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +178,8 @@
 		4F48C5DD259AC2730003ADE6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4FD8958E259CE7430035E6B8 /* NibReusable */,
 				4F48C5DE259AC2830003ADE6 /* Encodable+ToDictionary.swift */,
-				4F744F93259BFE7F007B79E6 /* UITableView+NibReusable.swift */,
 				4F744F97259C00E7007B79E6 /* UIViewController+NavigationBar.swift */,
 				4F745001259C9A39007B79E6 /* UIView+Animations.swift */,
 				4F745006259C9BA1007B79E6 /* UIView+SkeletonLoading.swift */,
@@ -366,18 +368,9 @@
 			children = (
 				4FAF27A3259A45BF00218656 /* Protocols */,
 				4F48C5E7259AC97B0003ADE6 /* RestaurantAPI */,
-				4FAF2767259A43FF00218656 /* CommonAPI */,
 				4F48C5F7259AD5E30003ADE6 /* NetworkRequestManager.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		4FAF2767259A43FF00218656 /* CommonAPI */ = {
-			isa = PBXGroup;
-			children = (
-				4FAF2764259A422D00218656 /* CommonAPI.swift */,
-			);
-			path = CommonAPI;
 			sourceTree = "<group>";
 		};
 		4FAF276B259A442E00218656 /* Search */ = {
@@ -485,6 +478,24 @@
 				4FC33A82259B046100618D34 /* EatListTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4FD8958E259CE7430035E6B8 /* NibReusable */ = {
+			isa = PBXGroup;
+			children = (
+				4FD89593259CE7670035E6B8 /* Protocols */,
+				4F744F93259BFE7F007B79E6 /* UITableView+NibReusable.swift */,
+				4FD8958A259CE7380035E6B8 /* UICollectionView+NibReusable.swift */,
+			);
+			path = NibReusable;
+			sourceTree = "<group>";
+		};
+		4FD89593259CE7670035E6B8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4FD8958F259CE7620035E6B8 /* NibReusable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		83A4B2FF5A965924F456B629 /* Frameworks */ = {
@@ -715,6 +726,7 @@
 				4FB8C4A2259B6D0600A6DDB4 /* SimpleCarouselItemCell.swift in Sources */,
 				4FAF272A259A35AF00218656 /* MainCoordinator.swift in Sources */,
 				4FB8C48D259B5E6B00A6DDB4 /* HighlightsTableViewCell.swift in Sources */,
+				4FD8958B259CE7380035E6B8 /* UICollectionView+NibReusable.swift in Sources */,
 				4FB8C4BD259B719800A6DDB4 /* TableViewDataSourceController.swift in Sources */,
 				4F74503A259CAB6E007B79E6 /* LocationService.swift in Sources */,
 				4FAF2736259A3A0500218656 /* R.generated.swift in Sources */,
@@ -743,10 +755,10 @@
 				4FB8C4B9259B719800A6DDB4 /* TableViewCellTypeProtocol.swift in Sources */,
 				4FAF2772259A446300218656 /* TrendingSearchRequestParams.swift in Sources */,
 				4FB8C47E259B5E2D00A6DDB4 /* ImageHeaderTableViewCell.swift in Sources */,
+				4FD89590259CE7620035E6B8 /* NibReusable.swift in Sources */,
 				4F744F98259C00E7007B79E6 /* UIViewController+NavigationBar.swift in Sources */,
 				4F48C5F8259AD5E30003ADE6 /* NetworkRequestManager.swift in Sources */,
 				4F48C5EA259AC9D20003ADE6 /* EatListViewModel.swift in Sources */,
-				4FAF2765259A422D00218656 /* CommonAPI.swift in Sources */,
 				4FC33A7A259ADA0800618D34 /* RestaurantNetworkService.swift in Sources */,
 				4FB8C4A5259B6D0600A6DDB4 /* SimpleCarouselItemView.swift in Sources */,
 				4FAF271E259A34C200218656 /* EatListViewController.swift in Sources */,

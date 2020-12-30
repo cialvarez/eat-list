@@ -7,18 +7,7 @@
 
 import UIKit
 
-protocol NibReusable: class {
-    static var reuseIdentifier: String { get }
-}
-
-extension NibReusable {
-    static var reuseIdentifier: String {
-        return "\(Self.self)"
-    }
-}
-
 extension UITableView {
-    
     func register<Cell: NibReusable>(_ cellClass: Cell.Type) where Cell: UITableViewCell {
         register(UINib(nibName: cellClass.reuseIdentifier, bundle: nil), forCellReuseIdentifier: cellClass.reuseIdentifier)
     }
