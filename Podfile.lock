@@ -8,9 +8,6 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
-  - NVActivityIndicatorView (5.1.1):
-    - NVActivityIndicatorView/Base (= 5.1.1)
-  - NVActivityIndicatorView/Base (5.1.1)
   - R.swift (5.3.1):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
@@ -30,7 +27,6 @@ DEPENDENCIES:
   - Hero
   - Kingfisher (~> 5.0)
   - Moya (~> 14.0)
-  - NVActivityIndicatorView
   - R.swift
   - RealmSwift
   - SwiftLint
@@ -42,7 +38,6 @@ SPEC REPOS:
     - Hero
     - Kingfisher
     - Moya
-    - NVActivityIndicatorView
     - R.swift
     - R.swift.Library
     - Realm
@@ -56,7 +51,6 @@ SPEC CHECKSUMS:
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   Realm: e1c22c3d83b229afb70ebc10e1771c91e9542d12
@@ -65,6 +59,6 @@ SPEC CHECKSUMS:
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
   Unrealm: 4992f5170f330be3e7b82b184b07dc8eb24257cc
 
-PODFILE CHECKSUM: 5940b530c864744281ea29529682ac9eee40c709
+PODFILE CHECKSUM: facb75005260f7d6f4eca120594482f96e34e6fd
 
 COCOAPODS: 1.10.0
