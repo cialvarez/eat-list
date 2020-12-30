@@ -26,7 +26,10 @@ class ImageHeaderTableViewCell: UITableViewCell, NibReusable {
     }
     
     func render(with parameters: Parameters) {
-        headerImageView.kf.setImage(with: parameters.imageUrl, placeholder: nil, options: [.transition(.fade(1.0))], progressBlock: nil)
+        headerImageView.kf.setImage(with: parameters.imageUrl,
+                                    placeholder: R.image.placeholder(),
+                                    options: [.transition(.fade(1.0))],
+                                    progressBlock: nil)
         headerImageView.hero.id = parameters.heroId
     }
 }
