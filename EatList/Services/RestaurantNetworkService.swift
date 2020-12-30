@@ -7,6 +7,7 @@
 
 import Foundation
 import Moya
+import Unrealm
 class RestaurantNetworkService {
     let provider: MoyaProvider<RestaurantAPI>
     
@@ -16,8 +17,13 @@ class RestaurantNetworkService {
     
     func fetchTrendingRestaurants(
         parameters: TrendingSearchRequestParams,
-        completion: @escaping (Result<SearchResponse, EatListError>) -> Void) {
+        completion: @escaping (Result<[Restaurant], EatListError>) -> Void) {
+        guard let realm = try? Realm() else {
+            assertionFailure("Expected a non-nil realm instance!")
+            return
+        }
         let target = RestaurantAPI.search(parameters: parameters)
+        
         NetworkRequestManager.fetchData(
             target: target,
             provider: provider,
@@ -32,9 +38,24 @@ class RestaurantNetworkService {
                     return
                 }
                 
-                completion(.success(searchResponse))
-            }, onFailure: { _ in
-                completion(.failure(.networkConnectivity))
+                try? realm.write {
+                    realm.add(searchResponse.restaurants, update: true)
+                }
+                // Get on-disk location of the default Realm
+                print("Realm is located at: \(realm.configuration.fileURL)")
+                completion(.success(searchResponse.restaurants))
+            }, onFailure: { error in
+                switch error {
+                case .networkConnectivity:
+                    // try to load cached data
+                    let cachedResult = realm.objects(Restaurant.self).compactMap { $0 }
+                    guard !cachedResult.isEmpty else {
+                        completion(.failure(.networkConnectivity))
+                        return
+                    }
+                    completion(.success(cachedResult))
+                default: completion(.failure(.networkConnectivity))
+                }
             })
     }
 }

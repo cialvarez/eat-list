@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Unrealm
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController()
         setupCoordinator(with: navigationController)
         setupWindow(with: navigationController)
+        setupRealm()
         return true
     }
     
@@ -31,6 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
+    }
+    
+    private func setupRealm() {
+        Realm.registerRealmables(Restaurant.self)
     }
 
     // MARK: UISceneSession Lifecycle

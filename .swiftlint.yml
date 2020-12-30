@@ -27,3 +27,9 @@ included: # paths to include during linting. `--path` is ignored if present. tak
 excluded: # paths to ignore during linting. overridden by `included`.
   - Pods
   - R.generated.swift
+identifier_name:
+  min_length: 2 # only warning
+  max_length: # warning and error
+    warning: 40
+    error: 50
+  excluded: id # excluded via string

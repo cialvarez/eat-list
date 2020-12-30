@@ -55,8 +55,8 @@ class EatListViewModel: NSObject {
                 guard let self = self else { return }
                 switch result {
                 case .success(let response):
-                    self.output.restaurants = response.restaurants
-                    self.output.list = self.mapToCellListItems(restaurantList: response.restaurants)
+                    self.output.restaurants = response
+                    self.output.list = self.mapToCellListItems(restaurantList: response)
                     self.output.stateChanged(.finished)
                 case .failure(let error):
                     self.output.stateChanged(.error(error))

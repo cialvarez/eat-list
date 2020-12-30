@@ -13,5 +13,5 @@ target 'EatList' do
   pod 'Kingfisher', '~> 5.0'
   pod 'NVActivityIndicatorView'
   pod 'Hero'
-
+  pod 'Unrealm'
 end
