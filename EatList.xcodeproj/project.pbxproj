@@ -17,6 +17,8 @@
 		4F48C5F8259AD5E30003ADE6 /* NetworkRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C5F7259AD5E30003ADE6 /* NetworkRequestManager.swift */; };
 		4F48C5FC259AD6600003ADE6 /* EatListError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C5FB259AD6600003ADE6 /* EatListError.swift */; };
 		4F48C602259AD6FE0003ADE6 /* PresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C601259AD6FE0003ADE6 /* PresentableError.swift */; };
+		4F6D5805259CCC0E00AD0CBC /* UIViewController+AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D5804259CCC0E00AD0CBC /* UIViewController+AlertView.swift */; };
+		4F6D580A259CCF3200AD0CBC /* AlertViewButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D5809259CCF3200AD0CBC /* AlertViewButtonStyle.swift */; };
 		4F744F94259BFE7F007B79E6 /* UITableView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744F93259BFE7F007B79E6 /* UITableView+NibReusable.swift */; };
 		4F744F98259C00E7007B79E6 /* UIViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744F97259C00E7007B79E6 /* UIViewController+NavigationBar.swift */; };
 		4F744FE2259C7365007B79E6 /* EatListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744FE1259C7364007B79E6 /* EatListTests.swift */; };
@@ -28,6 +30,8 @@
 		4F745007259C9BA1007B79E6 /* UIView+SkeletonLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F745006259C9BA1007B79E6 /* UIView+SkeletonLoading.swift */; };
 		4F74503A259CAB6E007B79E6 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F745039259CAB6D007B79E6 /* LocationService.swift */; };
 		4F74503E259CAC96007B79E6 /* LocationServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74503D259CAC96007B79E6 /* LocationServiceError.swift */; };
+		4F745046259CC95C007B79E6 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F745044259CC95C007B79E6 /* AlertView.swift */; };
+		4F745047259CC95C007B79E6 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F745045259CC95C007B79E6 /* AlertView.xib */; };
 		4FAF2702259A2F5C00218656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2701259A2F5C00218656 /* AppDelegate.swift */; };
 		4FAF2704259A2F5C00218656 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2703259A2F5C00218656 /* SceneDelegate.swift */; };
 		4FAF270B259A2F5D00218656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FAF270A259A2F5D00218656 /* Assets.xcassets */; };
@@ -95,6 +99,8 @@
 		4F48C5F7259AD5E30003ADE6 /* NetworkRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestManager.swift; sourceTree = "<group>"; };
 		4F48C5FB259AD6600003ADE6 /* EatListError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatListError.swift; sourceTree = "<group>"; };
 		4F48C601259AD6FE0003ADE6 /* PresentableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableError.swift; sourceTree = "<group>"; };
+		4F6D5804259CCC0E00AD0CBC /* UIViewController+AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertView.swift"; sourceTree = "<group>"; };
+		4F6D5809259CCF3200AD0CBC /* AlertViewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewButtonStyle.swift; sourceTree = "<group>"; };
 		4F744F93259BFE7F007B79E6 /* UITableView+NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+NibReusable.swift"; sourceTree = "<group>"; };
 		4F744F97259C00E7007B79E6 /* UIViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		4F744FDF259C7364007B79E6 /* EatListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EatListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +114,8 @@
 		4F745006259C9BA1007B79E6 /* UIView+SkeletonLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SkeletonLoading.swift"; sourceTree = "<group>"; };
 		4F745039259CAB6D007B79E6 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		4F74503D259CAC96007B79E6 /* LocationServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceError.swift; sourceTree = "<group>"; };
+		4F745044259CC95C007B79E6 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		4F745045259CC95C007B79E6 /* AlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		4FAF26FE259A2F5C00218656 /* EatList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAF2701259A2F5C00218656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FAF2703259A2F5C00218656 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +189,7 @@
 				4F744F97259C00E7007B79E6 /* UIViewController+NavigationBar.swift */,
 				4F745001259C9A39007B79E6 /* UIView+Animations.swift */,
 				4F745006259C9BA1007B79E6 /* UIView+SkeletonLoading.swift */,
+				4F6D5804259CCC0E00AD0CBC /* UIViewController+AlertView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +232,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		4F6D5808259CCF1F00AD0CBC /* Enumerators */ = {
+			isa = PBXGroup;
+			children = (
+				4F6D5809259CCF3200AD0CBC /* AlertViewButtonStyle.swift */,
+			);
+			path = Enumerators;
+			sourceTree = "<group>";
+		};
 		4F744FE0259C7364007B79E6 /* EatListTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +256,16 @@
 				4F744FF7259C8229007B79E6 /* EatListSectionType.swift */,
 			);
 			path = Enumerators;
+			sourceTree = "<group>";
+		};
+		4F745041259CC920007B79E6 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				4F6D5808259CCF1F00AD0CBC /* Enumerators */,
+				4F745044259CC95C007B79E6 /* AlertView.swift */,
+				4F745045259CC95C007B79E6 /* AlertView.xib */,
+			);
+			path = AlertView;
 			sourceTree = "<group>";
 		};
 		4FAF26F5259A2F5C00218656 = {
@@ -464,6 +491,7 @@
 		4FC33A7C259B003200618D34 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4F745041259CC920007B79E6 /* AlertView */,
 				4FC33A7D259B003900618D34 /* CustomizableView.swift */,
 				4F744FFD259C94FF007B79E6 /* ActionButton.swift */,
 			);
@@ -596,6 +624,7 @@
 				4FAF270B259A2F5D00218656 /* Assets.xcassets in Resources */,
 				4FB8C4A3259B6D0600A6DDB4 /* SimpleCarouselItemCell.xib in Resources */,
 				4FB8C48E259B5E6B00A6DDB4 /* HighlightsTableViewCell.xib in Resources */,
+				4F745047259CC95C007B79E6 /* AlertView.xib in Resources */,
 				4FC33A84259B046100618D34 /* EatListTableViewCell.xib in Resources */,
 				4FB8C489259B5E5700A6DDB4 /* AddressDetailsTableViewCell.xib in Resources */,
 			);
@@ -700,6 +729,8 @@
 				4FB8C483259B5E4500A6DDB4 /* BaseDetailsTableViewCell.swift in Sources */,
 				4FC33A7E259B003900618D34 /* CustomizableView.swift in Sources */,
 				4FAF27A5259A45C700218656 /* Parameterable.swift in Sources */,
+				4F6D580A259CCF3200AD0CBC /* AlertViewButtonStyle.swift in Sources */,
+				4F745046259CC95C007B79E6 /* AlertView.swift in Sources */,
 				4FB8C488259B5E5700A6DDB4 /* AddressDetailsTableViewCell.swift in Sources */,
 				4FB8C4A2259B6D0600A6DDB4 /* SimpleCarouselItemCell.swift in Sources */,
 				4FAF272A259A35AF00218656 /* MainCoordinator.swift in Sources */,
@@ -729,6 +760,7 @@
 				4FAF2779259A44BD00218656 /* LocationType.swift in Sources */,
 				4FAF2775259A446A00218656 /* SearchResponse.swift in Sources */,
 				4FB8C4BB259B719800A6DDB4 /* TableViewDataManager.swift in Sources */,
+				4F6D5805259CCC0E00AD0CBC /* UIViewController+AlertView.swift in Sources */,
 				4FAF2704259A2F5C00218656 /* SceneDelegate.swift in Sources */,
 				4FB8C479259B5D7300A6DDB4 /* TargetDetailsViewModel.swift in Sources */,
 				4FB8C4B9259B719800A6DDB4 /* TableViewCellTypeProtocol.swift in Sources */,

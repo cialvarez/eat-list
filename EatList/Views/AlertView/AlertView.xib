@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertView" customModule="EatList" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomMarginConstraint" destination="Wwc-H0-jlh" id="HyS-M6-9i1"/>
+                <outlet property="containerView" destination="EPu-qP-ya0" id="9Tj-bp-vgq"/>
+                <outlet property="imageTitle" destination="ton-4x-owC" id="ZiJ-Ga-6oF"/>
+                <outlet property="labelDescription" destination="OVl-q7-aZh" id="EvQ-RH-t4w"/>
+                <outlet property="labelTitle" destination="sVn-b3-ONW" id="9NJ-O9-09y"/>
+                <outlet property="leftMarginConstraint" destination="KmC-CI-9Yf" id="YXr-x2-lQz"/>
+                <outlet property="rightMarginConstraint" destination="loh-hZ-k2L" id="Vxv-J5-IOz"/>
+                <outlet property="stackViewButtonContainer" destination="TDm-P9-Uhc" id="YnR-iP-XZX"/>
+                <outlet property="stackViewContentContainer" destination="s6f-Ch-0WE" id="4La-1v-5bm"/>
+                <outlet property="tapGestureRecognizer" destination="Mat-RM-djG" id="wH4-dG-7g7"/>
+                <outlet property="topMarginConstraint" destination="OJG-5L-g4Z" id="3gb-kV-7Rh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JIC-Ta-I9r">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPu-qP-ya0" customClass="CustomizableView" customModule="EatList" customModuleProvider="target">
+                    <rect key="frame" x="32" y="348.5" width="350" height="199"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="s6f-Ch-0WE">
+                            <rect key="frame" x="60" y="40" width="230" height="129"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ErrorIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ton-4x-owC" userLabel="Alert Image Title">
+                                    <rect key="frame" x="90" y="0.0" width="50" height="50"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVn-b3-ONW">
+                                    <rect key="frame" x="98.5" y="65" width="33.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVl-q7-aZh">
+                                    <rect key="frame" x="83" y="99.5" width="64.5" height="14.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TDm-P9-Uhc" userLabel="Button Container">
+                                    <rect key="frame" x="0.0" y="129" width="230" height="0.0"/>
+                                    <subviews>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4G-rE-cbt">
+                                            <rect key="frame" x="0.0" y="0.0" width="45" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <state key="normal" title="Cancel"/>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="TDm-P9-Uhc" secondAttribute="trailing" id="ZrD-BA-pIq"/>
+                                <constraint firstItem="TDm-P9-Uhc" firstAttribute="leading" secondItem="s6f-Ch-0WE" secondAttribute="leading" id="xU5-xW-fHv"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="s6f-Ch-0WE" firstAttribute="centerX" secondItem="EPu-qP-ya0" secondAttribute="centerX" id="AbJ-iN-Jlz"/>
+                        <constraint firstItem="s6f-Ch-0WE" firstAttribute="leading" secondItem="EPu-qP-ya0" secondAttribute="leading" constant="60" id="KmC-CI-9Yf"/>
+                        <constraint firstItem="s6f-Ch-0WE" firstAttribute="top" secondItem="EPu-qP-ya0" secondAttribute="top" constant="40" id="OJG-5L-g4Z"/>
+                        <constraint firstAttribute="bottom" secondItem="s6f-Ch-0WE" secondAttribute="bottom" constant="30" id="Wwc-H0-jlh"/>
+                        <constraint firstAttribute="trailing" secondItem="s6f-Ch-0WE" secondAttribute="trailing" constant="60" id="loh-hZ-k2L"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="JtJ-VN-xTd"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="JtJ-VN-xTd" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EPu-qP-ya0" secondAttribute="trailing" constant="10" id="0wn-a9-Ilq"/>
+                <constraint firstItem="JtJ-VN-xTd" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EPu-qP-ya0" secondAttribute="bottom" constant="5" id="4YE-G0-XXz"/>
+                <constraint firstItem="EPu-qP-ya0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JtJ-VN-xTd" secondAttribute="top" constant="5" id="KZo-DC-VhX"/>
+                <constraint firstItem="EPu-qP-ya0" firstAttribute="centerY" secondItem="JIC-Ta-I9r" secondAttribute="centerY" id="NXm-2v-FLV"/>
+                <constraint firstItem="EPu-qP-ya0" firstAttribute="centerX" secondItem="JIC-Ta-I9r" secondAttribute="centerX" id="YyI-dk-XV5"/>
+                <constraint firstItem="EPu-qP-ya0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JtJ-VN-xTd" secondAttribute="leading" constant="10" id="kwU-te-gIM"/>
+                <constraint firstItem="EPu-qP-ya0" firstAttribute="width" secondItem="JIC-Ta-I9r" secondAttribute="width" multiplier="0.845" id="tlj-yf-7TS"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Mat-RM-djG" appends="YES" id="ECp-fd-okM"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </view>
+        <tapGestureRecognizer id="Mat-RM-djG">
+            <connections>
+                <action selector="didTap:" destination="-1" id="7vX-cP-dbW"/>
+                <outlet property="delegate" destination="JIC-Ta-I9r" id="h53-cf-2bX"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ErrorIcon" width="50" height="50"/>
+    </resources>
+</document>

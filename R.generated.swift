@@ -186,12 +186,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 5 images.
+  /// This `R.image` struct is generated, and contains static references to 6 images.
   struct image {
     /// Image `ArmyStar`.
     static let armyStar = Rswift.ImageResource(bundle: R.hostingBundle, name: "ArmyStar")
     /// Image `Back`.
     static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "Back")
+    /// Image `ErrorIcon`.
+    static let errorIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "ErrorIcon")
     /// Image `LocationUpdate`.
     static let locationUpdate = Rswift.ImageResource(bundle: R.hostingBundle, name: "LocationUpdate")
     /// Image `Pizzannotation`.
@@ -210,6 +212,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Back", bundle: ..., traitCollection: ...)`
     static func back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.back, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ErrorIcon", bundle: ..., traitCollection: ...)`
+    static func errorIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.errorIcon, compatibleWith: traitCollection)
     }
     #endif
 
@@ -267,10 +276,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 8 nibs.
   struct nib {
     /// Nib `AddressDetailsTableViewCell`.
     static let addressDetailsTableViewCell = _R.nib._AddressDetailsTableViewCell()
+    /// Nib `AlertView`.
+    static let alertView = _R.nib._AlertView()
     /// Nib `BaseDetailsTableViewCell`.
     static let baseDetailsTableViewCell = _R.nib._BaseDetailsTableViewCell()
     /// Nib `EatListTableViewCell`.
@@ -289,6 +300,14 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.addressDetailsTableViewCell) instead")
     static func addressDetailsTableViewCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.addressDetailsTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "AlertView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.alertView) instead")
+    static func alertView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.alertView)
     }
     #endif
 
@@ -342,6 +361,10 @@ struct R: Rswift.Validatable {
 
     static func addressDetailsTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AddressDetailsTableViewCell? {
       return R.nib.addressDetailsTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AddressDetailsTableViewCell
+    }
+
+    static func alertView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.alertView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     static func baseDetailsTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> BaseDetailsTableViewCell? {
@@ -405,6 +428,7 @@ struct _R: Rswift.Validatable {
   #if os(iOS) || os(tvOS)
   struct nib: Rswift.Validatable {
     static func validate() throws {
+      try _AlertView.validate()
       try _EatListTableViewCell.validate()
     }
 
@@ -414,6 +438,27 @@ struct _R: Rswift.Validatable {
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> AddressDetailsTableViewCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? AddressDetailsTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _AlertView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "AlertView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      func secondView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[1] as? UIKit.UIView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "ErrorIcon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ErrorIcon' is used in nib 'AlertView', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
       }
 
       fileprivate init() {}

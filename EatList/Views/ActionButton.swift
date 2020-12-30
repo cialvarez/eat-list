@@ -19,10 +19,19 @@ class ActionButton: UIButton {
         setup()
     }
 
-    func setup() {
+    private func setup() {
         addTarget(self, action: #selector(touchUp), for: .touchUpInside)
     }
 
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        self.animateTouchDown()
+        return true
+    }
+
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        self.animateTouchUp()
+    }
+    
     @objc func touchUp() {
         onTap()
     }
