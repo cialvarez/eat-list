@@ -52,6 +52,8 @@ class EatListViewModel: NSObject {
             .fetchTrendingRestaurants(
                 parameters: .init(lat: location.latitude,
                                   lon: location.longitude)) { [weak self] result in
+                self?.locationManager.stopUpdatingLocation()
+                self?.location = nil
                 guard let self = self else { return }
                 switch result {
                 case .success(let response):

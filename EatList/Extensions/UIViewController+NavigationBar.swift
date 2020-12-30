@@ -38,6 +38,16 @@ extension UIViewController {
         navigationController?.navigationBar.layoutIfNeeded()
     }
     
+    func setupCustomRightBarButton(image: UIImage?,
+                                   tintColor: UIColor = .black,
+                                   onTap: @escaping () -> Void) {
+        let rightButton = ActionButton(frame: CGRect(origin: .zero, size: CGSize(width: 44, height: 44)))
+        rightButton.setImage(image, for: .normal)
+        rightButton.tintColor = tintColor
+        rightButton.onTap = onTap
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
+    }
+    
     @objc func goBack() {
         navigationController?.popViewController(animated: true)
     }

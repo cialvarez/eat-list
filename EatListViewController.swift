@@ -31,6 +31,7 @@ class EatListViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupViewModel()
+        setupLocationUpdateControl()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +61,12 @@ class EatListViewController: UIViewController {
                     }
                 }
             ))
+    }
+    
+    private func setupLocationUpdateControl() {
+        setupCustomRightBarButton(image: R.image.locationUpdate()) { [weak self] in
+            self?.setupViewModel()
+        }
     }
 }
 
