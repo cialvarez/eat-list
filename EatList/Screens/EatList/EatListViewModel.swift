@@ -70,15 +70,15 @@ class EatListViewModel: NSObject, EatListProvider {
 private extension Array where Element == Restaurant {
     func asEatListSection(wantsToViewRestaurant: @escaping (RestaurantDetails) -> Void) -> [EatListSectionType] {
         return self.map { restaurant in
+            let restaurantDetails = restaurant.restaurant
             let parameters = EatListTableViewCell.Parameters(
-                imageHeroId: "HeroImage\(restaurant.restaurant.id)",
-                imageUrl: URL(string: restaurant.restaurant.thumb),
-                name: restaurant.restaurant.name,
-                cuisine: restaurant.restaurant.cuisines,
-                location: restaurant.restaurant.location.localityVerbose,
-                rating: restaurant.restaurant.userRating.aggregateRating,
-                averageCostForTwo: restaurant.restaurant.averageCostForTwo,
-                currency: restaurant.restaurant.currency
+                imageHeroId: "HeroImage\(restaurantDetails.id)",
+                imageUrl: URL(string: restaurantDetails.thumb),
+                name: restaurantDetails.name,
+                cuisine: restaurantDetails.cuisines,
+                location: restaurantDetails.location.localityVerbose,
+                rating: "\(restaurantDetails.userRating.aggregateRating) /5",
+                priceDetails: "\(restaurantDetails.currency)\(restaurantDetails.averageCostForTwo) for two"
             )
             return .restaurantDetails(parameters: parameters,
                                       restaurantDetails: restaurant.restaurant,

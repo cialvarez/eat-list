@@ -17,8 +17,7 @@ class EatListTableViewCell: UITableViewCell, NibReusable {
         let cuisine: String
         let location: String
         let rating: String
-        let averageCostForTwo: Int
-        let currency: String
+        let priceDetails: String
     }
 
     @IBOutlet weak var featuredImageView: UIImageView!
@@ -37,17 +36,14 @@ class EatListTableViewCell: UITableViewCell, NibReusable {
     
     func render(with parameters: EatListTableViewCell.Parameters) {
         toggleLoadingState(isLoading: false)
-        if let imageUrl = parameters.imageUrl {
-            featuredImageView.kf.indicatorType = .activity
-            featuredImageView.kf.setImage(with: imageUrl, placeholder: nil, options: [.transition(.fade(1.0))], progressBlock: nil)
-            featuredImageView.hero.id = parameters.imageHeroId
-
-        }
+        featuredImageView.kf.indicatorType = .activity
+        featuredImageView.kf.setImage(with: parameters.imageUrl, placeholder: nil, options: [.transition(.fade(1.0))], progressBlock: nil)
+        featuredImageView.hero.id = parameters.imageHeroId
         restaurantNameLabel.text = parameters.name
         cuisineLabel.text = parameters.cuisine
         locationLabel.text = parameters.location
-        ratingLabel.text = "\(parameters.rating) /5"
-        priceDetailsLabel.text = "\(parameters.currency)\(parameters.averageCostForTwo) for two"
+        ratingLabel.text = parameters.rating
+        priceDetailsLabel.text = parameters.priceDetails
     }
     
     func toggleLoadingState(isLoading: Bool) {
