@@ -48,7 +48,7 @@ class TableViewDataSourceController<T, U: TableViewCellTypeProtocol>: NSObject, 
         }
         let cellDataSource = tableViewDataSource.dataSource[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: cellDataSource.identifier, for: indexPath)
-        cellDataSource.setupCell?(cell, cellDataSource.data)
+        cellDataSource.setupCell?(cell)
         cell.layoutIfNeeded()
         return cell
     }
@@ -75,6 +75,6 @@ class TableViewDataSourceController<T, U: TableViewCellTypeProtocol>: NSObject, 
         }
         let cellDataSource = tableViewDataSource.dataSource[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath)
-        cellDataSource.didSelectCell?(cell, cellDataSource.data)
+        cellDataSource.didSelectCell?(cell, indexPath)
     }
 }

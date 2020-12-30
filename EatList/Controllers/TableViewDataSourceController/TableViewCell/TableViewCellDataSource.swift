@@ -7,12 +7,9 @@
 
 import UIKit
 
-class TableViewCellDataSource<T>: NSObject, TableViewCellProtocol {
+class TableViewCellDataSource: TableViewCellProtocol {
     var identifier: String = ""
-    var data: T?
-    var setupCell: ViewSetupBlock<T>?
-    var didSelectCell: RowSelectedBlock<T>?
+    var setupCell: ViewSetupBlock?
+    var didSelectCell: RowSelectedBlock?
     var rowHeight: CGFloat = UITableView.automaticDimension
-    var allowsDynamicHeightAdjustment: Bool = false
-    var needsReload: Bool = true
 }

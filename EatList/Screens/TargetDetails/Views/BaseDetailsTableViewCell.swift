@@ -8,6 +8,17 @@
 import UIKit
 
 class BaseDetailsTableViewCell: UITableViewCell, NibReusable {
+    
+    struct Parameters {
+        let rating: String
+        let reviewCount: String
+        let restaurantName: String
+        let cuisine: String
+        let location: String
+        let operatingHours: String
+        let costForTwo: String
+    }
+    
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var reviewCountLabel: UILabel!
     @IBOutlet weak var restaurantNameLabel: UILabel!
@@ -20,11 +31,14 @@ class BaseDetailsTableViewCell: UITableViewCell, NibReusable {
         super.awakeFromNib()
         selectionStyle = .none
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    func render(with parameters: Parameters) {
+        ratingLabel.text = parameters.rating
+        reviewCountLabel.text = parameters.reviewCount
+        restaurantNameLabel.text = parameters.restaurantName
+        cuisineLabel.text = parameters.cuisine
+        locationLabel.text = parameters.location
+        operatingHoursLabel.text = parameters.operatingHours
+        costForTwoLabel.text = parameters.costForTwo
+    }
 }

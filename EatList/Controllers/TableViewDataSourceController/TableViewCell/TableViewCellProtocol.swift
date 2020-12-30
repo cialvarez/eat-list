@@ -7,17 +7,12 @@
 
 import UIKit
 
-typealias ViewSetupBlock<T> = ((_ view: UIView?, _ data: T?) -> Void)
-typealias RowSelectedBlock<T> = ((_ view: UIView?, _ data: T?) -> Void)
+typealias ViewSetupBlock = ((_ view: UIView?) -> Void)
+typealias RowSelectedBlock = ((_ view: UIView?,_ indexPath: IndexPath) -> Void)
 
 protocol TableViewCellProtocol {
-    associatedtype TableViewCellModelType
-    
     var identifier: String { get }
-    var data: TableViewCellModelType? { get set }
-    var setupCell: ViewSetupBlock<TableViewCellModelType>? { get set }
-    var didSelectCell: RowSelectedBlock<TableViewCellModelType>? { get set }
+    var setupCell: ViewSetupBlock? { get set }
+    var didSelectCell: RowSelectedBlock? { get set }
     var rowHeight: CGFloat { get }
-    var allowsDynamicHeightAdjustment: Bool { get }
 }
-

@@ -11,5 +11,5 @@ protocol TableViewCellTypeProtocol {
     associatedtype TableViewCellModelType
     var reuseIdentifier: String { get }
     var height: CGFloat { get }
-    var cellSetupBlock: ViewSetupBlock<TableViewCellModelType>? { get }
+    var cellSetupBlock: ViewSetupBlock? { get }
 }

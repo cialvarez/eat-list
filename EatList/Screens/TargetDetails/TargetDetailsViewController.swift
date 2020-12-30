@@ -10,6 +10,7 @@ import UIKit
 class TargetDetailsViewController: UIViewController {
     
     struct Input {
+        var viewModel: TargetDetailsViewModel
         var restaurantDetails: RestaurantDetails
     }
     
@@ -19,6 +20,7 @@ class TargetDetailsViewController: UIViewController {
     var output: Output!
     
     @IBOutlet weak var tableView: UITableView!
+    
     private var dataManager = TableViewDataManager<RestaurantDetails, TargetDetailsSectionType>()
     private lazy var dataSourceProvider =
         TableViewDataSourceController<RestaurantDetails, TargetDetailsSectionType>(dataManager: dataManager, for: tableView)
@@ -27,7 +29,7 @@ class TargetDetailsViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupDataSource()
-        setupSections()
+        setupViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,14 +50,9 @@ class TargetDetailsViewController: UIViewController {
         tableView.delegate = dataSourceProvider
     }
     
-    func setupSections() {
-        dataManager.setItems(sections: [
-            .imageHeader,
-            .baseDetails,
-            .addressDetails,
-            .highlights
-        ])
-        dataManager.model = input.restaurantDetails
+    func setupViewModel() {
+        let output = input.viewModel.transform(input: .init(restaurantDetails: input.restaurantDetails))
+        dataManager.setItems(sections: output.tableViewCellItems)
     }
 }
 

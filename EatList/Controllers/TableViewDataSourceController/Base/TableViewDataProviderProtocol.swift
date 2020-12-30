@@ -8,6 +8,5 @@
 import Foundation
 
 protocol TableViewDataProviderProtocol {
-    associatedtype TableViewCellModelType
-    var dataSource: [TableViewCellDataSource<TableViewCellModelType>] { get set }
+    var dataSource: [TableViewCellDataSource] { get set }
 }

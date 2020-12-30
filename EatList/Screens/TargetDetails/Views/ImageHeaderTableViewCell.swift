@@ -8,18 +8,23 @@
 import UIKit
 
 class ImageHeaderTableViewCell: UITableViewCell, NibReusable {
-
-    @IBOutlet weak var headerImageView: UIImageView!
+    
+    struct Parameters {
+        let imageUrl: URL?
+    }
+    
+    @IBOutlet weak var headerImageView: UIImageView! {
+        didSet {
+            headerImageView.kf.indicatorType = .activity
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    func render(with parameters: Parameters) {
+        headerImageView.kf.setImage(with: parameters.imageUrl, placeholder: nil, options: [.transition(.fade(1.0))], progressBlock: nil)
+    }
 }
