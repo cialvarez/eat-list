@@ -13,7 +13,7 @@ import CoreLocation
 class EatListViewModel: NSObject {
     
     struct Output {
-        var list: [EatListItem]
+        var list: [EatListTableViewCell.Parameters]
         var restaurants: [Restaurant]
         var stateChanged: (State) -> Void
     }
@@ -64,16 +64,17 @@ class EatListViewModel: NSObject {
             }
     }
     
-    private func mapToCellListItems(restaurantList: [Restaurant]) -> [EatListItem] {
+    private func mapToCellListItems(restaurantList: [Restaurant]) -> [EatListTableViewCell.Parameters] {
         return restaurantList.map { restaurant in
-            return EatListItem(imageHeroId: "HeroImage\(restaurant.restaurant.id)",
-                               imageUrl: URL(string: restaurant.restaurant.thumb),
-                               name: restaurant.restaurant.name,
-                               cuisine: restaurant.restaurant.cuisines,
-                               location: restaurant.restaurant.location.localityVerbose,
-                               rating: restaurant.restaurant.userRating.aggregateRating,
-                               averageCostForTwo: restaurant.restaurant.averageCostForTwo,
-                               currency: restaurant.restaurant.currency)
+            return EatListTableViewCell.Parameters(
+                imageHeroId: "HeroImage\(restaurant.restaurant.id)",
+                imageUrl: URL(string: restaurant.restaurant.thumb),
+                name: restaurant.restaurant.name,
+                cuisine: restaurant.restaurant.cuisines,
+                location: restaurant.restaurant.location.localityVerbose,
+                rating: restaurant.restaurant.userRating.aggregateRating,
+                averageCostForTwo: restaurant.restaurant.averageCostForTwo,
+                currency: restaurant.restaurant.currency)
         }
     }
     

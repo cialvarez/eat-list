@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+//case restaurantDetails
 enum EatListSectionType {
     case imageHeader(parameters: ImageHeaderTableViewCell.Parameters)
     case baseDetails(parameters: BaseDetailsTableViewCell.Parameters)

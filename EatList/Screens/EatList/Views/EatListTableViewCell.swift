@@ -8,18 +8,18 @@
 import UIKit
 import Kingfisher
 
-struct EatListItem {
-    let imageHeroId: String
-    let imageUrl: URL?
-    let name: String
-    let cuisine: String
-    let location: String
-    let rating: String
-    let averageCostForTwo: Int
-    let currency: String
-}
-
 class EatListTableViewCell: UITableViewCell {
+    
+    struct Parameters {
+        let imageHeroId: String
+        let imageUrl: URL?
+        let name: String
+        let cuisine: String
+        let location: String
+        let rating: String
+        let averageCostForTwo: Int
+        let currency: String
+    }
 
     @IBOutlet weak var featuredImageView: UIImageView!
     @IBOutlet weak var restaurantNameLabel: UILabel!
@@ -33,7 +33,7 @@ class EatListTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
     
-    func configure(with data: EatListItem) {
+    func configure(with data: EatListTableViewCell.Parameters) {
         if let imageUrl = data.imageUrl {
             featuredImageView.kf.indicatorType = .activity
             featuredImageView.kf.setImage(with: imageUrl, placeholder: nil, options: [.transition(.fade(1.0))], progressBlock: nil)
