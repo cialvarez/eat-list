@@ -16,10 +16,10 @@ class TargetDetailsViewController: UIViewController {
     
     struct Output { }
     
-    var input: Input!
-    var output: Output!
+    private var input: Input!
+    private var output: Output!
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak private var tableView: UITableView!
     
     private var dataManager = TableViewDataManager<RestaurantDetails, TargetDetailsSectionType>()
     private lazy var dataSourceProvider =
