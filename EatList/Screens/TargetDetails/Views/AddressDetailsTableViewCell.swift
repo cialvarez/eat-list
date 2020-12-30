@@ -24,9 +24,9 @@ class AddressDetailsTableViewCell: UITableViewCell, NibReusable {
         mapView.layer.cornerRadius = 20
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
+    deinit {
         mapView.delegate = nil
+        mapView.removeAnnotations(mapView.annotations)
     }
     
     func render(with parameters: Parameters) {
