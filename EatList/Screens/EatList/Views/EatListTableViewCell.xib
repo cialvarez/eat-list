@@ -150,6 +150,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="containerView" destination="xJE-V6-gxa" id="Htq-uW-5zN"/>
                 <outlet property="cuisineLabel" destination="diD-1R-A5w" id="1Hq-lV-8fx"/>
                 <outlet property="featuredImageView" destination="Ggc-1i-E2w" id="rOV-dJ-obt"/>
                 <outlet property="locationLabel" destination="T4P-QB-wqr" id="ndV-Xd-fnr"/>

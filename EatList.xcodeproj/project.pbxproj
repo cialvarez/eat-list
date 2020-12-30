@@ -24,6 +24,7 @@
 		4F744FF3259C74FB007B79E6 /* DebugLoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744FF2259C74FB007B79E6 /* DebugLoggingService.swift */; };
 		4F744FF8259C8229007B79E6 /* EatListSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744FF7259C8229007B79E6 /* EatListSectionType.swift */; };
 		4F744FFE259C94FF007B79E6 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744FFD259C94FF007B79E6 /* ActionButton.swift */; };
+		4F745002259C9A39007B79E6 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F745001259C9A39007B79E6 /* UIView+Animations.swift */; };
 		4FAF2702259A2F5C00218656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2701259A2F5C00218656 /* AppDelegate.swift */; };
 		4FAF2704259A2F5C00218656 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2703259A2F5C00218656 /* SceneDelegate.swift */; };
 		4FAF270B259A2F5D00218656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FAF270A259A2F5D00218656 /* Assets.xcassets */; };
@@ -100,6 +101,7 @@
 		4F744FF2259C74FB007B79E6 /* DebugLoggingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLoggingService.swift; sourceTree = "<group>"; };
 		4F744FF7259C8229007B79E6 /* EatListSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatListSectionType.swift; sourceTree = "<group>"; };
 		4F744FFD259C94FF007B79E6 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		4F745001259C9A39007B79E6 /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		4FAF26FE259A2F5C00218656 /* EatList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAF2701259A2F5C00218656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FAF2703259A2F5C00218656 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				4F48C5DE259AC2830003ADE6 /* Encodable+ToDictionary.swift */,
 				4F744F93259BFE7F007B79E6 /* UITableView+NibReusable.swift */,
 				4F744F97259C00E7007B79E6 /* UIViewController+NavigationBar.swift */,
+				4F745001259C9A39007B79E6 /* UIView+Animations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -728,6 +731,7 @@
 				4FB8C4A5259B6D0600A6DDB4 /* SimpleCarouselItemView.swift in Sources */,
 				4FAF271E259A34C200218656 /* EatListViewController.swift in Sources */,
 				4FC33A77259AD95B00618D34 /* RestaurantAPIError.swift in Sources */,
+				4F745002259C9A39007B79E6 /* UIView+Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
