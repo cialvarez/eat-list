@@ -25,7 +25,7 @@ class RestaurantNetworkService: RestaurantNetworkProvider {
     enum State {
         case loading
         case error(EatListError)
-        case finished(restaurant: [Restaurant], source: DataSource)
+        case finished(response: SearchResponse, source: DataSource)
     }
     
     private let provider: MoyaProvider<RestaurantAPI>
@@ -62,7 +62,7 @@ class RestaurantNetworkService: RestaurantNetworkProvider {
                 }
                 // Get on-disk location of the default Realm
                 DebugLoggingService.log(status: .success, message: "Realm file is located here: \(realm.configuration.fileURL?.debugDescription ?? "n/a")")
-                completion(.finished(restaurant: searchResponse.restaurants, source: .network))
+                completion(.finished(response: searchResponse, source: .network))
             }, onFailure: { error in
                 switch error {
                 case .networkConnectivity:
@@ -73,7 +73,8 @@ class RestaurantNetworkService: RestaurantNetworkProvider {
                         return
                     }
                     DebugLoggingService.log(status: .warning, message: "No network detected. Using cached data for now.")
-                    completion(.finished(restaurant: cachedResult, source: .cache))
+                    let response = SearchResponse(resultsFound: cachedResult.count, resultsShown: cachedResult.count, restaurants: cachedResult)
+                    completion(.finished(response: response, source: .cache))
                 default:
                     DebugLoggingService.log(status: .warning)
                     completion(.error(.networkConnectivity))

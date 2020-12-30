@@ -1,0 +1,2132 @@
+{
+    "results_found": 13435,
+    "results_start": 0,
+    "results_shown": 20,
+    "restaurants": [
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16851686,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16851686",
+                "name": "Tartine Bakery",
+                "url": "https://www.zomato.com/san-francisco/tartine-bakery-mission-district?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "600 Guerrero Street, San Francisco 94110",
+                    "locality": "Mission District",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7614861111",
+                    "longitude": "-122.4239500000",
+                    "zipcode": "94110",
+                    "country_id": 216,
+                    "locality_verbose": "Mission District, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Bakery, Cafe",
+                "timings": "8 AM to 7 PM (Mon), 7:30 AM to 7 PM (Tue-Wed), 7:30 AM to 8 PM (Thu-Fri), 8 AM to 8 PM (Sat-Sun)",
+                "average_cost_for_two": 25,
+                "price_range": 1,
+                "currency": "$",
+                "highlights": [
+                    "Cash",
+                    "Breakfast",
+                    "Debit Card",
+                    "Serves Alcohol",
+                    "Takeaway Available",
+                    "Credit Card",
+                    "Lunch",
+                    "Vegetarian Friendly",
+                    "Wine",
+                    "Indoor Seating",
+                    "Brunch",
+                    "Beer",
+                    "Kid Friendly"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/reviews_photos/4f4/f2ab38e7def8a090053963ed47dd64f4_1541520823.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.7",
+                    "rating_text": "Excellent",
+                    "rating_color": "3F7E00",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.7"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "800"
+                        }
+                    },
+                    "votes": 722
+                },
+                "all_reviews_count": 126,
+                "photos_url": "https://www.zomato.com/san-francisco/tartine-bakery-mission-district/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 111,
+                "menu_url": "https://www.zomato.com/san-francisco/tartine-bakery-mission-district/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/reviews_photos/4f4/f2ab38e7def8a090053963ed47dd64f4_1541520823.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16851686",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/tartine-bakery-mission-district/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 487-2600",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Bakery"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16850231,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16850231",
+                "name": "The Slanted Door",
+                "url": "https://www.zomato.com/san-francisco/the-slanted-door-embarcadero?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "Ferry Building, Level 1, 1 Ferry Plaza, Suite 5, San Francisco 94111",
+                    "locality": "Ferry Building ",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7962638889",
+                    "longitude": "-122.3936777778",
+                    "zipcode": "94111",
+                    "country_id": 216,
+                    "locality_verbose": "Ferry Building , San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Vietnamese, Fusion",
+                "timings": "11 AM to 2:30 PM, 5:30 PM to 10 PM (Mon-Sat), 11:30 AM to 3 PM, 5:30 PM to 10 PM (Sun)",
+                "average_cost_for_two": 100,
+                "price_range": 4,
+                "currency": "$",
+                "highlights": [
+                    "Lunch",
+                    "Serves Alcohol",
+                    "Dinner",
+                    "Credit Card",
+                    "Lunch Menu",
+                    "Wine",
+                    "Indoor Seating",
+                    "Outdoor Seating",
+                    "Beer",
+                    "Serves Cocktails"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/pictures/1/16850231/b2d5b3848b5bbabe352520ed209856ae.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.3",
+                    "rating_text": "Very Good",
+                    "rating_color": "5BA829",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.3"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 1084
+                },
+                "all_reviews_count": 137,
+                "photos_url": "https://www.zomato.com/san-francisco/the-slanted-door-embarcadero/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 133,
+                "menu_url": "https://www.zomato.com/san-francisco/the-slanted-door-embarcadero/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/pictures/1/16850231/b2d5b3848b5bbabe352520ed209856ae.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16850231",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/the-slanted-door-embarcadero/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 861-8032",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16853056,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16853056",
+                "name": "Brenda's French Soul Food",
+                "url": "https://www.zomato.com/san-francisco/brendas-french-soul-food-civic-center?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "652 Polk Street, San Francisco 94102",
+                    "locality": "Civic Center",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7829200000",
+                    "longitude": "-122.4187690000",
+                    "zipcode": "94102",
+                    "country_id": 216,
+                    "locality_verbose": "Civic Center, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Cajun, Southern",
+                "timings": "8 AM to 3 PM (Mon-Tue),8 AM to 10 PM (Wed-Sat),8 AM to 8 PM (Sun)",
+                "average_cost_for_two": 40,
+                "price_range": 2,
+                "currency": "$",
+                "highlights": [
+                    "Credit Card",
+                    "Dinner",
+                    "Takeaway Available",
+                    "Breakfast",
+                    "Lunch",
+                    "Serves Alcohol",
+                    "Wifi",
+                    "Vegetarian Friendly",
+                    "Brunch",
+                    "Fullbar",
+                    "Indoor Seating",
+                    "Lunch Menu"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/res_imagery/16853056_RESTAURANT_2ea23688d207d78fae14a2bce5a7ee7c.png?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.6",
+                    "rating_text": "Excellent",
+                    "rating_color": "3F7E00",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.6"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "800"
+                        }
+                    },
+                    "votes": 474
+                },
+                "all_reviews_count": 121,
+                "photos_url": "https://www.zomato.com/san-francisco/brendas-french-soul-food-civic-center/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 90,
+                "menu_url": "https://www.zomato.com/san-francisco/brendas-french-soul-food-civic-center/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/res_imagery/16853056_RESTAURANT_2ea23688d207d78fae14a2bce5a7ee7c.png",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16853056",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/brendas-french-soul-food-civic-center/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 345-8100",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16842751,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16842751",
+                "name": "Delfina",
+                "url": "https://www.zomato.com/san-francisco/delfina-mission-district?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "3611 18th Street, San Francisco 94110",
+                    "locality": "Mission District",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7615388889",
+                    "longitude": "-122.4243694444",
+                    "zipcode": "94110",
+                    "country_id": 216,
+                    "locality_verbose": "Mission District, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Italian",
+                "timings": "11:30 AM to 10 PM (Mon, Wed-Thu), 5 PM to 10 PM (Tue), 11:30 AM to 11 PM (Fri), 12 Noon to 11 PM (Sat), 12 Noon to 10 PM (Sun)",
+                "average_cost_for_two": 55,
+                "price_range": 2,
+                "currency": "$",
+                "highlights": [
+                    "Dinner",
+                    "Cash",
+                    "Credit Card",
+                    "Serves Alcohol",
+                    "Takeaway Available",
+                    "Debit Card",
+                    "BYOW",
+                    "Outdoor Seating",
+                    "Table booking recommended",
+                    "Corkage Fee Charged",
+                    "Indoor Seating",
+                    "Kid Friendly"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/reviews_photos/cea/e3a3896a01c846a93ebeb7c8232ebcea_1433549754.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.5",
+                    "rating_text": "Excellent",
+                    "rating_color": "3F7E00",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.5"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 701
+                },
+                "all_reviews_count": 74,
+                "photos_url": "https://www.zomato.com/san-francisco/delfina-mission-district/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 34,
+                "menu_url": "https://www.zomato.com/san-francisco/delfina-mission-district/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/reviews_photos/cea/e3a3896a01c846a93ebeb7c8232ebcea_1433549754.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16842751",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/delfina-mission-district/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 437-6800",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Pizzeria"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16843658,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16843658",
+                "name": "Foreign Cinema",
+                "url": "https://www.zomato.com/san-francisco/foreign-cinema-mission-district?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "2534 Mission District Street, San Francisco 94110",
+                    "locality": "Mission District",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7565305556",
+                    "longitude": "-122.4190444444",
+                    "zipcode": "94110",
+                    "country_id": 216,
+                    "locality_verbose": "Mission District, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "California, Seafood",
+                "timings": "5:30 PM to 10 PM (Mon-Wed),5:30 PM to 11 PM (Thu-Fri),11 AM to 2:30 PM, 5:30 PM to 11 PM (Sat),11 AM to 2:30 PM, 5:30 PM to 10 PM (Sun)",
+                "average_cost_for_two": 120,
+                "price_range": 4,
+                "currency": "$",
+                "highlights": [
+                    "Credit Card",
+                    "Takeaway Available",
+                    "Dinner",
+                    "Serves Alcohol",
+                    "Kid Friendly",
+                    "Nightlife",
+                    "Table booking recommended",
+                    "Outdoor Seating",
+                    "Private Dining Area Available",
+                    "Brunch",
+                    "Fullbar"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/pictures/8/16843658/da67f67e7ed64345c6ca9b35c6afe544.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.4",
+                    "rating_text": "Very Good",
+                    "rating_color": "5BA829",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.4"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 545
+                },
+                "all_reviews_count": 58,
+                "photos_url": "https://www.zomato.com/san-francisco/foreign-cinema-mission-district/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 61,
+                "menu_url": "https://www.zomato.com/san-francisco/foreign-cinema-mission-district/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/pictures/8/16843658/da67f67e7ed64345c6ca9b35c6afe544.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16843658",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/foreign-cinema-mission-district/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 648-7600",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16852971,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16852971",
+                "name": "Zuni Café",
+                "url": "https://www.zomato.com/san-francisco/zuni-café-civic-center?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "1658 Market Street, San Francisco 94102",
+                    "locality": "Civic Center",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7736888889",
+                    "longitude": "-122.4213638889",
+                    "zipcode": "94102",
+                    "country_id": 216,
+                    "locality_verbose": "Civic Center, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Italian, French, California",
+                "timings": "Closed (Mon),11:30 AM to 11 PM (Tue-Thu),11:30 AM to 12 Midnight (Fri-Sat),11 AM to 11 PM (Sun)",
+                "average_cost_for_two": 90,
+                "price_range": 3,
+                "currency": "$",
+                "highlights": [
+                    "Credit Card",
+                    "Takeaway Available",
+                    "Dinner",
+                    "Lunch",
+                    "Serves Alcohol",
+                    "Brunch",
+                    "Fullbar",
+                    "Indoor Seating",
+                    "Vegetarian Friendly",
+                    "Lunch Menu"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/res_imagery/16852971_RESTAURANT_ed414bd9d75c685b2e8b6982cd928a9a_c.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.3",
+                    "rating_text": "Very Good",
+                    "rating_color": "5BA829",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.3"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 558
+                },
+                "all_reviews_count": 73,
+                "photos_url": "https://www.zomato.com/san-francisco/zuni-café-civic-center/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 33,
+                "menu_url": "https://www.zomato.com/san-francisco/zuni-café-civic-center/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/res_imagery/16852971_RESTAURANT_ed414bd9d75c685b2e8b6982cd928a9a_c.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16852971",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/zuni-café-civic-center/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 552-2522",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16840989,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16840989",
+                "name": "Boulevard",
+                "url": "https://www.zomato.com/san-francisco/boulevard-embarcadero?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "1 Mission Street, San Francisco 94105",
+                    "locality": "Embarcadero",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7935660000",
+                    "longitude": "-122.3927820000",
+                    "zipcode": "94105",
+                    "country_id": 216,
+                    "locality_verbose": "Embarcadero, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "American, French",
+                "timings": "11:30 AM to 2:15 PM, 5:30 PM to 9:30 PM (Mon-Wed, Sun), 11:30 AM to 2:15 PM, 5:30 PM to 10 PM (Thu-Fri), 5:30 PM to 10:30 PM, 5:30 PM to 10 PM (Sat)",
+                "average_cost_for_two": 120,
+                "price_range": 4,
+                "currency": "$",
+                "highlights": [
+                    "Dinner",
+                    "Debit Card",
+                    "Lunch",
+                    "Serves Alcohol",
+                    "Cash",
+                    "Credit Card",
+                    "Fullbar",
+                    "Indoor Seating",
+                    "Table booking recommended",
+                    "Private Dining Area Available",
+                    "Gluten Free Options",
+                    "Wine",
+                    "Wifi"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/pictures/9/16840989/6da410307bc49536219d985522f6e0df.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.6",
+                    "rating_text": "Excellent",
+                    "rating_color": "3F7E00",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.6"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "800"
+                        }
+                    },
+                    "votes": 465
+                },
+                "all_reviews_count": 50,
+                "photos_url": "https://www.zomato.com/san-francisco/boulevard-embarcadero/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 238,
+                "menu_url": "https://www.zomato.com/san-francisco/boulevard-embarcadero/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/pictures/9/16840989/6da410307bc49536219d985522f6e0df.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16840989",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/boulevard-embarcadero/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 543-6084",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Fine Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16849962,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16849962",
+                "name": "Scoma's",
+                "url": "https://www.zomato.com/san-francisco/scomas-fishermans-wharf?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "1965 Al Scoma Way, San Francisco 94133",
+                    "locality": "Fisherman's Wharf",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.8090527778",
+                    "longitude": "-122.4182500000",
+                    "zipcode": "94133",
+                    "country_id": 216,
+                    "locality_verbose": "Fisherman's Wharf, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Italian, Seafood",
+                "timings": "11:30 AM to 10 PM (Mon, Tue, Wed, Thu, Sun), 11:30 AM to 10:30 PM (Fri-Sat)",
+                "average_cost_for_two": 85,
+                "price_range": 3,
+                "currency": "$",
+                "highlights": [
+                    "Lunch",
+                    "Serves Alcohol",
+                    "Cash",
+                    "Takeaway Available",
+                    "Dinner",
+                    "Credit Card",
+                    "Wifi",
+                    "Vegetarian Friendly",
+                    "Indoor Seating",
+                    "Kid Friendly",
+                    "Fullbar"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/res_imagery/16849962_RESTAURANT_df96609dadf104beb31b3d0ed9202a54_c.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.2",
+                    "rating_text": "Very Good",
+                    "rating_color": "5BA829",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.2"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 628
+                },
+                "all_reviews_count": 138,
+                "photos_url": "https://www.zomato.com/san-francisco/scomas-fishermans-wharf/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 59,
+                "menu_url": "https://www.zomato.com/san-francisco/scomas-fishermans-wharf/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/res_imagery/16849962_RESTAURANT_df96609dadf104beb31b3d0ed9202a54_c.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16849962",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/scomas-fishermans-wharf/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 771-4383",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16849345,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16849345",
+                "name": "Gary Danko",
+                "url": "https://www.zomato.com/san-francisco/gary-danko-fishermans-wharf?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "800 North Point Street, San Francisco 94109",
+                    "locality": "Fisherman's Wharf",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.8057055556",
+                    "longitude": "-122.4205638889",
+                    "zipcode": "94109",
+                    "country_id": 216,
+                    "locality_verbose": "Fisherman's Wharf, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "California",
+                "timings": "5 PM to 12 Midnight (Mon-Sun)",
+                "average_cost_for_two": 210,
+                "price_range": 4,
+                "currency": "$",
+                "highlights": [
+                    "Credit Card",
+                    "Dinner",
+                    "Serves Alcohol",
+                    "Private Dining Area Available",
+                    "Gluten Free Options",
+                    "Nightlife",
+                    "Table booking recommended",
+                    "Indoor Seating",
+                    "Wifi",
+                    "Vegetarian Friendly",
+                    "Fullbar"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/pictures/5/16849345/db5f0c081e8b94e2ffb3e06812a4ae33.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.6",
+                    "rating_text": "Excellent",
+                    "rating_color": "3F7E00",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.6"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "800"
+                        }
+                    },
+                    "votes": 370
+                },
+                "all_reviews_count": 73,
+                "photos_url": "https://www.zomato.com/san-francisco/gary-danko-fishermans-wharf/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 430,
+                "menu_url": "https://www.zomato.com/san-francisco/gary-danko-fishermans-wharf/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/pictures/5/16849345/db5f0c081e8b94e2ffb3e06812a4ae33.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16849345",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/gary-danko-fishermans-wharf/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 749-2060",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Fine Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16860927,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16860927",
+                "name": "State Bird Provisions",
+                "url": "https://www.zomato.com/san-francisco/state-bird-provisions-western-addition?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "1529 Fillmore Street, San Francisco 94115",
+                    "locality": "Western Addition",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7837361000",
+                    "longitude": "-122.4329481000",
+                    "zipcode": "94115",
+                    "country_id": 216,
+                    "locality_verbose": "Western Addition, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "California, Fusion",
+                "timings": "5:30 PM to 10 PM (Mon, Tue, Wed, Thu, Sun), 5:30 PM to 11 PM (Fri-Sat)",
+                "average_cost_for_two": 80,
+                "price_range": 3,
+                "currency": "$",
+                "highlights": [
+                    "Credit Card",
+                    "Takeaway Available",
+                    "Dinner",
+                    "Serves Alcohol",
+                    "Wine",
+                    "Table booking recommended",
+                    "Indoor Seating",
+                    "Farm-to-Table",
+                    "Beer"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "",
+                "user_rating": {
+                    "aggregate_rating": "4.4",
+                    "rating_text": "Very Good",
+                    "rating_color": "5BA829",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.4"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 241
+                },
+                "all_reviews_count": 56,
+                "photos_url": "https://www.zomato.com/san-francisco/state-bird-provisions-western-addition/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 230,
+                "menu_url": "https://www.zomato.com/san-francisco/state-bird-provisions-western-addition/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16860927",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/state-bird-provisions-western-addition/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 795-1272",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16859330,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16859330",
+                "name": "Honey Honey",
+                "url": "https://www.zomato.com/san-francisco/honey-honey-union-square?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "599 Post Street, San Francisco 94102",
+                    "locality": "Union Square",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7878944444",
+                    "longitude": "-122.4115972222",
+                    "zipcode": "94102",
+                    "country_id": 216,
+                    "locality_verbose": "Union Square, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Crepes, Cafe",
+                "timings": "7:30 AM to 10 PM (Mon-Sun)",
+                "average_cost_for_two": 40,
+                "price_range": 2,
+                "currency": "$",
+                "highlights": [
+                    "Dinner",
+                    "Takeaway Available",
+                    "Breakfast",
+                    "Lunch",
+                    "Serves Alcohol",
+                    "Credit Card",
+                    "Lunch Menu",
+                    "Wine",
+                    "Serves Cocktails",
+                    "Kid Friendly",
+                    "Outdoor Seating",
+                    "Beer",
+                    "Wifi"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/res_imagery/16859330_RESTAURANT_5ca8a036daf6a65067bcb2bc184f681c_c.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.3",
+                    "rating_text": "Very Good",
+                    "rating_color": "5BA829",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.3"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 296
+                },
+                "all_reviews_count": 73,
+                "photos_url": "https://www.zomato.com/san-francisco/honey-honey-union-square/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 89,
+                "menu_url": "https://www.zomato.com/san-francisco/honey-honey-union-square/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/res_imagery/16859330_RESTAURANT_5ca8a036daf6a65067bcb2bc184f681c_c.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16859330",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/honey-honey-union-square/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 351-2423",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Café"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16851458,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16851458",
+                "name": "Tadich Grill",
+                "url": "https://www.zomato.com/san-francisco/tadich-grill-financial-district?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "240 California Street. 94111",
+                    "locality": "Financial District",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7933800000",
+                    "longitude": "-122.3992900000",
+                    "zipcode": "94111",
+                    "country_id": 216,
+                    "locality_verbose": "Financial District, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Seafood, American",
+                "timings": "11 AM to 2 PM, 5 PM to 9 PM (Mon-Fri), 5 PM to 9 PM (Sat), Sun Closed",
+                "average_cost_for_two": 80,
+                "price_range": 3,
+                "currency": "$",
+                "highlights": [
+                    "Credit Card",
+                    "Lunch",
+                    "Serves Alcohol",
+                    "Dinner",
+                    "Kid Friendly",
+                    "Lunch Menu",
+                    "Indoor Seating",
+                    "Vegetarian Friendly",
+                    "Fullbar"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/pictures/8/16851458/75a8ddfbd8ed1185fda171f0d0e99bca.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.5",
+                    "rating_text": "Excellent",
+                    "rating_color": "3F7E00",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.5"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 430
+                },
+                "all_reviews_count": 67,
+                "photos_url": "https://www.zomato.com/san-francisco/tadich-grill-financial-district/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 33,
+                "menu_url": "https://www.zomato.com/san-francisco/tadich-grill-financial-district/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/pictures/8/16851458/75a8ddfbd8ed1185fda171f0d0e99bca.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16851458",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/tadich-grill-financial-district/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 391-1849, (415) 391-1849",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16844677,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16844677",
+                "name": "House of Nanking",
+                "url": "https://www.zomato.com/san-francisco/house-of-nanking-chinatown?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "919 Kearny Street, San Francisco 94133",
+                    "locality": "Chinatown",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7964750000",
+                    "longitude": "-122.4050916667",
+                    "zipcode": "94133",
+                    "country_id": 216,
+                    "locality_verbose": "Chinatown, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Chinese",
+                "timings": "11 AM to 10 PM (Mon-Fri), 12 Noon to 10 PM (Sat), 12 Noon to 9:30 PM (Sun)",
+                "average_cost_for_two": 30,
+                "price_range": 2,
+                "currency": "$",
+                "highlights": [
+                    "Dinner",
+                    "Credit Card",
+                    "Lunch",
+                    "Cash",
+                    "Debit Card",
+                    "Indoor Seating"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/reviews_photos/cb2/12eb31271d2077ed62ee37f108781cb2_1529035592.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.1",
+                    "rating_text": "Very Good",
+                    "rating_color": "5BA829",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.1"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 469
+                },
+                "all_reviews_count": 91,
+                "photos_url": "https://www.zomato.com/san-francisco/house-of-nanking-chinatown/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 31,
+                "menu_url": "https://www.zomato.com/san-francisco/house-of-nanking-chinatown/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/reviews_photos/cb2/12eb31271d2077ed62ee37f108781cb2_1529035592.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16844677",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/house-of-nanking-chinatown/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 421-1429",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16840976,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16840976",
+                "name": "Boudin Bakery",
+                "url": "https://www.zomato.com/san-francisco/boudin-bakery-fishermans-wharf?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "160 Jefferson Street, Lower Level, San Francisco 94133",
+                    "locality": "Fisherman's Wharf",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.8087800000",
+                    "longitude": "-122.4146440000",
+                    "zipcode": "94133",
+                    "country_id": 216,
+                    "locality_verbose": "Fisherman's Wharf, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Cafe, Bakery",
+                "timings": "8 AM to 9 PM (Mon-Fri, Sun), 8 AM to 10 PM (Sat)",
+                "average_cost_for_two": 30,
+                "price_range": 2,
+                "currency": "$",
+                "highlights": [
+                    "Lunch",
+                    "Credit Card",
+                    "Debit Card",
+                    "Dinner",
+                    "Cash",
+                    "Breakfast",
+                    "Outdoor Seating",
+                    "Beer",
+                    "Kid Friendly",
+                    "Kids Area",
+                    "Lunch Menu",
+                    "Wine",
+                    "Indoor Seating",
+                    "Vegetarian Friendly",
+                    "Desserts and Bakes"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/reviews_photos/bbc/203669ab31ea9e925a751237e4da7bbc_1522783849.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.6",
+                    "rating_text": "Excellent",
+                    "rating_color": "3F7E00",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.6"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "800"
+                        }
+                    },
+                    "votes": 368
+                },
+                "all_reviews_count": 130,
+                "photos_url": "https://www.zomato.com/san-francisco/boudin-bakery-fishermans-wharf/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 172,
+                "menu_url": "https://www.zomato.com/san-francisco/boudin-bakery-fishermans-wharf/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/reviews_photos/bbc/203669ab31ea9e925a751237e4da7bbc_1522783849.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16840976",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/boudin-bakery-fishermans-wharf/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 928-1849",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Café"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16844513,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16844513",
+                "name": "Hog Island Oyster Company",
+                "url": "https://www.zomato.com/san-francisco/hog-island-oyster-company-embarcadero?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "Ferry Building, Level 1, 1 Ferry Plaza, Suite 11A, San Francisco 94111",
+                    "locality": "Embarcadero",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7961000000",
+                    "longitude": "-122.3934333333",
+                    "zipcode": "94111",
+                    "country_id": 216,
+                    "locality_verbose": "Embarcadero, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Seafood",
+                "timings": "11 AM to 9 PM",
+                "average_cost_for_two": 120,
+                "price_range": 4,
+                "currency": "$",
+                "highlights": [
+                    "Serves Alcohol",
+                    "Lunch",
+                    "Dinner",
+                    "Credit Card",
+                    "Farm-to-Table",
+                    "Beer",
+                    "Indoor Seating"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/pictures/3/16844513/701d923f56f84dbeb11c3e5a947e3be5.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.9",
+                    "rating_text": "Excellent",
+                    "rating_color": "3F7E00",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.9"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "800"
+                        }
+                    },
+                    "votes": 292
+                },
+                "all_reviews_count": 75,
+                "photos_url": "https://www.zomato.com/san-francisco/hog-island-oyster-company-embarcadero/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 775,
+                "menu_url": "https://www.zomato.com/san-francisco/hog-island-oyster-company-embarcadero/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/pictures/3/16844513/701d923f56f84dbeb11c3e5a947e3be5.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16844513",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/hog-island-oyster-company-embarcadero/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 391-7117",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16842986,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16842986",
+                "name": "Dottie's",
+                "url": "https://www.zomato.com/san-francisco/dotties-soma?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "28 6th Street, San Francisco 94103",
+                    "locality": "SOMA",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7817527778",
+                    "longitude": "-122.4098361111",
+                    "zipcode": "94103",
+                    "country_id": 216,
+                    "locality_verbose": "SOMA, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "American",
+                "timings": "7:30 AM to 3 PM (Mon, Thu, Fri), Closed (Tue-Wed),7:30 AM to 4 PM (Sat-Sun)",
+                "average_cost_for_two": 50,
+                "price_range": 2,
+                "currency": "$",
+                "highlights": [
+                    "Cash",
+                    "Takeaway Available",
+                    "Serves Alcohol",
+                    "Credit Card",
+                    "Breakfast",
+                    "Lunch",
+                    "Indoor Seating",
+                    "Brunch",
+                    "Wine",
+                    "Serves Cocktails",
+                    "Kid Friendly",
+                    "Lunch Menu",
+                    "Beer"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/res_imagery/16842986_RESTAURANT_59cdcda3f40d90adaa81cef9015d49a5_c.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.4",
+                    "rating_text": "Very Good",
+                    "rating_color": "5BA829",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.4"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 341
+                },
+                "all_reviews_count": 67,
+                "photos_url": "https://www.zomato.com/san-francisco/dotties-soma/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 54,
+                "menu_url": "https://www.zomato.com/san-francisco/dotties-soma/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/res_imagery/16842986_RESTAURANT_59cdcda3f40d90adaa81cef9015d49a5_c.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16842986",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/dotties-soma/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 885-2767",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16847879,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16847879",
+                "name": "Nopa",
+                "url": "https://www.zomato.com/san-francisco/nopa-western-addition?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "560 Divisadero Street, San Francisco 94117",
+                    "locality": "Western Addition",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7748527778",
+                    "longitude": "-122.4378805556",
+                    "zipcode": "94117",
+                    "country_id": 216,
+                    "locality_verbose": "Western Addition, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "California",
+                "timings": "5 PM to 1 AM (Mon-Fri),11 AM to 2:30 PM, 5 PM to 1 AM (Sat-Sun)",
+                "average_cost_for_two": 100,
+                "price_range": 4,
+                "currency": "$",
+                "highlights": [
+                    "Credit Card",
+                    "Dinner",
+                    "Lunch",
+                    "Serves Alcohol",
+                    "Brunch",
+                    "Fullbar",
+                    "Indoor Seating",
+                    "Nightlife"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/res_imagery/16847879_RESTAURANT_22344f4858fd9e0489c40d9daf0e34e6.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.4",
+                    "rating_text": "Very Good",
+                    "rating_color": "5BA829",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.4"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 328
+                },
+                "all_reviews_count": 45,
+                "photos_url": "https://www.zomato.com/san-francisco/nopa-western-addition/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 45,
+                "menu_url": "https://www.zomato.com/san-francisco/nopa-western-addition/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/res_imagery/16847879_RESTAURANT_22344f4858fd9e0489c40d9daf0e34e6.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16847879",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/nopa-western-addition/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 864-8643",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16845743,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16845743",
+                "name": "Kokkari Estiatorio",
+                "url": "https://www.zomato.com/san-francisco/kokkari-estiatorio-financial-district?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "200 Jackson Street, San Francisco 94111",
+                    "locality": "Financial District",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7970277778",
+                    "longitude": "-122.3994055556",
+                    "zipcode": "94111",
+                    "country_id": 216,
+                    "locality_verbose": "Financial District, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Greek, Mediterranean",
+                "timings": "11:30 AM to 10 PM (Mon-Thu),11:30 AM to 11 PM (Fri),5 PM to 11 PM (Sat),Closed (Sun)",
+                "average_cost_for_two": 100,
+                "price_range": 4,
+                "currency": "$",
+                "highlights": [
+                    "Cash",
+                    "Dinner",
+                    "Credit Card",
+                    "Lunch",
+                    "Indoor Seating",
+                    "Vegetarian Friendly",
+                    "Fullbar",
+                    "Lunch Menu"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/pictures/3/16845743/16e04d0fb52f2e6935d864a622ac0a9c.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.6",
+                    "rating_text": "Excellent",
+                    "rating_color": "3F7E00",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.6"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "800"
+                        }
+                    },
+                    "votes": 303
+                },
+                "all_reviews_count": 43,
+                "photos_url": "https://www.zomato.com/san-francisco/kokkari-estiatorio-financial-district/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 339,
+                "menu_url": "https://www.zomato.com/san-francisco/kokkari-estiatorio-financial-district/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/pictures/3/16845743/16e04d0fb52f2e6935d864a622ac0a9c.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16845743",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/kokkari-estiatorio-financial-district/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 981-0983",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16841211,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16841211",
+                "name": "Burma Superstar",
+                "url": "https://www.zomato.com/san-francisco/burma-superstar-inner-richmond?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "309 Clement Street, San Francisco 94118",
+                    "locality": "Inner Richmond",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7830361111",
+                    "longitude": "-122.4625472222",
+                    "zipcode": "94118",
+                    "country_id": 216,
+                    "locality_verbose": "Inner Richmond, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Burmese",
+                "timings": "11:30 AM to 3 PM, 5 PM to 9:30 PM (Mon, Tue, Wed, Thu, Sun), 11:30 AM to 3 PM, 5 PM to 10 PM (Fri-Sat)",
+                "average_cost_for_two": 50,
+                "price_range": 2,
+                "currency": "$",
+                "highlights": [
+                    "Cash",
+                    "Dinner",
+                    "Credit Card",
+                    "Takeaway Available",
+                    "Lunch",
+                    "Serves Alcohol",
+                    "Private Parking",
+                    "Kid Friendly",
+                    "Gluten Free Options",
+                    "Fullbar",
+                    "Indoor Seating",
+                    "Vegetarian Friendly"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/pictures/1/16841211/e747b99058f9c44a6dee4e84881b5c92.png?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.4",
+                    "rating_text": "Very Good",
+                    "rating_color": "5BA829",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.4"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "700"
+                        }
+                    },
+                    "votes": 369
+                },
+                "all_reviews_count": 61,
+                "photos_url": "https://www.zomato.com/san-francisco/burma-superstar-inner-richmond/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 136,
+                "menu_url": "https://www.zomato.com/san-francisco/burma-superstar-inner-richmond/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/pictures/1/16841211/e747b99058f9c44a6dee4e84881b5c92.png",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16841211",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/burma-superstar-inner-richmond/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 387-2147",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Casual Dining"
+                ],
+                "establishment_types": []
+            }
+        },
+        {
+            "restaurant": {
+                "R": {
+                    "res_id": 16852987,
+                    "is_grocery_store": false,
+                    "has_menu_status": {
+                        "delivery": -1,
+                        "takeaway": -1
+                    }
+                },
+                "apikey": "f99ebef11cec1ca2b908e93967c58ee7",
+                "id": "16852987",
+                "name": "Bi-Rite Creamery & Bakeshop",
+                "url": "https://www.zomato.com/san-francisco/bi-rite-creamery-bakeshop-mission-district?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "location": {
+                    "address": "3692 18th Street, San Francisco 94110",
+                    "locality": "Mission District",
+                    "city": "San Francisco",
+                    "city_id": 306,
+                    "latitude": "37.7614833333",
+                    "longitude": "-122.4257055556",
+                    "zipcode": "94110",
+                    "country_id": 216,
+                    "locality_verbose": "Mission District, San Francisco"
+                },
+                "switch_to_order_menu": 0,
+                "cuisines": "Ice Cream",
+                "timings": "11 AM to 10 PM (Mon, Tue, Wed, Thu, Sun), 11 AM to 11 PM (Fri-Sat)",
+                "average_cost_for_two": 15,
+                "price_range": 1,
+                "currency": "$",
+                "highlights": [
+                    "Credit Card",
+                    "Kid Friendly"
+                ],
+                "offers": [],
+                "opentable_support": 0,
+                "is_zomato_book_res": 0,
+                "mezzo_provider": "OTHER",
+                "is_book_form_web_view": 0,
+                "book_form_web_view_url": "",
+                "book_again_url": "",
+                "thumb": "https://b.zmtcdn.com/data/res_imagery/16852987_RESTAURANT_82f3f22d2f8af45d3001cd2e5f82e6aa_c.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A",
+                "user_rating": {
+                    "aggregate_rating": "4.8",
+                    "rating_text": "Excellent",
+                    "rating_color": "3F7E00",
+                    "rating_obj": {
+                        "title": {
+                            "text": "4.8"
+                        },
+                        "bg_color": {
+                            "type": "lime",
+                            "tint": "800"
+                        }
+                    },
+                    "votes": 392
+                },
+                "all_reviews_count": 75,
+                "photos_url": "https://www.zomato.com/san-francisco/bi-rite-creamery-bakeshop-mission-district/photos?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1#tabtop",
+                "photo_count": 46,
+                "menu_url": "https://www.zomato.com/san-francisco/bi-rite-creamery-bakeshop-mission-district/menu?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1&openSwipeBox=menu&showMinimal=1#tabtop",
+                "featured_image": "https://b.zmtcdn.com/data/res_imagery/16852987_RESTAURANT_82f3f22d2f8af45d3001cd2e5f82e6aa_c.jpg",
+                "medio_provider": false,
+                "has_online_delivery": 0,
+                "is_delivering_now": 0,
+                "store_type": "",
+                "include_bogo_offers": true,
+                "deeplink": "zomato://restaurant/16852987",
+                "is_table_reservation_supported": 0,
+                "has_table_booking": 0,
+                "events_url": "https://www.zomato.com/san-francisco/bi-rite-creamery-bakeshop-mission-district/events#tabtop?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                "phone_numbers": "(415) 626-5600",
+                "all_reviews": {
+                    "reviews": [
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        },
+                        {
+                            "review": []
+                        }
+                    ]
+                },
+                "establishment": [
+                    "Dessert Parlour"
+                ],
+                "establishment_types": []
+            }
+        }
+    ]
+}

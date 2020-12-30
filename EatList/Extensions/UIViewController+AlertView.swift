@@ -19,11 +19,13 @@ extension UIViewController {
         
         let alertView = AlertView()
         alertView.tag = alertHash
+        var actions = error.primaryButtonTitle.isEmpty ? [] : [AlertView.ButtonParameters(title: error.primaryButtonTitle, style: .primary, onTap: onPrimaryCtaTap)]
+        actions.append(.init(title: error.dismissButtonTitle, style: .secondary))
         alertView.render(with: .init(image: R.image.errorIcon(),
                                      title: error.errorTitle,
                                      description: error.errorMessage,
-                                     actions: [.init(title: error.primaryButtonTitle, style: .primary, onTap: onPrimaryCtaTap),
-                                               .init(title: error.dismissButtonTitle, style: .secondary)]))
+                                     actions: actions))
+        
         alertView.translatesAutoresizingMaskIntoConstraints = false
         UIView.transition(
             with: view,

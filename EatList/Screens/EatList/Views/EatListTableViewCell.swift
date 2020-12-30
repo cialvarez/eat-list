@@ -18,6 +18,7 @@ class EatListTableViewCell: UITableViewCell, NibReusable {
         let location: String
         let rating: String
         let priceDetails: String
+        let containerHeroId: String
     }
 
     @IBOutlet weak var featuredImageView: UIImageView!
@@ -40,7 +41,6 @@ class EatListTableViewCell: UITableViewCell, NibReusable {
     }
     
     func render(with parameters: EatListTableViewCell.Parameters) {
-        toggleLoadingState(isLoading: false)
         featuredImageView.kf.indicatorType = .activity
         featuredImageView.kf.setImage(with: parameters.imageUrl,
                                       placeholder: R.image.placeholder(),
@@ -52,6 +52,7 @@ class EatListTableViewCell: UITableViewCell, NibReusable {
         locationLabel.text = parameters.location
         ratingLabel.text = parameters.rating
         priceDetailsLabel.text = parameters.priceDetails
+        containerView.hero.id = parameters.containerHeroId
     }
     
     func toggleLoadingState(isLoading: Bool) {

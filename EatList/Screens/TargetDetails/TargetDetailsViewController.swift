@@ -53,7 +53,9 @@ class TargetDetailsViewController: UIViewController {
             switch state {
             case .loading: break
             case .error(let error): self.showError(error: error)
-            case .finished(let sections): self.dataSourceProvider.update(sections: sections)
+            case .finished(let sections):
+                self.dataSourceProvider.update(sections: sections)
+                self.view.hero.id = self.viewModel.backgroundHeroId
             }
         }
     }

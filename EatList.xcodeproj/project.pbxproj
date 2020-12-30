@@ -11,6 +11,8 @@
 		4F091153259CF8A3000A11AF /* UIViewController+Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F091152259CF8A3000A11AF /* UIViewController+Banner.swift */; };
 		4F091158259D09AA000A11AF /* EatListBlankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F091156259D09AA000A11AF /* EatListBlankTableViewCell.swift */; };
 		4F091159259D09AA000A11AF /* EatListBlankTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F091157259D09AA000A11AF /* EatListBlankTableViewCell.xib */; };
+		4F09115D259D113A000A11AF /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F09115C259D113A000A11AF /* XCTestCase.swift */; };
+		4F091164259D121F000A11AF /* getTrending-SanFrancisco.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F091163259D121F000A11AF /* getTrending-SanFrancisco.json */; };
 		4F48C5DB259ABDC00003ADE6 /* RestaurantAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C5DA259ABDC00003ADE6 /* RestaurantAPI.swift */; };
 		4F48C5DF259AC2830003ADE6 /* Encodable+ToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C5DE259AC2830003ADE6 /* Encodable+ToDictionary.swift */; };
 		4F48C5E2259AC7BA0003ADE6 /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C5E1259AC7BA0003ADE6 /* SortType.swift */; };
@@ -93,6 +95,8 @@
 		4F091152259CF8A3000A11AF /* UIViewController+Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Banner.swift"; sourceTree = "<group>"; };
 		4F091156259D09AA000A11AF /* EatListBlankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatListBlankTableViewCell.swift; sourceTree = "<group>"; };
 		4F091157259D09AA000A11AF /* EatListBlankTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EatListBlankTableViewCell.xib; sourceTree = "<group>"; };
+		4F09115C259D113A000A11AF /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		4F091163259D121F000A11AF /* getTrending-SanFrancisco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "getTrending-SanFrancisco.json"; sourceTree = "<group>"; };
 		4F48C5DA259ABDC00003ADE6 /* RestaurantAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAPI.swift; sourceTree = "<group>"; };
 		4F48C5DE259AC2830003ADE6 /* Encodable+ToDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+ToDictionary.swift"; sourceTree = "<group>"; };
 		4F48C5E1259AC7BA0003ADE6 /* SortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortType.swift; sourceTree = "<group>"; };
@@ -181,6 +185,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F091160259D115E000A11AF /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				4F091163259D121F000A11AF /* getTrending-SanFrancisco.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 		4F48C5DD259AC2730003ADE6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,9 +256,11 @@
 		4F744FE0259C7364007B79E6 /* EatListTests */ = {
 			isa = PBXGroup;
 			children = (
+				4F091160259D115E000A11AF /* Stubs */,
 				4F744FE1259C7364007B79E6 /* EatListTests.swift */,
 				4F744FE3259C7365007B79E6 /* Info.plist */,
 				4F744FED259C73FB007B79E6 /* TargetDetailsVMTests.swift */,
+				4F09115C259D113A000A11AF /* XCTestCase.swift */,
 			);
 			path = EatListTests;
 			sourceTree = "<group>";
@@ -608,6 +622,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F091164259D121F000A11AF /* getTrending-SanFrancisco.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +732,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F744FEE259C73FB007B79E6 /* TargetDetailsVMTests.swift in Sources */,
+				4F09115D259D113A000A11AF /* XCTestCase.swift in Sources */,
 				4F744FE2259C7365007B79E6 /* EatListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,13 +12,18 @@ protocol SectionUpdatable: UITableViewDataSource, UITableViewDelegate {
     func update(sections: [TableViewCellType])
 }
 
+protocol Paginatable {
+    var reachedEndOfList: (IndexPath) -> Void { get set }
+}
+
 // Inspired by: https://www.alfianlosari.com/posts/slim-view-controller-through-uitableview-datasource-delegate-encapsulation/
-class TableViewDataSourceController<U: TableViewCellTypeProtocol>: NSObject, UITableViewDataSource, UITableViewDelegate, SectionUpdatable {
+class TableViewDataSourceController<U: TableViewCellTypeProtocol>: NSObject, UITableViewDataSource, UITableViewDelegate, SectionUpdatable, Paginatable {
     
     typealias TableViewCellType = U
     
     private var dataSource = [TableViewCellType]()
     private var tableView: UITableView
+    var reachedEndOfList: (IndexPath) -> Void = { _ in }
     
     init(for tableView: UITableView) {
         self.tableView = tableView
@@ -66,6 +71,14 @@ class TableViewDataSourceController<U: TableViewCellTypeProtocol>: NSObject, UIT
         let cellDataSource = dataSource[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath)
         cellDataSource.cellSelectBlock?(cell, indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard indexPath.row < dataSource.count else {
+            return
+        }
+        
+        if indexPath.row == (dataSource.count - 1) { reachedEndOfList(indexPath) }
     }
 }
 

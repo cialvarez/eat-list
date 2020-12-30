@@ -11,6 +11,7 @@ import CoreLocation
 protocol TargetDetailsProvider {
     var lastUpdatedList: [TargetDetailsSectionType] { get }
     var navBarTitle: String { get }
+    var backgroundHeroId: String { get }
     var wantsToUpdateState: (TargetDetailsViewModel.State) -> Void { get set }
     func processDetails()
 }
@@ -28,6 +29,7 @@ class TargetDetailsViewModel: TargetDetailsProvider {
     private(set) var lastUpdatedList = [TargetDetailsSectionType]()
     var wantsToUpdateState: (TargetDetailsViewModel.State) -> Void = { _ in }
     private(set) var navBarTitle = ""
+    private(set) var backgroundHeroId: String = ""
     
     init(restaurantDetails: RestaurantDetails) {
         self.restaurantDetails = restaurantDetails
@@ -47,6 +49,7 @@ class TargetDetailsViewModel: TargetDetailsProvider {
             .highlights(parameters: highlights)
         ]
         navBarTitle = restaurantDetails.name
+        backgroundHeroId = "HeroBackground\(restaurantDetails.id)"
         wantsToUpdateState(.finished(lastUpdatedList))
     }
     

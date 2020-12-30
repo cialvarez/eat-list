@@ -9,10 +9,13 @@ import Foundation
 import Unrealm
 // MARK: - SearchResponse
 struct SearchResponse: Codable {
-    
+    let resultsFound: Int
+    let resultsShown: Int
     let restaurants: [Restaurant]
 
     enum CodingKeys: String, CodingKey {
+        case resultsFound = "results_found"
+        case resultsShown = "results_shown"
         case restaurants
     }
 }

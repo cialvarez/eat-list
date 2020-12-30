@@ -15,6 +15,7 @@ protocol EatListProvider {
     var wantsToViewRestaurant: (RestaurantDetails) -> Void { get set }
     var wantsToUpdateState: (EatListViewModel.State) -> Void { get set }
     func fetchList()
+    func nextPage()
 }
 
 class EatListViewModel: NSObject, EatListProvider {
@@ -31,6 +32,7 @@ class EatListViewModel: NSObject, EatListProvider {
     
     private let networkService: RestaurantNetworkProvider
     private let locationService: LocationProvider
+    private var canLoadMore: Bool = true
     
     init(networkService: RestaurantNetworkProvider = RestaurantNetworkService(provider: .init()),
          locationService: LocationProvider = LocationService()) {
@@ -43,23 +45,43 @@ class EatListViewModel: NSObject, EatListProvider {
         self.locationService.fetchUserLocation { [weak self] result in
             guard let self = self else { return }
             switch result {
-            case .success(let location):
-                self.fetchTrendingRestaurants(in: location)
+            case .success:
+                self.fetchTrendingRestaurants(startingAt: 0)
             case .failure(let error):
                 self.wantsToUpdateState(.error(error))
             }
         }
     }
     
-    private func fetchTrendingRestaurants(in location: CLLocationCoordinate2D) {
+    func nextPage() {
+        fetchTrendingRestaurants(startingAt: max(lastUpdatedList.count - 1, 0))
+    }
+    
+    private func fetchTrendingRestaurants(startingAt index: Int) {
+        guard canLoadMore else {
+            return
+        }
+        guard let currentLocation = locationService.lastReceivedLocation else {
+            assertionFailure("Expected a location but got nil!")
+            return
+        }
         networkService
             .fetchTrendingRestaurants(
-                parameters: .init(lat: location.latitude,
-                                  lon: location.longitude)) { [weak self] result in
+                parameters: .init(lat: currentLocation.latitude,
+                                  lon: currentLocation.longitude,
+                                  start: index)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
-                case let .finished(restaurants, source):
-                    self.wantsToUpdateState(.finished(restaurants.asEatListSection(wantsToViewRestaurant: self.wantsToViewRestaurant),
+                case let .finished(response, source):
+                    self.canLoadMore = response.resultsShown < response.resultsFound && response.resultsShown != 0
+                    // We need to make this check due to an API bug wherein even if the results found are much much higher, the cap is actually much lower
+                    // and when you reach that cap you get a blank list
+                    guard response.resultsShown != 0 else {
+                        return
+                    }
+                    if index == 0 { self.lastUpdatedList = [] }
+                    self.lastUpdatedList.append(contentsOf: response.restaurants.asEatListSection(wantsToViewRestaurant: self.wantsToViewRestaurant))
+                    self.wantsToUpdateState(.finished(self.lastUpdatedList,
                                                       source: source))
                 case let .error(error):
                     self.wantsToUpdateState(.error(error))
@@ -80,7 +102,8 @@ private extension Array where Element == Restaurant {
                 cuisine: restaurantDetails.cuisines,
                 location: restaurantDetails.location.localityVerbose,
                 rating: "\(restaurantDetails.userRating.aggregateRating) /5",
-                priceDetails: "\(restaurantDetails.currency)\(restaurantDetails.averageCostForTwo) for two"
+                priceDetails: "\(restaurantDetails.currency)\(restaurantDetails.averageCostForTwo) for two",
+                containerHeroId: "HeroBackground\(restaurantDetails.id)"
             )
             return .restaurantDetails(parameters: parameters,
                                       restaurantDetails: restaurant.restaurant,

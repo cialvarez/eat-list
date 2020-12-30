@@ -11,4 +11,6 @@ struct TrendingSearchRequestParams: Codable, Parameterable {
     var lat: Double
     var lon: Double
     var collectionId: String = "1"
+    var start: Int
+    var count: Int = 20
 }

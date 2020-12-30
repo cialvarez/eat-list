@@ -18,7 +18,8 @@ class TargetDetailsVMTests: XCTestCase {
     }
 
     func testViewModel() throws {
-        let viewModel = TargetDetailsViewModel()
+        
+//        let viewModel = TargetDetailsViewModel(restaurantDetails: <#T##RestaurantDetails#>)
 //        viewModel.transform(input: .init(restaurantDetails: <#T##RestaurantDetails#>))
     }
 
