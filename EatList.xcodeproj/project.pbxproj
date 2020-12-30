@@ -22,6 +22,7 @@
 		4F744FE2259C7365007B79E6 /* EatListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744FE1259C7364007B79E6 /* EatListTests.swift */; };
 		4F744FEE259C73FB007B79E6 /* TargetDetailsVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744FED259C73FB007B79E6 /* TargetDetailsVMTests.swift */; };
 		4F744FF3259C74FB007B79E6 /* DebugLoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744FF2259C74FB007B79E6 /* DebugLoggingService.swift */; };
+		4F744FF8259C8229007B79E6 /* EatListSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744FF7259C8229007B79E6 /* EatListSectionType.swift */; };
 		4FAF2702259A2F5C00218656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2701259A2F5C00218656 /* AppDelegate.swift */; };
 		4FAF2704259A2F5C00218656 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2703259A2F5C00218656 /* SceneDelegate.swift */; };
 		4FAF270B259A2F5D00218656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FAF270A259A2F5D00218656 /* Assets.xcassets */; };
@@ -96,6 +97,7 @@
 		4F744FE3259C7365007B79E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F744FED259C73FB007B79E6 /* TargetDetailsVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDetailsVMTests.swift; sourceTree = "<group>"; };
 		4F744FF2259C74FB007B79E6 /* DebugLoggingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLoggingService.swift; sourceTree = "<group>"; };
+		4F744FF7259C8229007B79E6 /* EatListSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatListSectionType.swift; sourceTree = "<group>"; };
 		4FAF26FE259A2F5C00218656 /* EatList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAF2701259A2F5C00218656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FAF2703259A2F5C00218656 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +219,14 @@
 			path = EatListTests;
 			sourceTree = "<group>";
 		};
+		4F744FF6259C821E007B79E6 /* Enumerators */ = {
+			isa = PBXGroup;
+			children = (
+				4F744FF7259C8229007B79E6 /* EatListSectionType.swift */,
+			);
+			path = Enumerators;
+			sourceTree = "<group>";
+		};
 		4FAF26F5259A2F5C00218656 = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +282,7 @@
 		4FAF271A259A340300218656 /* EatList */ = {
 			isa = PBXGroup;
 			children = (
+				4F744FF6259C821E007B79E6 /* Enumerators */,
 				4FC33A80259B044400618D34 /* Views */,
 				4FAF271D259A34C200218656 /* EatListViewController.swift */,
 				4FAF2755259A3F4E00218656 /* EatList.storyboard */,
@@ -669,6 +680,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F744FF8259C8229007B79E6 /* EatListSectionType.swift in Sources */,
 				4F48C602259AD6FE0003ADE6 /* PresentableError.swift in Sources */,
 				4FB8C483259B5E4500A6DDB4 /* BaseDetailsTableViewCell.swift in Sources */,
 				4FC33A7E259B003900618D34 /* CustomizableView.swift in Sources */,

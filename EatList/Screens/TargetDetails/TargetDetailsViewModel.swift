@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import CoreLocation
 class TargetDetailsViewModel {
     
     struct Input {
@@ -19,9 +19,10 @@ class TargetDetailsViewModel {
     
     func transform(input: Input) -> Output {
         let restaurantDetails = input.restaurantDetails
-        let imageHeader = ImageHeaderTableViewCell.Parameters(imageUrl: URL(string: restaurantDetails.featuredImage), heroId: "HeroImage\(restaurantDetails.id)")
+        let imageHeader = ImageHeaderTableViewCell.Parameters(imageUrl: URL(string: restaurantDetails.featuredImage),
+                                                              heroId: "HeroImage\(restaurantDetails.id)")
         let baseDetails = getBaseDetails(from: restaurantDetails)
-        let addressDetails = AddressDetailsTableViewCell.Parameters(fullAddress: restaurantDetails.location.localityVerbose)
+        let addressDetails = getAddressDetails(from: restaurantDetails)
         let highlights = HighlightsTableViewCell.Parameters(highlightsList: restaurantDetails.highlights)
         
         return .init(tableViewCellItems: [
@@ -44,5 +45,15 @@ class TargetDetailsViewModel {
             location: "\(restaurantDetails.location.localityVerbose)",
             operatingHours: "\(restaurantDetails.timings)",
             costForTwo: "Cost for two - \(restaurantDetails.currency)\(restaurantDetails.averageCostForTwo) approx." + (hasAlcohol ? "" : "without alcohol"))
+    }
+    
+    private func getAddressDetails(from restaurantDetails: RestaurantDetails) -> AddressDetailsTableViewCell.Parameters {
+        let fullAddress = restaurantDetails.location.localityVerbose
+        guard let latitude = Double(restaurantDetails.location.latitude),
+              let longitude = Double(restaurantDetails.location.longitude) else {
+            return .init(fullAddress: fullAddress, location: nil)
+        }
+        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        return AddressDetailsTableViewCell.Parameters(fullAddress: fullAddress, location: location)
     }
 }
