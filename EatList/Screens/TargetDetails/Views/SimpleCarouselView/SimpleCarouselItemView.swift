@@ -38,7 +38,7 @@ class SimpleCarouselItemView: UIControl, UICollectionViewDelegateFlowLayout, UIC
     
     private func viewLoadFromNib() {
         guard let view = R.nib.simpleCarouselItemView.firstView(owner: self) else {
-                return
+            return
         }
         
         addSubview(view)
@@ -53,18 +53,14 @@ extension SimpleCarouselItemView {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView
-            .dequeueReusableCell(withReuseIdentifier: R.nib.simpleCarouselItemCell.identifier,
-                                 for: indexPath) as? SimpleCarouselItemCell,
-            dataSource.count > indexPath.row {
-            cell.setup(name: dataSource[indexPath.row])
-            return cell
-        }
-        return UICollectionViewCell()
+        guard dataSource.count > indexPath.row else { return UICollectionViewCell() }
+        let cell = collectionView.dequeueReusableCell(of: SimpleCarouselItemCell.self, for: indexPath)
+        cell.setup(name: dataSource[indexPath.row])
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            selectedCells(self)
+        selectedCells(self)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -76,7 +72,6 @@ extension SimpleCarouselItemView {
     }
 }
 
-// View Update Methods
 extension SimpleCarouselItemView {
     
     func updateDataSource(with data: [String]) {

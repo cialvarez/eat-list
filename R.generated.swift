@@ -412,14 +412,6 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
-  struct reuseIdentifier {
-    /// Reuse identifier `PopularItem`.
-    static let popularItem: Rswift.ReuseIdentifier<SimpleCarouselItemCell> = Rswift.ReuseIdentifier(identifier: "PopularItem")
-
-    fileprivate init() {}
-  }
-
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -532,11 +524,8 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    struct _SimpleCarouselItemCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
-      typealias ReusableType = SimpleCarouselItemCell
-
+    struct _SimpleCarouselItemCell: Rswift.NibResourceType {
       let bundle = R.hostingBundle
-      let identifier = "PopularItem"
       let name = "SimpleCarouselItemCell"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SimpleCarouselItemCell? {
