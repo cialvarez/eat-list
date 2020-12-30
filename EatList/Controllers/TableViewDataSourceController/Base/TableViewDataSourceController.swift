@@ -8,9 +8,8 @@
 import UIKit
 
 // Inspired by: https://www.alfianlosari.com/posts/slim-view-controller-through-uitableview-datasource-delegate-encapsulation/
-class TableViewDataSourceController<T, U: TableViewCellTypeProtocol>: NSObject, UITableViewDataSource, UITableViewDelegate {
+class TableViewDataSourceController<U: TableViewCellTypeProtocol>: NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    typealias TableViewCellModelType = T
     typealias TableViewCellType = U
     
     let tableViewDataSource: TableViewDataManager<TableViewCellType>

@@ -22,8 +22,7 @@ class TargetDetailsViewController: UIViewController {
     @IBOutlet weak private var tableView: UITableView!
     
     private var dataManager = TableViewDataManager<TargetDetailsSectionType>()
-    private lazy var dataSourceProvider =
-        TableViewDataSourceController<RestaurantDetails, TargetDetailsSectionType>(dataManager: dataManager, for: tableView)
+    private lazy var dataSourceProvider = TableViewDataSourceController<TargetDetailsSectionType>(dataManager: dataManager, for: tableView)
 
     override func viewDidLoad() {
         super.viewDidLoad()
