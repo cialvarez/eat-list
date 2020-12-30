@@ -16,7 +16,7 @@ enum TargetDetailsSectionType {
 }
 
 extension TargetDetailsSectionType: TableViewCellTypeProtocol {
-    
+
     typealias TableViewCellModelType = RestaurantDetails
     
     var reuseIdentifier: String {
@@ -37,6 +37,10 @@ extension TargetDetailsSectionType: TableViewCellTypeProtocol {
              .highlights:
             return UITableView.automaticDimension
         }
+    }
+    
+    var cellSelectBlock: RowSelectedBlock? {
+        return nil
     }
     
     var cellSetupBlock: ViewSetupBlock? {

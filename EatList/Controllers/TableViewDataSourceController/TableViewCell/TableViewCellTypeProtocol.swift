@@ -12,4 +12,5 @@ protocol TableViewCellTypeProtocol {
     var reuseIdentifier: String { get }
     var height: CGFloat { get }
     var cellSetupBlock: ViewSetupBlock? { get }
+    var cellSelectBlock: RowSelectedBlock? { get }
 }

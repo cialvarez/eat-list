@@ -11,6 +11,7 @@ class ImageHeaderTableViewCell: UITableViewCell, NibReusable {
     
     struct Parameters {
         let imageUrl: URL?
+        let heroId: String
     }
     
     @IBOutlet weak var headerImageView: UIImageView! {
@@ -26,5 +27,6 @@ class ImageHeaderTableViewCell: UITableViewCell, NibReusable {
     
     func render(with parameters: Parameters) {
         headerImageView.kf.setImage(with: parameters.imageUrl, placeholder: nil, options: [.transition(.fade(1.0))], progressBlock: nil)
+        headerImageView.hero.id = parameters.heroId
     }
 }

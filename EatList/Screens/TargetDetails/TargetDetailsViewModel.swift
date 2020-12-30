@@ -19,7 +19,7 @@ class TargetDetailsViewModel {
     
     func transform(input: Input) -> Output {
         let restaurantDetails = input.restaurantDetails
-        let imageHeader = ImageHeaderTableViewCell.Parameters(imageUrl: URL(string: restaurantDetails.featuredImage))
+        let imageHeader = ImageHeaderTableViewCell.Parameters(imageUrl: URL(string: restaurantDetails.featuredImage), heroId: "HeroImage\(restaurantDetails.id)")
         let baseDetails = getBaseDetails(from: restaurantDetails)
         let addressDetails = AddressDetailsTableViewCell.Parameters(fullAddress: restaurantDetails.location.localityVerbose)
         let highlights = HighlightsTableViewCell.Parameters(highlightsList: restaurantDetails.highlights)

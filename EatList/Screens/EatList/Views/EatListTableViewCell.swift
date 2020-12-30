@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 
 struct EatListItem {
+    let imageHeroId: String
     let imageUrl: URL?
     let name: String
     let cuisine: String
@@ -36,6 +37,8 @@ class EatListTableViewCell: UITableViewCell {
         if let imageUrl = data.imageUrl {
             featuredImageView.kf.indicatorType = .activity
             featuredImageView.kf.setImage(with: imageUrl, placeholder: nil, options: [.transition(.fade(1.0))], progressBlock: nil)
+            featuredImageView.hero.id = data.imageHeroId
+
         }
         restaurantNameLabel.text = data.name
         cuisineLabel.text = data.cuisine

@@ -66,7 +66,8 @@ class EatListViewModel: NSObject {
     
     private func mapToCellListItems(restaurantList: [Restaurant]) -> [EatListItem] {
         return restaurantList.map { restaurant in
-            return EatListItem(imageUrl: URL(string: restaurant.restaurant.thumb),
+            return EatListItem(imageHeroId: "HeroImage\(restaurant.restaurant.id)",
+                               imageUrl: URL(string: restaurant.restaurant.thumb),
                                name: restaurant.restaurant.name,
                                cuisine: restaurant.restaurant.cuisines,
                                location: restaurant.restaurant.location.localityVerbose,

@@ -6,13 +6,15 @@
 //
 
 import UIKit
-
+import Hero
 class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.navigationController.isHeroEnabled = true
+        self.navigationController.hero.navigationAnimationType = .fade
     }
 
     func start() {

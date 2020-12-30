@@ -26,6 +26,7 @@ class TableViewDataManager<T, U: TableViewCellTypeProtocol>: TableViewDataProvid
             let cellDataSource = TableViewCellDataSource()
             cellDataSource.identifier = row.reuseIdentifier
             cellDataSource.setupCell = row.cellSetupBlock
+            cellDataSource.didSelectCell = row.cellSelectBlock
             cellDataSource.rowHeight = row.height
             return cellDataSource
         }
