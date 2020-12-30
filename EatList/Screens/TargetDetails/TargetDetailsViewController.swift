@@ -28,18 +28,18 @@ class TargetDetailsViewController: UIViewController {
         setupTableView()
         setupDataSource()
         setupSections()
-        setupNavigation()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigation(title: input.restaurantDetails.name)
     }
     
     func setupTableView() {
-        tableView.register(UINib(resource: R.nib.imageHeaderTableViewCell),
-                           forCellReuseIdentifier: R.nib.imageHeaderTableViewCell.name)
-        tableView.register(UINib(resource: R.nib.baseDetailsTableViewCell),
-                           forCellReuseIdentifier: R.nib.baseDetailsTableViewCell.name)
-        tableView.register(UINib(resource: R.nib.addressDetailsTableViewCell),
-                           forCellReuseIdentifier: R.nib.addressDetailsTableViewCell.name)
-        tableView.register(UINib(resource: R.nib.highlightsTableViewCell),
-                           forCellReuseIdentifier: R.nib.highlightsTableViewCell.name)
+        tableView.register(ImageHeaderTableViewCell.self)
+        tableView.register(BaseDetailsTableViewCell.self)
+        tableView.register(AddressDetailsTableViewCell.self)
+        tableView.register(HighlightsTableViewCell.self)
         tableView.separatorStyle = .none
     }
     
@@ -56,15 +56,6 @@ class TargetDetailsViewController: UIViewController {
             .highlights
         ])
         dataManager.model = input.restaurantDetails
-    }
-    
-    func setupNavigation() {
-        navigationController?.navigationBar.backgroundColor = .clear
-        navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.layoutIfNeeded()
     }
 }
 

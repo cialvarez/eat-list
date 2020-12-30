@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4MH-BW-JIw">
-                        <rect key="frame" x="12" y="0.0" width="296" height="95"/>
+                        <rect key="frame" x="12" y="12" width="296" height="83"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highlights" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hao-bz-Aix">
                                 <rect key="frame" x="0.0" y="0.0" width="296" height="20.5"/>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukU-rP-AUy" customClass="SimpleCarouselItemView" customModule="EatList" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="45" width="296" height="50"/>
+                                <rect key="frame" x="0.0" y="33" width="296" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="64J-Iz-brh"/>
@@ -41,7 +41,7 @@
                     <constraint firstItem="4MH-BW-JIw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="8lP-AW-FPU"/>
                     <constraint firstAttribute="trailing" secondItem="4MH-BW-JIw" secondAttribute="trailing" constant="12" id="HBg-nJ-okX"/>
                     <constraint firstAttribute="bottom" secondItem="4MH-BW-JIw" secondAttribute="bottom" id="UdG-DA-fxQ"/>
-                    <constraint firstItem="4MH-BW-JIw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oWo-cr-o8u"/>
+                    <constraint firstItem="4MH-BW-JIw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="oWo-cr-o8u"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

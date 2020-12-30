@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HighlightsTableViewCell: UITableViewCell {
+class HighlightsTableViewCell: UITableViewCell, NibReusable {
 
     @IBOutlet weak var simpleCarouselView: SimpleCarouselItemView!
     

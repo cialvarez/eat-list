@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageHeaderTableViewCell: UITableViewCell {
+class ImageHeaderTableViewCell: UITableViewCell, NibReusable {
 
     @IBOutlet weak var headerImageView: UIImageView!
     

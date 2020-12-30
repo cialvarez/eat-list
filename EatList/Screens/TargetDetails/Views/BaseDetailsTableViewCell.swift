@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaseDetailsTableViewCell: UITableViewCell {
+class BaseDetailsTableViewCell: UITableViewCell, NibReusable {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var reviewCountLabel: UILabel!
     @IBOutlet weak var restaurantNameLabel: UILabel!

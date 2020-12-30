@@ -33,6 +33,11 @@ class EatListViewController: UIViewController {
         setupViewModel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigation(title: "Eat List")
+    }
+    
     private func setupTableView() {
         let eatListCell = R.nib.eatListTableViewCell
         tableView.register(UINib(resource: eatListCell), forCellReuseIdentifier: eatListCell.name)

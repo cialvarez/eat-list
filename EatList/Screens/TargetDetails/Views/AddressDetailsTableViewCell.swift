@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddressDetailsTableViewCell: UITableViewCell {
+class AddressDetailsTableViewCell: UITableViewCell, NibReusable {
 
     @IBOutlet weak var addressLabel: UILabel!
     

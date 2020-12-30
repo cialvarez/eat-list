@@ -31,7 +31,7 @@ extension TargetDetailsSectionType: TableViewCellTypeProtocol {
     var height: CGFloat {
         switch self {
         case .imageHeader:
-            return 150
+            return 250
         case .baseDetails,
              .addressDetails,
              .highlights:
@@ -42,7 +42,7 @@ extension TargetDetailsSectionType: TableViewCellTypeProtocol {
     var cellSetupBlock: ViewSetupBlock<RestaurantDetails>? {
         switch self {
         case .imageHeader:
-            return {  cell, model in
+            return { cell, model in
                 if let cell = cell as? ImageHeaderTableViewCell,
                    let model = model,
                    let imageUrl = URL(string: model.featuredImage) {
@@ -50,16 +50,30 @@ extension TargetDetailsSectionType: TableViewCellTypeProtocol {
                     cell.headerImageView.kf.setImage(with: imageUrl, placeholder: nil, options: [.transition(.fade(1.0))], progressBlock: nil)
                 }
             }
-        case .baseDetails: return nil
+        case .baseDetails:
+            return { cell, model in
+                if let cell = cell as? BaseDetailsTableViewCell,
+                   let model = model {
+                    cell.ratingLabel.text = model.userRating.aggregateRating
+                    cell.reviewCountLabel.text = "\(model.userRating.votes) Review(s)" // TODO: Pluralize
+                    cell.restaurantNameLabel.text = model.name
+                    let cuisineText = (model.establishment.first ?? "").isEmpty ? "" : "\(model.establishment.first ?? "") - "
+                    cell.cuisineLabel.text = "\(cuisineText)\(model.cuisines)"
+                    cell.locationLabel.text = "\(model.location.localityVerbose)"
+                    cell.operatingHoursLabel.text = "\(model.timings)"
+                    let hasAlcohol = model.highlights.contains("Serves Alcohol")
+                    cell.costForTwoLabel.text = "Cost for two - \(model.currency)\(model.averageCostForTwo) approx." + (hasAlcohol ? "" : "without alcohol")
+                }
+            }
         case .addressDetails:
-            return {  cell, model in
+            return { cell, model in
                 if let cell = cell as? AddressDetailsTableViewCell,
                    let model = model {
                     cell.addressLabel.text = model.location.localityVerbose
                 }
             }
         case .highlights:
-            return {  cell, model in
+            return { cell, model in
                 if let cell = cell as? HighlightsTableViewCell,
                    let model = model {
                     cell.simpleCarouselView.updateDataSource(with: model.highlights)
