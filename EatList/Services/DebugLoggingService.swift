@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 enum DebugLogType: String {
+    /// Pending implementation
+    case todo
     /// General information, e.g., lifecycle method calls
     case info
     /// For Swift-side errors or problems
@@ -22,6 +24,7 @@ enum DebugLogType: String {
     
     var symbol: String {
         switch self {
+        case .todo: return "🚧"
         case .info: return "🔵"
         case .error: return "⛔️"
         case .warning: return "⚠️"

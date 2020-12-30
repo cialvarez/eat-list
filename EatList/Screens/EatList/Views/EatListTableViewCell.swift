@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class EatListTableViewCell: UITableViewCell {
+class EatListTableViewCell: UITableViewCell, NibReusable {
     
     struct Parameters {
         let imageHeroId: String

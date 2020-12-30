@@ -26,6 +26,8 @@
 		4F744FFE259C94FF007B79E6 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744FFD259C94FF007B79E6 /* ActionButton.swift */; };
 		4F745002259C9A39007B79E6 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F745001259C9A39007B79E6 /* UIView+Animations.swift */; };
 		4F745007259C9BA1007B79E6 /* UIView+SkeletonLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F745006259C9BA1007B79E6 /* UIView+SkeletonLoading.swift */; };
+		4F74503A259CAB6E007B79E6 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F745039259CAB6D007B79E6 /* LocationService.swift */; };
+		4F74503E259CAC96007B79E6 /* LocationServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F74503D259CAC96007B79E6 /* LocationServiceError.swift */; };
 		4FAF2702259A2F5C00218656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2701259A2F5C00218656 /* AppDelegate.swift */; };
 		4FAF2704259A2F5C00218656 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2703259A2F5C00218656 /* SceneDelegate.swift */; };
 		4FAF270B259A2F5D00218656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FAF270A259A2F5D00218656 /* Assets.xcassets */; };
@@ -104,6 +106,8 @@
 		4F744FFD259C94FF007B79E6 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		4F745001259C9A39007B79E6 /* UIView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
 		4F745006259C9BA1007B79E6 /* UIView+SkeletonLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SkeletonLoading.swift"; sourceTree = "<group>"; };
+		4F745039259CAB6D007B79E6 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		4F74503D259CAC96007B79E6 /* LocationServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceError.swift; sourceTree = "<group>"; };
 		4FAF26FE259A2F5C00218656 /* EatList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAF2701259A2F5C00218656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FAF2703259A2F5C00218656 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 			children = (
 				4FC33A79259ADA0800618D34 /* RestaurantNetworkService.swift */,
 				4F744FF2259C74FB007B79E6 /* DebugLoggingService.swift */,
+				4F745039259CAB6D007B79E6 /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 				4F48C600259AD6EA0003ADE6 /* Protocols */,
 				4F48C5FB259AD6600003ADE6 /* EatListError.swift */,
 				4FC33A76259AD95B00618D34 /* RestaurantAPIError.swift */,
+				4F74503D259CAC96007B79E6 /* LocationServiceError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -699,6 +705,7 @@
 				4FAF272A259A35AF00218656 /* MainCoordinator.swift in Sources */,
 				4FB8C48D259B5E6B00A6DDB4 /* HighlightsTableViewCell.swift in Sources */,
 				4FB8C4BD259B719800A6DDB4 /* TableViewDataSourceController.swift in Sources */,
+				4F74503A259CAB6E007B79E6 /* LocationService.swift in Sources */,
 				4FAF2736259A3A0500218656 /* R.generated.swift in Sources */,
 				4FB8C4BA259B719800A6DDB4 /* TableViewCellDataSource.swift in Sources */,
 				4F48C5E2259AC7BA0003ADE6 /* SortType.swift in Sources */,
@@ -716,6 +723,7 @@
 				4FB8C476259B5CF100A6DDB4 /* TargetDetailsSectionType.swift in Sources */,
 				4F48C5E5259AC7F10003ADE6 /* OrderType.swift in Sources */,
 				4F745007259C9BA1007B79E6 /* UIView+SkeletonLoading.swift in Sources */,
+				4F74503E259CAC96007B79E6 /* LocationServiceError.swift in Sources */,
 				4F744FF3259C74FB007B79E6 /* DebugLoggingService.swift in Sources */,
 				4F48C5FC259AD6600003ADE6 /* EatListError.swift in Sources */,
 				4FAF2779259A44BD00218656 /* LocationType.swift in Sources */,

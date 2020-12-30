@@ -9,7 +9,9 @@ import Foundation
 import UIKit
 
 enum EatListSectionType {
-    case restaurantDetails(parameters: EatListTableViewCell.Parameters)
+    case restaurantDetails(parameters: EatListTableViewCell.Parameters,
+                           restaurantDetails: RestaurantDetails,
+                           wantsToViewRestaurant: (RestaurantDetails) -> Void)
     case skeletonLoader
 }
 
@@ -34,18 +36,23 @@ extension EatListSectionType: TableViewCellTypeProtocol {
     }
     
     var cellSelectBlock: RowSelectedBlock? {
-        return nil
+        switch self {
+        case let .restaurantDetails(_, restaurantDetails, wantsToViewRestaurant):
+            return { _, _ in
+                wantsToViewRestaurant(restaurantDetails)
+            }
+        case .skeletonLoader: return nil
+        }
     }
     
     var cellSetupBlock: ViewSetupBlock? {
         switch self {
-        case let .restaurantDetails(parameters):
+        case let .restaurantDetails(parameters, _, _):
             return { cell in
                 guard let cell = cell as? EatListTableViewCell else {
                     return
                 }
-                // TODO: IMPLEMENT ACTUAL RENDER CODE
-//                cell.render(with: parameters)
+                cell.render(with: parameters)
             }
         case .skeletonLoader:
             return { cell in

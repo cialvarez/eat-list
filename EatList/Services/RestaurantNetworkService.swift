@@ -8,8 +8,15 @@
 import Foundation
 import Moya
 import Unrealm
-class RestaurantNetworkService {
-    let provider: MoyaProvider<RestaurantAPI>
+
+protocol RestaurantNetworkProvider {
+    func fetchTrendingRestaurants(
+        parameters: TrendingSearchRequestParams,
+        completion: @escaping (Result<[Restaurant], EatListError>) -> Void)
+}
+
+class RestaurantNetworkService: RestaurantNetworkProvider {
+    private let provider: MoyaProvider<RestaurantAPI>
     
     init(provider: MoyaProvider<RestaurantAPI> = .init()) {
         self.provider = provider

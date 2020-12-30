@@ -10,65 +10,67 @@ import Moya
 import MapKit
 import CoreLocation
 
-class EatListViewModel: NSObject {
-    
-    struct Output {
-        var list: [EatListTableViewCell.Parameters]
-        var restaurants: [Restaurant]
-        var stateChanged: (State) -> Void
-    }
+protocol EatListProvider {
+    var lastUpdatedList: [EatListSectionType] { get }
+    var wantsToViewRestaurant: (RestaurantDetails) -> Void { get set }
+    var wantsToUpdateState: (EatListViewModel.State) -> Void { get set }
+    func fetchList()
+}
+
+class EatListViewModel: NSObject, EatListProvider {
     
     enum State {
         case loading
         case error(EatListError)
-        case finished
+        case finished([EatListSectionType])
     }
     
-    var output: Output!
-    private let networkService: RestaurantNetworkService
-    private let locationManager = CLLocationManager()
-    private var location: CLLocationCoordinate2D? {
-        didSet {
-            if let location = location,
-               location.latitude != oldValue?.latitude,
-               location.longitude != oldValue?.longitude {
-                refreshData(location: location)
+    var lastUpdatedList = [EatListSectionType]()
+    var wantsToViewRestaurant: (RestaurantDetails) -> Void = { _ in }
+    var wantsToUpdateState: (EatListViewModel.State) -> Void = { _ in }
+    
+    private let networkService: RestaurantNetworkProvider
+    private let locationService: LocationProvider
+    
+    init(networkService: RestaurantNetworkProvider = RestaurantNetworkService(provider: .init()),
+         locationService: LocationProvider = LocationService()) {
+        self.networkService = networkService
+        self.locationService = locationService
+    }
+    
+    func fetchList() {
+        self.wantsToUpdateState(.loading)
+        self.locationService.fetchUserLocation { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let location):
+                self.fetchTrendingRestaurants(in: location)
+            case .failure(let error):
+                self.wantsToUpdateState(.error(error))
             }
         }
     }
-
-    init(provider: MoyaProvider<RestaurantAPI> = .init()) {
-        self.networkService = RestaurantNetworkService(provider: provider)
-    }
     
-    func start(output: Output) {
-        setupLocation()
-        self.output = output
-    }
-    
-    private func refreshData(location: CLLocationCoordinate2D) {
-        output.stateChanged(.loading)
+    private func fetchTrendingRestaurants(in location: CLLocationCoordinate2D) {
         networkService
             .fetchTrendingRestaurants(
                 parameters: .init(lat: location.latitude,
                                   lon: location.longitude)) { [weak self] result in
-                self?.locationManager.stopUpdatingLocation()
-                self?.location = nil
                 guard let self = self else { return }
                 switch result {
                 case .success(let response):
-                    self.output.restaurants = response
-                    self.output.list = self.mapToCellListItems(restaurantList: response)
-                    self.output.stateChanged(.finished)
+                    self.wantsToUpdateState(.finished(response.asEatListSection(wantsToViewRestaurant: self.wantsToViewRestaurant)))
                 case .failure(let error):
-                    self.output.stateChanged(.error(error))
+                    self.wantsToUpdateState(.error(error))
                 }
             }
     }
-    
-    private func mapToCellListItems(restaurantList: [Restaurant]) -> [EatListTableViewCell.Parameters] {
-        return restaurantList.map { restaurant in
-            return EatListTableViewCell.Parameters(
+}
+
+private extension Array where Element == Restaurant {
+    func asEatListSection(wantsToViewRestaurant: @escaping (RestaurantDetails) -> Void) -> [EatListSectionType] {
+        return self.map { restaurant in
+            let parameters = EatListTableViewCell.Parameters(
                 imageHeroId: "HeroImage\(restaurant.restaurant.id)",
                 imageUrl: URL(string: restaurant.restaurant.thumb),
                 name: restaurant.restaurant.name,
@@ -76,33 +78,11 @@ class EatListViewModel: NSObject {
                 location: restaurant.restaurant.location.localityVerbose,
                 rating: restaurant.restaurant.userRating.aggregateRating,
                 averageCostForTwo: restaurant.restaurant.averageCostForTwo,
-                currency: restaurant.restaurant.currency)
+                currency: restaurant.restaurant.currency
+            )
+            return .restaurantDetails(parameters: parameters,
+                                      restaurantDetails: restaurant.restaurant,
+                                      wantsToViewRestaurant: wantsToViewRestaurant)
         }
-    }
-    
-    private func setupLocation() {
-        locationManager.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }
-    }
-}
-
-extension EatListViewModel: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-         print("error: \(error.localizedDescription)")
-    }
-
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse {
-            locationManager.requestLocation()
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let currentLocation: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        location = currentLocation
     }
 }
