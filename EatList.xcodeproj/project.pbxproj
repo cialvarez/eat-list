@@ -19,6 +19,7 @@
 		4F48C602259AD6FE0003ADE6 /* PresentableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C601259AD6FE0003ADE6 /* PresentableError.swift */; };
 		4F744F94259BFE7F007B79E6 /* UITableView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744F93259BFE7F007B79E6 /* UITableView+NibReusable.swift */; };
 		4F744F98259C00E7007B79E6 /* UIViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744F97259C00E7007B79E6 /* UIViewController+NavigationBar.swift */; };
+		4F744FE2259C7365007B79E6 /* EatListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F744FE1259C7364007B79E6 /* EatListTests.swift */; };
 		4FAF2702259A2F5C00218656 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2701259A2F5C00218656 /* AppDelegate.swift */; };
 		4FAF2704259A2F5C00218656 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF2703259A2F5C00218656 /* SceneDelegate.swift */; };
 		4FAF270B259A2F5D00218656 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FAF270A259A2F5D00218656 /* Assets.xcassets */; };
@@ -63,6 +64,16 @@
 		4FC33A84259B046100618D34 /* EatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FC33A82259B046100618D34 /* EatListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4F744FE4259C7365007B79E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FAF26F6259A2F5C00218656 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FAF26FD259A2F5C00218656;
+			remoteInfo = EatList;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0D385FB4DAE7614D5ADEB5C3 /* Pods-EatList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatList.release.xcconfig"; path = "Target Support Files/Pods-EatList/Pods-EatList.release.xcconfig"; sourceTree = "<group>"; };
 		4C3BD87D8BFCE77FC58BF345 /* Pods-EatList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatList.debug.xcconfig"; path = "Target Support Files/Pods-EatList/Pods-EatList.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +89,9 @@
 		4F48C601259AD6FE0003ADE6 /* PresentableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableError.swift; sourceTree = "<group>"; };
 		4F744F93259BFE7F007B79E6 /* UITableView+NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+NibReusable.swift"; sourceTree = "<group>"; };
 		4F744F97259C00E7007B79E6 /* UIViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBar.swift"; sourceTree = "<group>"; };
+		4F744FDF259C7364007B79E6 /* EatListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EatListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F744FE1259C7364007B79E6 /* EatListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatListTests.swift; sourceTree = "<group>"; };
+		4F744FE3259C7365007B79E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FAF26FE259A2F5C00218656 /* EatList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAF2701259A2F5C00218656 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FAF2703259A2F5C00218656 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +139,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4F744FDC259C7364007B79E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4FAF26FB259A2F5C00218656 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,10 +202,20 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		4F744FE0259C7364007B79E6 /* EatListTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F744FE1259C7364007B79E6 /* EatListTests.swift */,
+				4F744FE3259C7365007B79E6 /* Info.plist */,
+			);
+			path = EatListTests;
+			sourceTree = "<group>";
+		};
 		4FAF26F5259A2F5C00218656 = {
 			isa = PBXGroup;
 			children = (
 				4FAF2700259A2F5C00218656 /* EatList */,
+				4F744FE0259C7364007B79E6 /* EatListTests */,
 				4FAF26FF259A2F5C00218656 /* Products */,
 				A52B9B1D9C09C63E1F9CEE99 /* Pods */,
 				83A4B2FF5A965924F456B629 /* Frameworks */,
@@ -195,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				4FAF26FE259A2F5C00218656 /* EatList.app */,
+				4F744FDF259C7364007B79E6 /* EatListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -435,6 +467,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4F744FDE259C7364007B79E6 /* EatListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F744FE8259C7365007B79E6 /* Build configuration list for PBXNativeTarget "EatListTests" */;
+			buildPhases = (
+				4F744FDB259C7364007B79E6 /* Sources */,
+				4F744FDC259C7364007B79E6 /* Frameworks */,
+				4F744FDD259C7364007B79E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F744FE5259C7365007B79E6 /* PBXTargetDependency */,
+			);
+			name = EatListTests;
+			productName = EatListTests;
+			productReference = 4F744FDF259C7364007B79E6 /* EatListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4FAF26FD259A2F5C00218656 /* EatList */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FAF2712259A2F5D00218656 /* Build configuration list for PBXNativeTarget "EatList" */;
@@ -465,6 +515,10 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					4F744FDE259C7364007B79E6 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 4FAF26FD259A2F5C00218656;
+					};
 					4FAF26FD259A2F5C00218656 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -484,11 +538,19 @@
 			projectRoot = "";
 			targets = (
 				4FAF26FD259A2F5C00218656 /* EatList */,
+				4F744FDE259C7364007B79E6 /* EatListTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4F744FDD259C7364007B79E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4FAF26FC259A2F5C00218656 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -588,6 +650,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4F744FDB259C7364007B79E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F744FE2259C7365007B79E6 /* EatListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4FAF26FA259A2F5C00218656 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,6 +709,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4F744FE5259C7365007B79E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FAF26FD259A2F5C00218656 /* EatList */;
+			targetProxy = 4F744FE4259C7365007B79E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		4FAF270C259A2F5D00218656 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -651,6 +729,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4F744FE6259C7365007B79E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JA7VCGA8D;
+				INFOPLIST_FILE = EatListTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cia.EatListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatList.app/EatList";
+			};
+			name = Debug;
+		};
+		4F744FE7259C7365007B79E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JA7VCGA8D;
+				INFOPLIST_FILE = EatListTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cia.EatListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EatList.app/EatList";
+			};
+			name = Release;
+		};
 		4FAF2710259A2F5D00218656 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -810,6 +930,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4F744FE8259C7365007B79E6 /* Build configuration list for PBXNativeTarget "EatListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F744FE6259C7365007B79E6 /* Debug */,
+				4F744FE7259C7365007B79E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4FAF26F9259A2F5C00218656 /* Build configuration list for PBXProject "EatList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
