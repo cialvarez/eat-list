@@ -9,7 +9,8 @@ import UIKit
 
 extension UIViewController {
     @discardableResult
-    func showError(error: EatListError) -> AlertView? {
+    func showError(error: EatListError,
+                   onPrimaryCtaTap: @escaping (() -> Void) = {}) -> AlertView? {
         view.window?.endEditing(true)
         let alertHash = (error.errorTitle + error.errorMessage).hashValue
         guard !view.subviews.contains(where: { $0.tag == alertHash }) else {
@@ -21,7 +22,8 @@ extension UIViewController {
         alertView.render(with: .init(image: R.image.errorIcon(),
                                      title: error.errorTitle,
                                      description: error.errorMessage,
-                                     actions: [.init(title: error.dismissButtonTitle)]))
+                                     actions: [.init(title: error.primaryButtonTitle, style: .primary, onTap: onPrimaryCtaTap),
+                                               .init(title: error.dismissButtonTitle, style: .secondary)]))
         alertView.translatesAutoresizingMaskIntoConstraints = false
         UIView.transition(
             with: view,

@@ -186,10 +186,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 8 images.
+  /// This `R.image` struct is generated, and contains static references to 9 images.
   struct image {
     /// Image `Back`.
     static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "Back")
+    /// Image `BlankState`.
+    static let blankState = Rswift.ImageResource(bundle: R.hostingBundle, name: "BlankState")
     /// Image `ErrorIcon`.
     static let errorIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "ErrorIcon")
     /// Image `Icon`.
@@ -209,6 +211,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Back", bundle: ..., traitCollection: ...)`
     static func back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.back, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "BlankState", bundle: ..., traitCollection: ...)`
+    static func blankState(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.blankState, compatibleWith: traitCollection)
     }
     #endif
 
@@ -294,7 +303,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 8 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 9 nibs.
   struct nib {
     /// Nib `AddressDetailsTableViewCell`.
     static let addressDetailsTableViewCell = _R.nib._AddressDetailsTableViewCell()
@@ -302,6 +311,8 @@ struct R: Rswift.Validatable {
     static let alertView = _R.nib._AlertView()
     /// Nib `BaseDetailsTableViewCell`.
     static let baseDetailsTableViewCell = _R.nib._BaseDetailsTableViewCell()
+    /// Nib `EatListBlankTableViewCell`.
+    static let eatListBlankTableViewCell = _R.nib._EatListBlankTableViewCell()
     /// Nib `EatListTableViewCell`.
     static let eatListTableViewCell = _R.nib._EatListTableViewCell()
     /// Nib `HighlightsTableViewCell`.
@@ -334,6 +345,14 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.baseDetailsTableViewCell) instead")
     static func baseDetailsTableViewCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.baseDetailsTableViewCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "EatListBlankTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.eatListBlankTableViewCell) instead")
+    static func eatListBlankTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.eatListBlankTableViewCell)
     }
     #endif
 
@@ -389,6 +408,10 @@ struct R: Rswift.Validatable {
       return R.nib.baseDetailsTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? BaseDetailsTableViewCell
     }
 
+    static func eatListBlankTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EatListBlankTableViewCell? {
+      return R.nib.eatListBlankTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EatListBlankTableViewCell
+    }
+
     static func eatListTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EatListTableViewCell? {
       return R.nib.eatListTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EatListTableViewCell
     }
@@ -440,6 +463,7 @@ struct _R: Rswift.Validatable {
     static func validate() throws {
       try _AlertView.validate()
       try _BaseDetailsTableViewCell.validate()
+      try _EatListBlankTableViewCell.validate()
       try _EatListTableViewCell.validate()
     }
 
@@ -485,6 +509,23 @@ struct _R: Rswift.Validatable {
 
       static func validate() throws {
         if UIKit.UIImage(named: "Rating", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Rating' is used in nib 'BaseDetailsTableViewCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _EatListBlankTableViewCell: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "EatListBlankTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EatListBlankTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EatListBlankTableViewCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "BlankState", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'BlankState' is used in nib 'EatListBlankTableViewCell', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

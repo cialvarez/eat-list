@@ -10,9 +10,9 @@ import UIKit
 class AlertView: UIView, UIGestureRecognizerDelegate {
 
     struct ButtonParameters {
-        let title: String
-        let style = AlertViewButtonStyle.primary
-        let onTap: (() -> Void) = { }
+        var title: String
+        var style = AlertViewButtonStyle.primary
+        var onTap: (() -> Void) = { }
     }
 
     struct Parameters {

@@ -23,7 +23,21 @@ extension LocationServiceError: PresentableError {
     var errorMessage: String {
         switch self {
         case .generalFailure: return "Please try again in a bit."
-        case .permissionDenied: return "Please allow Eat List to access your location for the app to work correctly!"
+        case .permissionDenied: return "Please allow Eat List to access your location for the app to work."
+        }
+    }
+    
+    var primaryButtonTitle: String {
+        switch self {
+        case .generalFailure: return ""
+        case .permissionDenied: return "Settings"
+        }
+    }
+    
+    var dismissButtonTitle: String {
+        switch self {
+        case .generalFailure,
+             .permissionDenied: return "Close"
         }
     }
 }

@@ -38,6 +38,7 @@ class EatListViewController: UIViewController {
     
     private func setupTableView() {
         tableView.register(EatListTableViewCell.self)
+        tableView.register(EatListBlankTableViewCell.self)
         tableView.dataSource = dataSourceProvider
         tableView.delegate = dataSourceProvider
         tableView.separatorStyle = .none
@@ -47,24 +48,41 @@ class EatListViewController: UIViewController {
         viewModel.wantsToUpdateState = { [weak self] state in
             guard let self = self else { return }
             switch state {
-            case .loading:
-                let skeletonCells = Array(repeating: EatListSectionType.skeletonLoader, count: 20)
-                self.dataSourceProvider.update(sections: skeletonCells)
-                self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
-                self.tableView.isUserInteractionEnabled = false
-                self.navigationItem.rightBarButtonItem?.isEnabled = false
-            case .error(let error):
-                self.showError(error: error)
-                self.tableView.isUserInteractionEnabled = true
-                self.navigationItem.rightBarButtonItem?.isEnabled = true
-            case let .finished(sections, source):
-                self.dataSourceProvider.update(sections: sections)
-                if source == .cache { self.showOfflineBanner() }
-                self.tableView.isUserInteractionEnabled = true
-                self.navigationItem.rightBarButtonItem?.isEnabled = true
+            case .loading: self.renderLoadingState()
+            case .error(let error): self.renderErrorState(error: error)
+            case let .finished(sections, source): self.renderFinishedState(sections: sections, source: source)
             }
         }
         viewModel.wantsToViewRestaurant = wantsToViewRestaurant
+    }
+    
+    private func renderLoadingState() {
+        let skeletonCells = Array(repeating: EatListSectionType.skeletonLoader, count: 20)
+        self.dataSourceProvider.update(sections: skeletonCells)
+        self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+        self.tableView.isUserInteractionEnabled = false
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
+    }
+    
+    private func renderErrorState(error: EatListError) {
+        switch error {
+        case .api(type: LocationServiceError.permissionDenied):
+            self.showError(error: error) {
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+            }
+        default: self.showError(error: error)
+        }
+        self.showError(error: error)
+        self.dataSourceProvider.update(sections: [.emptyState])
+        self.tableView.isUserInteractionEnabled = true
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
+    }
+    
+    private func renderFinishedState(sections: [EatListSectionType], source: RestaurantNetworkService.DataSource) {
+        self.dataSourceProvider.update(sections: sections)
+        if source == .cache { self.showOfflineBanner() }
+        self.tableView.isUserInteractionEnabled = true
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
     }
     
     private func setupLocationUpdateControl() {

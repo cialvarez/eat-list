@@ -35,7 +35,14 @@ class LocationService: NSObject, LocationProvider {
 
 extension LocationService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        locationRequestCompletion(.failure(.api(type: LocationServiceError.generalFailure)))
+        guard let error = error as? CLError else {
+            locationRequestCompletion(.failure(.api(type: LocationServiceError.generalFailure)))
+            return
+        }
+        switch error {
+        case CLError.denied: locationRequestCompletion(.failure(.api(type: LocationServiceError.permissionDenied)))
+        default: locationRequestCompletion(.failure(.api(type: LocationServiceError.generalFailure)))
+        }
     }
 
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

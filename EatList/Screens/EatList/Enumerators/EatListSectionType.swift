@@ -13,6 +13,7 @@ enum EatListSectionType {
                            restaurantDetails: RestaurantDetails,
                            wantsToViewRestaurant: (RestaurantDetails) -> Void)
     case skeletonLoader
+    case emptyState
 }
 
 extension EatListSectionType: TableViewCellTypeProtocol {
@@ -24,13 +25,16 @@ extension EatListSectionType: TableViewCellTypeProtocol {
         case .restaurantDetails,
              .skeletonLoader:
             return R.nib.eatListTableViewCell.name
+        case .emptyState:
+            return R.nib.eatListBlankTableViewCell.name
         }
     }
     
     var height: CGFloat {
         switch self {
         case .restaurantDetails,
-             .skeletonLoader:
+             .skeletonLoader,
+             .emptyState:
             return UITableView.automaticDimension
         }
     }
@@ -40,6 +44,8 @@ extension EatListSectionType: TableViewCellTypeProtocol {
         case .restaurantDetails,
              .skeletonLoader:
             return 100
+        case .emptyState:
+            return 300
         }
     }
     
@@ -49,7 +55,9 @@ extension EatListSectionType: TableViewCellTypeProtocol {
             return { _, _ in
                 wantsToViewRestaurant(restaurantDetails)
             }
-        case .skeletonLoader: return nil
+        case .skeletonLoader,
+             .emptyState:
+            return nil
         }
     }
     
@@ -69,6 +77,7 @@ extension EatListSectionType: TableViewCellTypeProtocol {
                 }
                 cell.toggleLoadingState(isLoading: true)
             }
+        case .emptyState: return nil
         }
     }
 }
