@@ -61,7 +61,7 @@ class EatListTableViewCell: UITableViewCell, NibReusable {
         locationLabel.toggleSkeleton(isShown: isLoading, cornerRadius: 5)
         ratingLabel.toggleSkeleton(isShown: isLoading, cornerRadius: 5)
         priceDetailsLabel.toggleSkeleton(isShown: isLoading, cornerRadius: 5)
-        ratingIconImageView.image = isLoading ? nil : R.image.armyStar()
+        ratingIconImageView.image = isLoading ? nil : R.image.rating()
         isLoading ? containerView.animateTouchDown() : containerView.animateTouchUp()
     }
     

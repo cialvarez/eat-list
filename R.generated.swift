@@ -188,8 +188,6 @@ struct R: Rswift.Validatable {
 
   /// This `R.image` struct is generated, and contains static references to 8 images.
   struct image {
-    /// Image `ArmyStar`.
-    static let armyStar = Rswift.ImageResource(bundle: R.hostingBundle, name: "ArmyStar")
     /// Image `Back`.
     static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "Back")
     /// Image `ErrorIcon`.
@@ -202,15 +200,10 @@ struct R: Rswift.Validatable {
     static let pizzannotation = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pizzannotation")
     /// Image `Placeholder`.
     static let placeholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "Placeholder")
+    /// Image `Rating`.
+    static let rating = Rswift.ImageResource(bundle: R.hostingBundle, name: "Rating")
     /// Image `star`.
     static let star = Rswift.ImageResource(bundle: R.hostingBundle, name: "star")
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ArmyStar", bundle: ..., traitCollection: ...)`
-    static func armyStar(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.armyStar, compatibleWith: traitCollection)
-    }
-    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "Back", bundle: ..., traitCollection: ...)`
@@ -251,6 +244,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Placeholder", bundle: ..., traitCollection: ...)`
     static func placeholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.placeholder, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Rating", bundle: ..., traitCollection: ...)`
+    static func rating(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rating, compatibleWith: traitCollection)
     }
     #endif
 
@@ -439,6 +439,7 @@ struct _R: Rswift.Validatable {
   struct nib: Rswift.Validatable {
     static func validate() throws {
       try _AlertView.validate()
+      try _BaseDetailsTableViewCell.validate()
       try _EatListTableViewCell.validate()
     }
 
@@ -474,12 +475,18 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
 
-    struct _BaseDetailsTableViewCell: Rswift.NibResourceType {
+    struct _BaseDetailsTableViewCell: Rswift.NibResourceType, Rswift.Validatable {
       let bundle = R.hostingBundle
       let name = "BaseDetailsTableViewCell"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> BaseDetailsTableViewCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? BaseDetailsTableViewCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "Rating", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Rating' is used in nib 'BaseDetailsTableViewCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
       }
 
       fileprivate init() {}
@@ -494,7 +501,7 @@ struct _R: Rswift.Validatable {
       }
 
       static func validate() throws {
-        if UIKit.UIImage(named: "ArmyStar", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ArmyStar' is used in nib 'EatListTableViewCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "Rating", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Rating' is used in nib 'EatListTableViewCell', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

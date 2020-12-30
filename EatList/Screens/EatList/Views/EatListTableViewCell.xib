@@ -60,18 +60,30 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="bottom" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6Ad-8p-1IO">
                                                                 <rect key="frame" x="117" y="0.0" width="63" height="36"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="p0w-B8-txT">
-                                                                        <rect key="frame" x="26" y="0.0" width="37" height="12"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="p0w-B8-txT">
+                                                                        <rect key="frame" x="17" y="0.0" width="46" height="20"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArmyStar" translatesAutoresizingMaskIntoConstraints="NO" id="mR2-76-h7y">
-                                                                                <rect key="frame" x="0.0" y="1" width="10" height="10"/>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmj-HL-xXO">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="16" height="20"/>
+                                                                                <subviews>
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rating" translatesAutoresizingMaskIntoConstraints="NO" id="mR2-76-h7y">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" priority="999" constant="16" id="b0P-Ko-9wd"/>
+                                                                                            <constraint firstAttribute="height" priority="999" constant="16" id="oiV-P1-JQu"/>
+                                                                                        </constraints>
+                                                                                    </imageView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" priority="999" constant="10" id="b0P-Ko-9wd"/>
-                                                                                    <constraint firstAttribute="height" priority="999" constant="10" id="oiV-P1-JQu"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="mR2-76-h7y" secondAttribute="trailing" id="EVh-ru-j0G"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="mR2-76-h7y" secondAttribute="bottom" constant="4" id="Jzx-PQ-8bT"/>
+                                                                                    <constraint firstItem="mR2-76-h7y" firstAttribute="leading" secondItem="tmj-HL-xXO" secondAttribute="leading" id="fJd-ug-paS"/>
+                                                                                    <constraint firstItem="mR2-76-h7y" firstAttribute="top" secondItem="tmj-HL-xXO" secondAttribute="top" id="fu3-xT-NO4"/>
                                                                                 </constraints>
-                                                                            </imageView>
+                                                                            </view>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQQ-Qs-vgq">
-                                                                                <rect key="frame" x="11" y="0.0" width="26" height="12"/>
+                                                                                <rect key="frame" x="20" y="4" width="26" height="12"/>
                                                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -163,7 +175,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ArmyStar" width="24" height="24"/>
+        <image name="Rating" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

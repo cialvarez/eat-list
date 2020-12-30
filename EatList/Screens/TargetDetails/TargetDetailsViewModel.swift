@@ -53,14 +53,15 @@ class TargetDetailsViewModel: TargetDetailsProvider {
     private func getBaseDetails(from restaurantDetails: RestaurantDetails) -> BaseDetailsTableViewCell.Parameters {
         let cuisineText = (restaurantDetails.establishment.first ?? "").isEmpty ? "" : "\(restaurantDetails.establishment.first ?? "") - "
         let hasAlcohol = restaurantDetails.highlights.contains("Serves Alcohol")
-
+        let timings = restaurantDetails.timings.replacingOccurrences(of: ", ", with: "\n")
+        
         return BaseDetailsTableViewCell.Parameters(
             rating: restaurantDetails.userRating.aggregateRating,
             reviewCount: "\(restaurantDetails.userRating.votes) Review(s)",
             restaurantName: restaurantDetails.name,
             cuisine: "\(cuisineText)\(restaurantDetails.cuisines)",
             location: "\(restaurantDetails.location.localityVerbose)",
-            operatingHours: "\(restaurantDetails.timings)",
+            operatingHours: "\(timings)",
             costForTwo: "Cost for two - \(restaurantDetails.currency)\(restaurantDetails.averageCostForTwo) approx." + (hasAlcohol ? "" : "without alcohol"))
     }
     
