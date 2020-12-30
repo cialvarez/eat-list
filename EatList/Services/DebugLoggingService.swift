@@ -34,11 +34,11 @@ enum DebugLogType: String {
 class DebugLoggingService {
     private init() { }
     
-    class func debugMessage(status: DebugLogType,
-                            message: String = "",
-                            file: String = #file,
-                            function: String = #function,
-                            line: Int = #line) {
+    class func log(status: DebugLogType,
+                   message: String = "",
+                   file: String = #file,
+                   function: String = #function,
+                   line: Int = #line) {
         
         var logText = ""
         
