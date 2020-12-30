@@ -25,6 +25,7 @@ class EatListTableViewCell: UITableViewCell {
     @IBOutlet weak var restaurantNameLabel: UILabel!
     @IBOutlet weak var cuisineLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var ratingIconImageView: UIImageView!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var priceDetailsLabel: UILabel!
     @IBOutlet weak var containerView: CustomizableView!
@@ -34,18 +35,30 @@ class EatListTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
     
-    func configure(with data: EatListTableViewCell.Parameters) {
-        if let imageUrl = data.imageUrl {
+    func render(with parameters: EatListTableViewCell.Parameters) {
+        toggleLoadingState(isLoading: false)
+        if let imageUrl = parameters.imageUrl {
             featuredImageView.kf.indicatorType = .activity
             featuredImageView.kf.setImage(with: imageUrl, placeholder: nil, options: [.transition(.fade(1.0))], progressBlock: nil)
-            featuredImageView.hero.id = data.imageHeroId
+            featuredImageView.hero.id = parameters.imageHeroId
 
         }
-        restaurantNameLabel.text = data.name
-        cuisineLabel.text = data.cuisine
-        locationLabel.text = data.location
-        ratingLabel.text = "\(data.rating) /5"
-        priceDetailsLabel.text = "\(data.currency)\(data.averageCostForTwo) for two"
+        restaurantNameLabel.text = parameters.name
+        cuisineLabel.text = parameters.cuisine
+        locationLabel.text = parameters.location
+        ratingLabel.text = "\(parameters.rating) /5"
+        priceDetailsLabel.text = "\(parameters.currency)\(parameters.averageCostForTwo) for two"
+    }
+    
+    func toggleLoadingState(isLoading: Bool) {
+        featuredImageView.toggleSkeleton(isShown: isLoading)
+        restaurantNameLabel.toggleSkeleton(isShown: isLoading, cornerRadius: 5)
+        cuisineLabel.toggleSkeleton(isShown: isLoading, cornerRadius: 5)
+        locationLabel.toggleSkeleton(isShown: isLoading, cornerRadius: 5)
+        ratingLabel.toggleSkeleton(isShown: isLoading, cornerRadius: 5)
+        priceDetailsLabel.toggleSkeleton(isShown: isLoading, cornerRadius: 5)
+        ratingIconImageView.image = isLoading ? nil : R.image.armyStar()
+        isLoading ? containerView.animateTouchDown() : containerView.animateTouchUp()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -7,12 +7,10 @@
 
 import Foundation
 import UIKit
-//case restaurantDetails
+
 enum EatListSectionType {
-    case imageHeader(parameters: ImageHeaderTableViewCell.Parameters)
-    case baseDetails(parameters: BaseDetailsTableViewCell.Parameters)
-    case addressDetails(parameters: AddressDetailsTableViewCell.Parameters)
-    case highlights(parameters: HighlightsTableViewCell.Parameters)
+    case restaurantDetails(parameters: EatListTableViewCell.Parameters)
+    case skeletonLoader
 }
 
 extension EatListSectionType: TableViewCellTypeProtocol {
@@ -21,20 +19,16 @@ extension EatListSectionType: TableViewCellTypeProtocol {
     
     var reuseIdentifier: String {
         switch self {
-        case .imageHeader: return R.nib.imageHeaderTableViewCell.name
-        case .baseDetails: return R.nib.baseDetailsTableViewCell.name
-        case .addressDetails: return R.nib.addressDetailsTableViewCell.name
-        case .highlights: return R.nib.highlightsTableViewCell.name
+        case .restaurantDetails,
+             .skeletonLoader:
+            return R.nib.eatListTableViewCell.name
         }
     }
     
     var height: CGFloat {
         switch self {
-        case .imageHeader:
-            return 250
-        case .baseDetails,
-             .addressDetails,
-             .highlights:
+        case .restaurantDetails,
+             .skeletonLoader:
             return UITableView.automaticDimension
         }
     }
@@ -45,33 +39,20 @@ extension EatListSectionType: TableViewCellTypeProtocol {
     
     var cellSetupBlock: ViewSetupBlock? {
         switch self {
-        case let .imageHeader(parameters):
+        case let .restaurantDetails(parameters):
             return { cell in
-                guard let cell = cell as? ImageHeaderTableViewCell else {
+                guard let cell = cell as? EatListTableViewCell else {
                     return
                 }
-                cell.render(with: parameters)
+                // TODO: IMPLEMENT ACTUAL RENDER CODE
+//                cell.render(with: parameters)
             }
-        case let .baseDetails(parameters):
+        case .skeletonLoader:
             return { cell in
-                guard let cell = cell as? BaseDetailsTableViewCell else {
+                guard let cell = cell as? EatListTableViewCell else {
                     return
                 }
-                cell.render(with: parameters)
-            }
-        case let .addressDetails(parameters):
-            return { cell in
-                guard let cell = cell as? AddressDetailsTableViewCell else {
-                    return
-                }
-                cell.render(with: parameters)
-            }
-        case let .highlights(parameters):
-            return { cell in
-                guard let cell = cell as? HighlightsTableViewCell else {
-                    return
-                }
-                cell.render(with: parameters)
+                cell.toggleSkeleton(isShown: true)
             }
         }
     }

@@ -123,10 +123,14 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 1 colors.
+  /// This `R.color` struct is generated, and contains static references to 3 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
+    /// Color `gradient-base`.
+    static let gradientBase = Rswift.ColorResource(bundle: R.hostingBundle, name: "gradient-base")
+    /// Color `gradient-secondary`.
+    static let gradientSecondary = Rswift.ColorResource(bundle: R.hostingBundle, name: "gradient-secondary")
 
     #if os(iOS) || os(tvOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
@@ -137,11 +141,45 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "gradient-base", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func gradientBase(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.gradientBase, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "gradient-secondary", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func gradientSecondary(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.gradientSecondary, compatibleWith: traitCollection)
+    }
+    #endif
+
     #if os(watchOS)
     /// `UIColor(named: "AccentColor", bundle: ..., traitCollection: ...)`
     @available(watchOSApplicationExtension 4.0, *)
     static func accentColor(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.accentColor.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "gradient-base", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func gradientBase(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.gradientBase.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "gradient-secondary", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func gradientSecondary(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.gradientSecondary.name)
     }
     #endif
 

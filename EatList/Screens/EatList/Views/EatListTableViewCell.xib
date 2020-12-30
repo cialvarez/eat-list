@@ -155,6 +155,7 @@
                 <outlet property="featuredImageView" destination="Ggc-1i-E2w" id="rOV-dJ-obt"/>
                 <outlet property="locationLabel" destination="T4P-QB-wqr" id="ndV-Xd-fnr"/>
                 <outlet property="priceDetailsLabel" destination="BbX-KZ-Ucd" id="aw0-DV-kIF"/>
+                <outlet property="ratingIconImageView" destination="mR2-76-h7y" id="ZHE-HV-PUk"/>
                 <outlet property="ratingLabel" destination="xQQ-Qs-vgq" id="bkz-oB-5IN"/>
                 <outlet property="restaurantNameLabel" destination="pa0-PV-kRn" id="h3o-X3-ClK"/>
             </connections>

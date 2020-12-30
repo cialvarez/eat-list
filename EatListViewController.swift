@@ -93,7 +93,7 @@ extension EatListViewController: UITableViewDataSource {
               indexPath.row < viewModel.output.list.count else {
             fatalError("EatListTableViewCell is not configured properly!")
         }
-        cell.configure(with: viewModel.output.list[indexPath.row])
+        cell.render(with: self.viewModel.output.list[indexPath.row])
         return cell
     }
     
