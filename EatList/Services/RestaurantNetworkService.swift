@@ -42,19 +42,22 @@ class RestaurantNetworkService {
                     realm.add(searchResponse.restaurants, update: true)
                 }
                 // Get on-disk location of the default Realm
-                print("Realm is located at: \(realm.configuration.fileURL)")
+                DebugLoggingService.log(status: .success, message: "Realm file is located here: \(realm.configuration.fileURL?.debugDescription ?? "n/a")")
                 completion(.success(searchResponse.restaurants))
             }, onFailure: { error in
                 switch error {
                 case .networkConnectivity:
-                    // try to load cached data
                     let cachedResult = realm.objects(Restaurant.self).compactMap { $0 }
                     guard !cachedResult.isEmpty else {
+                        DebugLoggingService.log(status: .warning, message: "No network detected, and no cached data is available.")
                         completion(.failure(.networkConnectivity))
                         return
                     }
+                    DebugLoggingService.log(status: .warning, message: "No network detected. Using cached data for now.")
                     completion(.success(cachedResult))
-                default: completion(.failure(.networkConnectivity))
+                default:
+                    DebugLoggingService.log(status: .warning)
+                    completion(.failure(.networkConnectivity))
                 }
             })
     }
