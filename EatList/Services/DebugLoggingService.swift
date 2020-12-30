@@ -31,7 +31,7 @@ enum DebugLogType: String {
     }
 }
 
-class DebugLog {
+class DebugLoggingService {
     private init() { }
     
     class func debugMessage(status: DebugLogType,
