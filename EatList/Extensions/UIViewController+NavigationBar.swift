@@ -43,6 +43,7 @@ extension UIViewController {
                                    onTap: @escaping () -> Void) {
         let rightButton = ActionButton(frame: CGRect(origin: .zero, size: CGSize(width: 44, height: 44)))
         rightButton.setImage(image, for: .normal)
+        rightButton.imageView?.contentMode = .scaleAspectFit
         rightButton.tintColor = tintColor
         rightButton.onTap = onTap
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightButton)
