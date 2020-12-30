@@ -60,5 +60,7 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>To get you the right eat list, we need your location.</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>
