@@ -13,10 +13,10 @@ class TableViewDataSourceController<T, U: TableViewCellTypeProtocol>: NSObject, 
     typealias TableViewCellModelType = T
     typealias TableViewCellType = U
     
-    let tableViewDataSource: TableViewDataManager<TableViewCellModelType, TableViewCellType>
+    let tableViewDataSource: TableViewDataManager<TableViewCellType>
     var tableView: UITableView
     
-    init(dataManager: TableViewDataManager<TableViewCellModelType, TableViewCellType>, for tableView: UITableView) {
+    init(dataManager: TableViewDataManager<TableViewCellType>, for tableView: UITableView) {
         self.tableViewDataSource = dataManager
         self.tableView = tableView
         self.tableViewDataSource.reloadData = { [weak tableView] in

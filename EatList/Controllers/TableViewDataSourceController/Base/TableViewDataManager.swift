@@ -7,9 +7,8 @@
 
 import UIKit
 
-class TableViewDataManager<T, U: TableViewCellTypeProtocol>: TableViewDataProviderProtocol {
+class TableViewDataManager<U: TableViewCellTypeProtocol>: TableViewDataProviderProtocol {
     
-    typealias TableViewCellModelType = T
     typealias TableViewCellType = U
     
     var dataSource = [TableViewCellDataSource]()
