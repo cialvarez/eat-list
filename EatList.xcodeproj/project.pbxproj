@@ -63,11 +63,7 @@
 		4FB8C4A3259B6D0600A6DDB4 /* SimpleCarouselItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB8C49F259B6D0500A6DDB4 /* SimpleCarouselItemCell.xib */; };
 		4FB8C4A4259B6D0600A6DDB4 /* SimpleCarouselItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB8C4A0259B6D0600A6DDB4 /* SimpleCarouselItemView.xib */; };
 		4FB8C4A5259B6D0600A6DDB4 /* SimpleCarouselItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8C4A1259B6D0600A6DDB4 /* SimpleCarouselItemView.swift */; };
-		4FB8C4B8259B719800A6DDB4 /* TableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8C4B0259B719800A6DDB4 /* TableViewCellProtocol.swift */; };
 		4FB8C4B9259B719800A6DDB4 /* TableViewCellTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8C4B1259B719800A6DDB4 /* TableViewCellTypeProtocol.swift */; };
-		4FB8C4BA259B719800A6DDB4 /* TableViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8C4B2259B719800A6DDB4 /* TableViewCellDataSource.swift */; };
-		4FB8C4BB259B719800A6DDB4 /* TableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8C4B4259B719800A6DDB4 /* TableViewDataManager.swift */; };
-		4FB8C4BC259B719800A6DDB4 /* TableViewDataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8C4B5259B719800A6DDB4 /* TableViewDataProviderProtocol.swift */; };
 		4FB8C4BD259B719800A6DDB4 /* TableViewDataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB8C4B6259B719800A6DDB4 /* TableViewDataSourceController.swift */; };
 		4FC33A77259AD95B00618D34 /* RestaurantAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC33A76259AD95B00618D34 /* RestaurantAPIError.swift */; };
 		4FC33A7A259ADA0800618D34 /* RestaurantNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC33A79259ADA0800618D34 /* RestaurantNetworkService.swift */; };
@@ -149,11 +145,7 @@
 		4FB8C49F259B6D0500A6DDB4 /* SimpleCarouselItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCarouselItemCell.xib; sourceTree = "<group>"; };
 		4FB8C4A0259B6D0600A6DDB4 /* SimpleCarouselItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCarouselItemView.xib; sourceTree = "<group>"; };
 		4FB8C4A1259B6D0600A6DDB4 /* SimpleCarouselItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCarouselItemView.swift; sourceTree = "<group>"; };
-		4FB8C4B0259B719800A6DDB4 /* TableViewCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellProtocol.swift; sourceTree = "<group>"; };
 		4FB8C4B1259B719800A6DDB4 /* TableViewCellTypeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellTypeProtocol.swift; sourceTree = "<group>"; };
-		4FB8C4B2259B719800A6DDB4 /* TableViewCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellDataSource.swift; sourceTree = "<group>"; };
-		4FB8C4B4259B719800A6DDB4 /* TableViewDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataManager.swift; sourceTree = "<group>"; };
-		4FB8C4B5259B719800A6DDB4 /* TableViewDataProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataProviderProtocol.swift; sourceTree = "<group>"; };
 		4FB8C4B6259B719800A6DDB4 /* TableViewDataSourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceController.swift; sourceTree = "<group>"; };
 		4FC33A76259AD95B00618D34 /* RestaurantAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAPIError.swift; sourceTree = "<group>"; };
 		4FC33A79259ADA0800618D34 /* RestaurantNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantNetworkService.swift; sourceTree = "<group>"; };
@@ -462,30 +454,18 @@
 		4FB8C4AD259B719800A6DDB4 /* TableViewDataSourceController */ = {
 			isa = PBXGroup;
 			children = (
-				4FB8C4AF259B719800A6DDB4 /* TableViewCell */,
-				4FB8C4B3259B719800A6DDB4 /* Base */,
+				4FB8C4AF259B719800A6DDB4 /* Protocols */,
+				4FB8C4B6259B719800A6DDB4 /* TableViewDataSourceController.swift */,
 			);
 			path = TableViewDataSourceController;
 			sourceTree = "<group>";
 		};
-		4FB8C4AF259B719800A6DDB4 /* TableViewCell */ = {
+		4FB8C4AF259B719800A6DDB4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				4FB8C4B0259B719800A6DDB4 /* TableViewCellProtocol.swift */,
 				4FB8C4B1259B719800A6DDB4 /* TableViewCellTypeProtocol.swift */,
-				4FB8C4B2259B719800A6DDB4 /* TableViewCellDataSource.swift */,
 			);
-			path = TableViewCell;
-			sourceTree = "<group>";
-		};
-		4FB8C4B3259B719800A6DDB4 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				4FB8C4B4259B719800A6DDB4 /* TableViewDataManager.swift */,
-				4FB8C4B5259B719800A6DDB4 /* TableViewDataProviderProtocol.swift */,
-				4FB8C4B6259B719800A6DDB4 /* TableViewDataSourceController.swift */,
-			);
-			path = Base;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		4FC33A7C259B003200618D34 /* Views */ = {
@@ -738,14 +718,12 @@
 				4FB8C4BD259B719800A6DDB4 /* TableViewDataSourceController.swift in Sources */,
 				4F74503A259CAB6E007B79E6 /* LocationService.swift in Sources */,
 				4FAF2736259A3A0500218656 /* R.generated.swift in Sources */,
-				4FB8C4BA259B719800A6DDB4 /* TableViewCellDataSource.swift in Sources */,
 				4F48C5E2259AC7BA0003ADE6 /* SortType.swift in Sources */,
 				4FC33A83259B046100618D34 /* EatListTableViewCell.swift in Sources */,
 				4F744FFE259C94FF007B79E6 /* ActionButton.swift in Sources */,
 				4F48C5DF259AC2830003ADE6 /* Encodable+ToDictionary.swift in Sources */,
 				4F48C5DB259ABDC00003ADE6 /* RestaurantAPI.swift in Sources */,
 				4FAF2702259A2F5C00218656 /* AppDelegate.swift in Sources */,
-				4FB8C4BC259B719800A6DDB4 /* TableViewDataProviderProtocol.swift in Sources */,
 				4FAF2725259A357A00218656 /* Coordinator.swift in Sources */,
 				4F48C5EE259ACBAE0003ADE6 /* StoryboardInstantiable.swift in Sources */,
 				4FAF2761259A40FA00218656 /* APIConstants.swift in Sources */,
@@ -759,13 +737,11 @@
 				4F48C5FC259AD6600003ADE6 /* EatListError.swift in Sources */,
 				4FAF2779259A44BD00218656 /* LocationType.swift in Sources */,
 				4FAF2775259A446A00218656 /* SearchResponse.swift in Sources */,
-				4FB8C4BB259B719800A6DDB4 /* TableViewDataManager.swift in Sources */,
 				4F6D5805259CCC0E00AD0CBC /* UIViewController+AlertView.swift in Sources */,
 				4FAF2704259A2F5C00218656 /* SceneDelegate.swift in Sources */,
 				4FB8C479259B5D7300A6DDB4 /* TargetDetailsViewModel.swift in Sources */,
 				4FB8C4B9259B719800A6DDB4 /* TableViewCellTypeProtocol.swift in Sources */,
 				4FAF2772259A446300218656 /* TrendingSearchRequestParams.swift in Sources */,
-				4FB8C4B8259B719800A6DDB4 /* TableViewCellProtocol.swift in Sources */,
 				4FB8C47E259B5E2D00A6DDB4 /* ImageHeaderTableViewCell.swift in Sources */,
 				4F744F98259C00E7007B79E6 /* UIViewController+NavigationBar.swift in Sources */,
 				4F48C5F8259AD5E30003ADE6 /* NetworkRequestManager.swift in Sources */,

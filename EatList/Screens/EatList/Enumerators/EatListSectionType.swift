@@ -16,7 +16,7 @@ enum EatListSectionType {
 }
 
 extension EatListSectionType: TableViewCellTypeProtocol {
-
+ 
     typealias TableViewCellModelType = RestaurantDetails
     
     var reuseIdentifier: String {
@@ -32,6 +32,14 @@ extension EatListSectionType: TableViewCellTypeProtocol {
         case .restaurantDetails,
              .skeletonLoader:
             return UITableView.automaticDimension
+        }
+    }
+    
+    var estimatedHeight: CGFloat {
+        switch self {
+        case .restaurantDetails,
+             .skeletonLoader:
+            return 100
         }
     }
     

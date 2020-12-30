@@ -39,6 +39,17 @@ extension TargetDetailsSectionType: TableViewCellTypeProtocol {
         }
     }
     
+    var estimatedHeight: CGFloat {
+        switch self {
+        case .imageHeader:
+            return 250
+        case .baseDetails,
+             .addressDetails,
+             .highlights:
+            return 200
+        }
+    }
+    
     var cellSelectBlock: RowSelectedBlock? {
         return nil
     }
