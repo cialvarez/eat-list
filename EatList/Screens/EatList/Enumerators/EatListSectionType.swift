@@ -59,7 +59,7 @@ extension EatListSectionType: TableViewCellTypeProtocol {
                 guard let cell = cell as? EatListTableViewCell else {
                     return
                 }
-                cell.toggleSkeleton(isShown: true)
+                cell.toggleLoadingState(isLoading: true)
             }
         }
     }

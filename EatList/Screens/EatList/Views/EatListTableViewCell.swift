@@ -34,6 +34,11 @@ class EatListTableViewCell: UITableViewCell, NibReusable {
         selectionStyle = .none
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        toggleLoadingState(isLoading: false)
+    }
+    
     func render(with parameters: EatListTableViewCell.Parameters) {
         toggleLoadingState(isLoading: false)
         featuredImageView.kf.indicatorType = .activity

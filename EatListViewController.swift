@@ -47,9 +47,16 @@ class EatListViewController: UIViewController {
         viewModel.wantsToUpdateState = { [weak self] state in
             guard let self = self else { return }
             switch state {
-            case .loading: DebugLoggingService.log(status: .todo, message: "Loading!")
-            case .error(let error): DebugLoggingService.log(status: .todo, message: "Error! \(error.errorMessage)")
-            case .finished(let sections): self.dataSourceProvider.update(sections: sections)
+            case .loading:
+                let skeletonCells = Array(repeating: EatListSectionType.skeletonLoader, count: 20)
+                self.dataSourceProvider.update(sections: skeletonCells)
+                self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+                self.tableView.isUserInteractionEnabled = false
+            case .error(let error):
+                self.tableView.isUserInteractionEnabled = true
+            case .finished(let sections):
+                self.dataSourceProvider.update(sections: sections)
+                self.tableView.isUserInteractionEnabled = true
             }
         }
         viewModel.wantsToViewRestaurant = wantsToViewRestaurant
