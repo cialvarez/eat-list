@@ -12,10 +12,22 @@ import Unrealm
 protocol RestaurantNetworkProvider {
     func fetchTrendingRestaurants(
         parameters: TrendingSearchRequestParams,
-        completion: @escaping (Result<[Restaurant], EatListError>) -> Void)
+        completion: @escaping (RestaurantNetworkService.State) -> Void)
 }
 
 class RestaurantNetworkService: RestaurantNetworkProvider {
+    
+    enum DataSource {
+        case network
+        case cache
+    }
+    
+    enum State {
+        case loading
+        case error(EatListError)
+        case finished(restaurant: [Restaurant], source: DataSource)
+    }
+    
     private let provider: MoyaProvider<RestaurantAPI>
     
     init(provider: MoyaProvider<RestaurantAPI> = .init()) {
@@ -24,7 +36,7 @@ class RestaurantNetworkService: RestaurantNetworkProvider {
     
     func fetchTrendingRestaurants(
         parameters: TrendingSearchRequestParams,
-        completion: @escaping (Result<[Restaurant], EatListError>) -> Void) {
+        completion: @escaping (State) -> Void) {
         guard let realm = try? Realm() else {
             assertionFailure("Expected a non-nil realm instance!")
             return
@@ -36,12 +48,12 @@ class RestaurantNetworkService: RestaurantNetworkProvider {
             provider: provider,
             onSuccess: { response in
                 guard let moyaResponse = try? response.filterSuccessfulStatusCodes() else {
-                    completion(.failure(.api(type: RestaurantAPIError.generalFailure)))
+                    completion(.error(.api(type: RestaurantAPIError.generalFailure)))
                     return
                 }
                 
                 guard let searchResponse = try? moyaResponse.map(SearchResponse.self) else {
-                    completion(.failure(.jsonParsing))
+                    completion(.error(.jsonParsing))
                     return
                 }
                 
@@ -50,21 +62,21 @@ class RestaurantNetworkService: RestaurantNetworkProvider {
                 }
                 // Get on-disk location of the default Realm
                 DebugLoggingService.log(status: .success, message: "Realm file is located here: \(realm.configuration.fileURL?.debugDescription ?? "n/a")")
-                completion(.success(searchResponse.restaurants))
+                completion(.finished(restaurant: searchResponse.restaurants, source: .network))
             }, onFailure: { error in
                 switch error {
                 case .networkConnectivity:
                     let cachedResult = realm.objects(Restaurant.self).compactMap { $0 }
                     guard !cachedResult.isEmpty else {
                         DebugLoggingService.log(status: .warning, message: "No network detected, and no cached data is available.")
-                        completion(.failure(.networkConnectivity))
+                        completion(.error(.networkConnectivity))
                         return
                     }
                     DebugLoggingService.log(status: .warning, message: "No network detected. Using cached data for now.")
-                    completion(.success(cachedResult))
+                    completion(.finished(restaurant: cachedResult, source: .cache))
                 default:
                     DebugLoggingService.log(status: .warning)
-                    completion(.failure(.networkConnectivity))
+                    completion(.error(.networkConnectivity))
                 }
             })
     }

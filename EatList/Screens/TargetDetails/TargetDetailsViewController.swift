@@ -10,14 +10,12 @@ import UIKit
 class TargetDetailsViewController: UIViewController {
     
     struct Input {
-        var viewModel: TargetDetailsViewModel
-        var restaurantDetails: RestaurantDetails
+        var viewModel: TargetDetailsProvider
     }
     
     struct Output { }
     
-    private var input: Input!
-    private var output: Output!
+    private var viewModel: TargetDetailsProvider!
     
     @IBOutlet weak private var tableView: UITableView!
     
@@ -27,12 +25,13 @@ class TargetDetailsViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         setupDataSource()
-        setupViewModel()
+        setupViewModelBindings()
+        viewModel.processDetails()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupNavigation(title: input.restaurantDetails.name)
+        setupNavigation(title: viewModel.navBarTitle)
     }
     
     func setupTableView() {
@@ -48,9 +47,15 @@ class TargetDetailsViewController: UIViewController {
         tableView.delegate = dataSourceProvider
     }
     
-    func setupViewModel() {
-        let output = input.viewModel.transform(input: .init(restaurantDetails: input.restaurantDetails))
-        dataSourceProvider.update(sections: output.tableViewCellItems)
+    func setupViewModelBindings() {
+        viewModel.wantsToUpdateState = { [weak self] state in
+            guard let self = self else { return }
+            switch state {
+            case .loading: break
+            case .error(let error): self.showError(error: error)
+            case .finished(let sections): self.dataSourceProvider.update(sections: sections)
+            }
+        }
     }
 }
 
@@ -59,8 +64,7 @@ extension TargetDetailsViewController: StoryboardInstantiable {
         guard let targetDetailsVC = R.storyboard.targetDetails.instantiateInitialViewController() else {
             fatalError("Expected an instantiable storyboard but got nil!")
         }
-        targetDetailsVC.input = input
-        targetDetailsVC.output = output
+        targetDetailsVC.viewModel = input.viewModel
         return targetDetailsVC
     }
 }

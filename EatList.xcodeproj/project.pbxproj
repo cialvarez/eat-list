@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EF475E1CD122EB2A0D250C7 /* Pods_EatList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2759F0D26129D862409D1A /* Pods_EatList.framework */; };
+		4F091153259CF8A3000A11AF /* UIViewController+Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F091152259CF8A3000A11AF /* UIViewController+Banner.swift */; };
 		4F48C5DB259ABDC00003ADE6 /* RestaurantAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C5DA259ABDC00003ADE6 /* RestaurantAPI.swift */; };
 		4F48C5DF259AC2830003ADE6 /* Encodable+ToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C5DE259AC2830003ADE6 /* Encodable+ToDictionary.swift */; };
 		4F48C5E2259AC7BA0003ADE6 /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F48C5E1259AC7BA0003ADE6 /* SortType.swift */; };
@@ -87,6 +88,7 @@
 		0D385FB4DAE7614D5ADEB5C3 /* Pods-EatList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatList.release.xcconfig"; path = "Target Support Files/Pods-EatList/Pods-EatList.release.xcconfig"; sourceTree = "<group>"; };
 		4C3BD87D8BFCE77FC58BF345 /* Pods-EatList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatList.debug.xcconfig"; path = "Target Support Files/Pods-EatList/Pods-EatList.debug.xcconfig"; sourceTree = "<group>"; };
 		4E2759F0D26129D862409D1A /* Pods_EatList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F091152259CF8A3000A11AF /* UIViewController+Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Banner.swift"; sourceTree = "<group>"; };
 		4F48C5DA259ABDC00003ADE6 /* RestaurantAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAPI.swift; sourceTree = "<group>"; };
 		4F48C5DE259AC2830003ADE6 /* Encodable+ToDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+ToDictionary.swift"; sourceTree = "<group>"; };
 		4F48C5E1259AC7BA0003ADE6 /* SortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortType.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				4F745001259C9A39007B79E6 /* UIView+Animations.swift */,
 				4F745006259C9BA1007B79E6 /* UIView+SkeletonLoading.swift */,
 				4F6D5804259CCC0E00AD0CBC /* UIViewController+AlertView.swift */,
+				4F091152259CF8A3000A11AF /* UIViewController+Banner.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 				4F48C5EA259AC9D20003ADE6 /* EatListViewModel.swift in Sources */,
 				4FC33A7A259ADA0800618D34 /* RestaurantNetworkService.swift in Sources */,
 				4FB8C4A5259B6D0600A6DDB4 /* SimpleCarouselItemView.swift in Sources */,
+				4F091153259CF8A3000A11AF /* UIViewController+Banner.swift in Sources */,
 				4FAF271E259A34C200218656 /* EatListViewController.swift in Sources */,
 				4FC33A77259AD95B00618D34 /* RestaurantAPIError.swift in Sources */,
 				4F745002259C9A39007B79E6 /* UIView+Animations.swift in Sources */,

@@ -32,8 +32,8 @@ class MainCoordinator: Coordinator {
     }
     
     private func showDetails(restaurantDetails: RestaurantDetails) {
-        let viewModel = TargetDetailsViewModel()
-        let input = TargetDetailsViewController.Input(viewModel: viewModel, restaurantDetails: restaurantDetails)
+        let viewModel = TargetDetailsViewModel(restaurantDetails: restaurantDetails)
+        let input = TargetDetailsViewController.Input(viewModel: viewModel)
         let targetDetailsVC = TargetDetailsViewController.generateFromStoryboard(input: input)
         navigationController.pushViewController(targetDetailsVC, animated: true)
     }

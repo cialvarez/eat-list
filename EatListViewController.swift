@@ -10,7 +10,7 @@ import UIKit
 class EatListViewController: UIViewController {
     
     struct Input {
-        var viewModel: EatListViewModel
+        var viewModel: EatListProvider
     }
     
     struct Output {
@@ -57,8 +57,9 @@ class EatListViewController: UIViewController {
                 self.showError(error: error)
                 self.tableView.isUserInteractionEnabled = true
                 self.navigationItem.rightBarButtonItem?.isEnabled = true
-            case .finished(let sections):
+            case let .finished(sections, source):
                 self.dataSourceProvider.update(sections: sections)
+                if source == .cache { self.showOfflineBanner() }
                 self.tableView.isUserInteractionEnabled = true
                 self.navigationItem.rightBarButtonItem?.isEnabled = true
             }

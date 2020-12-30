@@ -22,7 +22,7 @@ class EatListViewModel: NSObject, EatListProvider {
     enum State {
         case loading
         case error(EatListError)
-        case finished([EatListSectionType])
+        case finished([EatListSectionType], source: RestaurantNetworkService.DataSource)
     }
     
     var lastUpdatedList = [EatListSectionType]()
@@ -58,10 +58,12 @@ class EatListViewModel: NSObject, EatListProvider {
                                   lon: location.longitude)) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
-                case .success(let response):
-                    self.wantsToUpdateState(.finished(response.asEatListSection(wantsToViewRestaurant: self.wantsToViewRestaurant)))
-                case .failure(let error):
+                case let .finished(restaurants, source):
+                    self.wantsToUpdateState(.finished(restaurants.asEatListSection(wantsToViewRestaurant: self.wantsToViewRestaurant),
+                                                      source: source))
+                case let .error(error):
                     self.wantsToUpdateState(.error(error))
+                case .loading: break
                 }
             }
     }

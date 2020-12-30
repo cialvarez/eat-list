@@ -7,30 +7,47 @@
 
 import Foundation
 import CoreLocation
-class TargetDetailsViewModel {
+
+protocol TargetDetailsProvider {
+    var lastUpdatedList: [TargetDetailsSectionType] { get }
+    var navBarTitle: String { get }
+    var wantsToUpdateState: (TargetDetailsViewModel.State) -> Void { get set }
+    func processDetails()
+}
+
+class TargetDetailsViewModel: TargetDetailsProvider {
     
-    struct Input {
-        let restaurantDetails: RestaurantDetails
+    enum State {
+        case loading
+        case error(EatListError)
+        case finished([TargetDetailsSectionType])
     }
     
-    struct Output {
-        let tableViewCellItems: [TargetDetailsSectionType]
+    private let restaurantDetails: RestaurantDetails
+
+    private(set) var lastUpdatedList = [TargetDetailsSectionType]()
+    var wantsToUpdateState: (TargetDetailsViewModel.State) -> Void = { _ in }
+    private(set) var navBarTitle = ""
+    
+    init(restaurantDetails: RestaurantDetails) {
+        self.restaurantDetails = restaurantDetails
     }
     
-    func transform(input: Input) -> Output {
-        let restaurantDetails = input.restaurantDetails
+    func processDetails() {
         let imageHeader = ImageHeaderTableViewCell.Parameters(imageUrl: URL(string: restaurantDetails.featuredImage),
                                                               heroId: "HeroImage\(restaurantDetails.id)")
         let baseDetails = getBaseDetails(from: restaurantDetails)
         let addressDetails = getAddressDetails(from: restaurantDetails)
         let highlights = HighlightsTableViewCell.Parameters(highlightsList: restaurantDetails.highlights)
         
-        return .init(tableViewCellItems: [
+        lastUpdatedList = [
             .imageHeader(parameters: imageHeader),
             .baseDetails(parameters: baseDetails),
             .addressDetails(parameters: addressDetails),
             .highlights(parameters: highlights)
-        ])
+        ]
+        navBarTitle = restaurantDetails.name
+        wantsToUpdateState(.finished(lastUpdatedList))
     }
     
     private func getBaseDetails(from restaurantDetails: RestaurantDetails) -> BaseDetailsTableViewCell.Parameters {
