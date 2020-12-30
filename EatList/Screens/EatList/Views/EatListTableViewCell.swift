@@ -42,7 +42,10 @@ class EatListTableViewCell: UITableViewCell, NibReusable {
     func render(with parameters: EatListTableViewCell.Parameters) {
         toggleLoadingState(isLoading: false)
         featuredImageView.kf.indicatorType = .activity
-        featuredImageView.kf.setImage(with: parameters.imageUrl, placeholder: nil, options: [.transition(.fade(1.0))], progressBlock: nil)
+        featuredImageView.kf.setImage(with: parameters.imageUrl,
+                                      placeholder: R.image.placeholderImage(),
+                                      options: [.transition(.fade(1.0))],
+                                      progressBlock: nil)
         featuredImageView.hero.id = parameters.imageHeroId
         restaurantNameLabel.text = parameters.name
         cuisineLabel.text = parameters.cuisine

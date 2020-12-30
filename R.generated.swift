@@ -186,7 +186,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 6 images.
+  /// This `R.image` struct is generated, and contains static references to 8 images.
   struct image {
     /// Image `ArmyStar`.
     static let armyStar = Rswift.ImageResource(bundle: R.hostingBundle, name: "ArmyStar")
@@ -194,10 +194,14 @@ struct R: Rswift.Validatable {
     static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "Back")
     /// Image `ErrorIcon`.
     static let errorIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "ErrorIcon")
+    /// Image `Icon`.
+    static let icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "Icon")
     /// Image `LocationUpdate`.
     static let locationUpdate = Rswift.ImageResource(bundle: R.hostingBundle, name: "LocationUpdate")
     /// Image `Pizzannotation`.
     static let pizzannotation = Rswift.ImageResource(bundle: R.hostingBundle, name: "Pizzannotation")
+    /// Image `PlaceholderImage`.
+    static let placeholderImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "PlaceholderImage")
     /// Image `star`.
     static let star = Rswift.ImageResource(bundle: R.hostingBundle, name: "star")
 
@@ -223,6 +227,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Icon", bundle: ..., traitCollection: ...)`
+    static func icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "LocationUpdate", bundle: ..., traitCollection: ...)`
     static func locationUpdate(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.locationUpdate, compatibleWith: traitCollection)
@@ -233,6 +244,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "Pizzannotation", bundle: ..., traitCollection: ...)`
     static func pizzannotation(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.pizzannotation, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "PlaceholderImage", bundle: ..., traitCollection: ...)`
+    static func placeholderImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.placeholderImage, compatibleWith: traitCollection)
     }
     #endif
 
@@ -581,6 +599,7 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
 
       static func validate() throws {
+        if UIKit.UIImage(named: "Icon", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Icon' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
