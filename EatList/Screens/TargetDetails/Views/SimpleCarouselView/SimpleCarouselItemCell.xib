@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="86" height="41"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LY5-58-e1h" customClass="CustomizableView" customModule="EatList" customModuleProvider="target">
+                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LY5-58-e1h" customClass="CustomizableView" customModule="EatList" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="86" height="41"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dish" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sou-25-m05">
