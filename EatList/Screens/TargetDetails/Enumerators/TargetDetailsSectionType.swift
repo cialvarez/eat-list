@@ -15,6 +15,22 @@ enum TargetDetailsSectionType {
     case highlights(parameters: HighlightsTableViewCell.Parameters)
 }
 
+extension TargetDetailsSectionType: Equatable {
+    static func == (lhs: TargetDetailsSectionType, rhs: TargetDetailsSectionType) -> Bool {
+        switch (lhs, rhs) {
+        case let (.imageHeader(lhsParameters), .imageHeader(rhsParameters)):
+            return lhsParameters == rhsParameters
+        case let (.baseDetails(lhsParameters), .baseDetails(rhsParameters)):
+            return lhsParameters == rhsParameters
+        case let (.addressDetails(lhsParameters), .addressDetails(rhsParameters)):
+            return lhsParameters == rhsParameters
+        case let (.highlights(lhsParameters), .highlights(rhsParameters)):
+            return lhsParameters == rhsParameters
+        default: return false
+        }
+    }
+}
+
 extension TargetDetailsSectionType: TableViewCellTypeProtocol {
 
     typealias TableViewCellModelType = RestaurantDetails

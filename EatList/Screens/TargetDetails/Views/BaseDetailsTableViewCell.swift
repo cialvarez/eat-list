@@ -9,7 +9,7 @@ import UIKit
 
 class BaseDetailsTableViewCell: UITableViewCell, NibReusable {
     
-    struct Parameters {
+    struct Parameters: Equatable {
         let rating: String
         let reviewCount: String
         let restaurantName: String

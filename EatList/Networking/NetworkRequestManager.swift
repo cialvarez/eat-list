@@ -12,13 +12,22 @@ import Alamofire
 typealias RequestSuccessBlock = (Response) -> Void
 typealias RequestFailedBlock = (EatListError) -> Void
 
-class NetworkRequestManager {
+protocol NetworkRequestProvider {
+    func fetchData<T: TargetType>(
+        target: T,
+        provider: MoyaProvider<T>,
+        onSuccess: @escaping RequestSuccessBlock,
+        onFailure: @escaping RequestFailedBlock
+    ) 
+}
+
+class NetworkRequestManager: NetworkRequestProvider {
     /**
      For centralized network fetch error handling.
      Should we wish to add other possible errors in the future that all other APIs will likely have,
      e.g., server maintenance, we put the handling here.
      */
-    static func fetchData<T: TargetType>(
+    func fetchData<T: TargetType>(
         target: T,
         provider: MoyaProvider<T>,
         onSuccess: @escaping RequestSuccessBlock,

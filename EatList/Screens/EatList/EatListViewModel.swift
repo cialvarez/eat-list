@@ -62,7 +62,6 @@ class EatListViewModel: NSObject, EatListProvider {
             return
         }
         guard let currentLocation = locationService.lastReceivedLocation else {
-            assertionFailure("Expected a location but got nil!")
             return
         }
         networkService

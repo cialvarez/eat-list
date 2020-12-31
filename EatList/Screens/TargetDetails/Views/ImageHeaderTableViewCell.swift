@@ -9,7 +9,7 @@ import UIKit
 
 class ImageHeaderTableViewCell: UITableViewCell, NibReusable {
     
-    struct Parameters {
+    struct Parameters: Equatable {
         let imageUrl: URL?
         let heroId: String
     }

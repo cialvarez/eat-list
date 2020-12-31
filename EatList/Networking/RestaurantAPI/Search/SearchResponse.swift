@@ -21,10 +21,11 @@ struct SearchResponse: Codable {
 }
 
 // MARK: - RestaurantElement
-struct Restaurant: Codable, Realmable {
+struct Restaurant: Codable, Realmable, Equatable {
     
     var restaurant = RestaurantDetails()
     var derivedId = ""
+    var dateCreated = Date()
     
     static func primaryKey() -> String? {
         return "derivedId"
@@ -36,11 +37,12 @@ struct Restaurant: Codable, Realmable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         restaurant = try values.decode(RestaurantDetails.self, forKey: .restaurant)
         derivedId = restaurant.id
+        dateCreated = Date()
     }
 }
 
 // MARK: - RestaurantDetails
-struct RestaurantDetails: Codable, Realmable {
+struct RestaurantDetails: Codable, Realmable, Equatable {
     var id = ""
     var name = ""
     var location = Location()
@@ -91,7 +93,7 @@ struct RestaurantDetails: Codable, Realmable {
 }
 
 // MARK: - Location
-struct Location: Codable, Realmable {
+struct Location: Codable, Realmable, Equatable {
     var latitude = ""
     var longitude = ""
     var localityVerbose = ""
@@ -108,7 +110,7 @@ struct Location: Codable, Realmable {
 }
 
 // MARK: - UserRating
-struct UserRating: Codable, Realmable {
+struct UserRating: Codable, Realmable, Equatable {
     var aggregateRating = ""
     var votes = 0
     var derivedId = ""

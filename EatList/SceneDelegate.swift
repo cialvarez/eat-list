@@ -38,6 +38,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func setupRealm() {
         Realm.registerRealmables(Restaurant.self)
+        let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+        Realm.Configuration.defaultConfiguration = config
     }
 
 }

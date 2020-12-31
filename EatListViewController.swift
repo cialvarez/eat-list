@@ -45,7 +45,7 @@ class EatListViewController: UIViewController {
     }
     
     private func setupBindings() {
-        dataSourceProvider.reachedEndOfList = { [weak self] indexPath in
+        dataSourceProvider.reachedEndOfList = { [weak self] _ in
             self?.viewModel.nextPage()
         }
         

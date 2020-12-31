@@ -10,9 +10,14 @@ import MapKit
 
 class AddressDetailsTableViewCell: UITableViewCell, NibReusable {
 
-    struct Parameters {
+    struct Parameters: Equatable {
         let fullAddress: String
         let location: CLLocationCoordinate2D?
+        static func == (lhs: AddressDetailsTableViewCell.Parameters, rhs: AddressDetailsTableViewCell.Parameters) -> Bool {
+            return lhs.fullAddress == rhs.fullAddress &&
+                lhs.location?.latitude == rhs.location?.latitude &&
+                rhs.location?.longitude == rhs.location?.longitude
+        }
     }
     
     @IBOutlet weak var addressLabel: UILabel!

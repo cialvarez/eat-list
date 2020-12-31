@@ -9,7 +9,7 @@ import UIKit
 
 class HighlightsTableViewCell: UITableViewCell, NibReusable {
 
-    struct Parameters {
+    struct Parameters: Equatable {
         let highlightsList: [String]
     }
     

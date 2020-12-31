@@ -1,64 +1,24 @@
 PODS:
-  - Alamofire (5.4.1)
-  - Hero (1.5.0)
-  - Kingfisher (5.15.8):
-    - Kingfisher/Core (= 5.15.8)
-  - Kingfisher/Core (5.15.8)
-  - Moya (14.0.0):
-    - Moya/Core (= 14.0.0)
-  - Moya/Core (14.0.0):
-    - Alamofire (~> 5.0)
   - R.swift (5.3.1):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
-  - Realm (10.5.0):
-    - Realm/Headers (= 10.5.0)
-  - Realm/Headers (10.5.0)
-  - RealmSwift (10.5.0):
-    - Realm (= 10.5.0)
-  - RuntimeNew (2.1.5)
   - SwiftLint (0.42.0)
-  - Unrealm (1.9.0):
-    - Realm (= 10.5.0)
-    - RealmSwift (= 10.5.0)
-    - RuntimeNew (= 2.1.5)
 
 DEPENDENCIES:
-  - Hero
-  - Kingfisher (~> 5.0)
-  - Moya (~> 14.0)
   - R.swift
-  - RealmSwift
   - SwiftLint
-  - Unrealm
 
 SPEC REPOS:
   trunk:
-    - Alamofire
-    - Hero
-    - Kingfisher
-    - Moya
     - R.swift
     - R.swift.Library
-    - Realm
-    - RealmSwift
-    - RuntimeNew
     - SwiftLint
-    - Unrealm
 
 SPEC CHECKSUMS:
-  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
-  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
-  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
-  Realm: e1c22c3d83b229afb70ebc10e1771c91e9542d12
-  RealmSwift: 6fc078d9d3fd7e58c71bfdbb694e252462f112a5
-  RuntimeNew: ef34cf1783be4c1cbe798970bc590924dab5df87
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
-  Unrealm: 4992f5170f330be3e7b82b184b07dc8eb24257cc
 
-PODFILE CHECKSUM: facb75005260f7d6f4eca120594482f96e34e6fd
+PODFILE CHECKSUM: 16f4b0021402f2ed8cbb5c06be44e64b50e9320e
 
 COCOAPODS: 1.10.0

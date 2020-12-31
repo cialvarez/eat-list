@@ -36,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupRealm() {
         Realm.registerRealmables(Restaurant.self)
+        let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+        Realm.Configuration.defaultConfiguration = config
     }
 
     // MARK: UISceneSession Lifecycle

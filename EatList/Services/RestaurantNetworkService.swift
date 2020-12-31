@@ -29,9 +29,12 @@ class RestaurantNetworkService: RestaurantNetworkProvider {
     }
     
     private let provider: MoyaProvider<RestaurantAPI>
+    private let requestManager: NetworkRequestProvider
     
-    init(provider: MoyaProvider<RestaurantAPI> = .init()) {
+    init(provider: MoyaProvider<RestaurantAPI> = .init(),
+         requestManager: NetworkRequestProvider = NetworkRequestManager()) {
         self.provider = provider
+        self.requestManager = requestManager
     }
     
     func fetchTrendingRestaurants(
@@ -43,7 +46,7 @@ class RestaurantNetworkService: RestaurantNetworkProvider {
         }
         let target = RestaurantAPI.search(parameters: parameters)
         
-        NetworkRequestManager.fetchData(
+        requestManager.fetchData(
             target: target,
             provider: provider,
             onSuccess: { response in
@@ -66,7 +69,10 @@ class RestaurantNetworkService: RestaurantNetworkProvider {
             }, onFailure: { error in
                 switch error {
                 case .networkConnectivity:
-                    let cachedResult = realm.objects(Restaurant.self).compactMap { $0 }
+                    // Realm objects are naturally unsorted, so we have to sort them based on the dates in which they were created
+                    let cachedResult = realm.objects(Restaurant.self)
+                        .compactMap { $0 }
+                        .sorted { $0.dateCreated < $1.dateCreated }
                     guard !cachedResult.isEmpty else {
                         DebugLoggingService.log(status: .warning, message: "No network detected, and no cached data is available.")
                         completion(.error(.networkConnectivity))
