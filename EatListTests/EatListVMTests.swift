@@ -32,7 +32,9 @@ class EatListVMTests: XCTestCase {
         viewModel.wantsToUpdateState = { state in
             switch state {
             case let .finished(sections, _):
-                XCTAssertEqual(sections.count, 20)
+                // Restaurant count: 20
+                // Loading indicator: 1
+                XCTAssertEqual(sections.count, 21)
                 switch sections[0] {
                 case let .restaurantDetails(parameters, restaurantDetails, _):
                     XCTAssertEqual(parameters.imageHeroId, "HeroImage16851686")

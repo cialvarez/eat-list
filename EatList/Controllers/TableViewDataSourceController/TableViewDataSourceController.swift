@@ -85,9 +85,14 @@ class TableViewDataSourceController<U: TableViewCellTypeProtocol>: NSObject, UIT
 extension TableViewDataSourceController {
     public func update(sections: [TableViewCellType]) {
         dataSource = sections
-        UIView.transition(with: tableView,
-                          duration: 0.2,
-                          options: .transitionCrossDissolve,
-                          animations: { self.tableView.reloadData() })
+        
+        UIView.transition(
+            with: tableView,
+            duration: 0.2,
+            options: .transitionCrossDissolve,
+            animations: {
+                self.tableView.reloadData()
+            }
+        )
     }
 }
