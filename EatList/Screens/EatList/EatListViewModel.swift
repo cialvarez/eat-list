@@ -59,7 +59,7 @@ class EatListViewModel: NSObject, EatListProvider {
     
     private func fetchTrendingRestaurants(startingAt index: Int) {
         guard canLoadMore else {
-            return 
+            return
         }
         guard let currentLocation = locationService.lastReceivedLocation else {
             return

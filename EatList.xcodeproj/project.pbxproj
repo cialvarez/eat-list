@@ -79,10 +79,14 @@
 		4FD8958B259CE7380035E6B8 /* UICollectionView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8958A259CE7380035E6B8 /* UICollectionView+NibReusable.swift */; };
 		4FD89590259CE7620035E6B8 /* NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8958F259CE7620035E6B8 /* NibReusable.swift */; };
 		4FDDD109259D740B00C6CAC5 /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDD108259D740B00C6CAC5 /* PersistenceTests.swift */; };
-		4FDDD123259D7A4800C6CAC5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDDD122259D7A4800C6CAC5 /* SwiftPackageProductDependency */; };
-		4FDDD128259D7ACC00C6CAC5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDDD127259D7ACC00C6CAC5 /* SwiftPackageProductDependency */; };
-		4FDDD12D259D7B3200C6CAC5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDDD12C259D7B3200C6CAC5 /* SwiftPackageProductDependency */; };
-		4FDDD134259D7D0F00C6CAC5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDDD133259D7D0F00C6CAC5 /* SwiftPackageProductDependency */; };
+		4FDDD123259D7A4800C6CAC5 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDDD122259D7A4800C6CAC5 /* Moya */; };
+		4FDDD128259D7ACC00C6CAC5 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDDD127259D7ACC00C6CAC5 /* Kingfisher */; };
+		4FDDD12D259D7B3200C6CAC5 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDDD12C259D7B3200C6CAC5 /* Hero */; };
+		4FDDD134259D7D0F00C6CAC5 /* Unrealm in Frameworks */ = {isa = PBXBuildFile; productRef = 4FDDD133259D7D0F00C6CAC5 /* Unrealm */; };
+		4FDDD143259D97DE00C6CAC5 /* getTrending-Page1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDD140259D97DE00C6CAC5 /* getTrending-Page1.json */; };
+		4FDDD144259D97DE00C6CAC5 /* getTrending-Page2.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDD141259D97DE00C6CAC5 /* getTrending-Page2.json */; };
+		4FDDD145259D97DE00C6CAC5 /* getTrending-Page3.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDD142259D97DE00C6CAC5 /* getTrending-Page3.json */; };
+		4FDDD14B259D984C00C6CAC5 /* PaginationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDD14A259D984C00C6CAC5 /* PaginationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +177,10 @@
 		4FD8958A259CE7380035E6B8 /* UICollectionView+NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+NibReusable.swift"; sourceTree = "<group>"; };
 		4FD8958F259CE7620035E6B8 /* NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibReusable.swift; sourceTree = "<group>"; };
 		4FDDD108259D740B00C6CAC5 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
+		4FDDD140259D97DE00C6CAC5 /* getTrending-Page1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "getTrending-Page1.json"; sourceTree = "<group>"; };
+		4FDDD141259D97DE00C6CAC5 /* getTrending-Page2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "getTrending-Page2.json"; sourceTree = "<group>"; };
+		4FDDD142259D97DE00C6CAC5 /* getTrending-Page3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "getTrending-Page3.json"; sourceTree = "<group>"; };
+		4FDDD14A259D984C00C6CAC5 /* PaginationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationTests.swift; sourceTree = "<group>"; };
 		5008DA8AD4272B7A68C7A9AE /* Pods-EatList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatList.debug.xcconfig"; path = "Target Support Files/Pods-EatList/Pods-EatList.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,10 +196,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FDDD128259D7ACC00C6CAC5 /* BuildFile in Frameworks */,
-				4FDDD123259D7A4800C6CAC5 /* BuildFile in Frameworks */,
-				4FDDD134259D7D0F00C6CAC5 /* BuildFile in Frameworks */,
-				4FDDD12D259D7B3200C6CAC5 /* BuildFile in Frameworks */,
+				4FDDD128259D7ACC00C6CAC5 /* Kingfisher in Frameworks */,
+				4FDDD123259D7A4800C6CAC5 /* Moya in Frameworks */,
+				4FDDD134259D7D0F00C6CAC5 /* Unrealm in Frameworks */,
+				4FDDD12D259D7B3200C6CAC5 /* Hero in Frameworks */,
 				494D170EC232AD0C8BE665D3 /* Pods_EatList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +218,9 @@
 		4F091160259D115E000A11AF /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
+				4FDDD140259D97DE00C6CAC5 /* getTrending-Page1.json */,
+				4FDDD141259D97DE00C6CAC5 /* getTrending-Page2.json */,
+				4FDDD142259D97DE00C6CAC5 /* getTrending-Page3.json */,
 				4F091163259D121F000A11AF /* getTrending-SanFrancisco.json */,
 			);
 			path = Stubs;
@@ -294,6 +305,7 @@
 				4F744FED259C73FB007B79E6 /* TargetDetailsVMTests.swift */,
 				4F09115C259D113A000A11AF /* XCTestCase.swift */,
 				4FDDD108259D740B00C6CAC5 /* PersistenceTests.swift */,
+				4FDDD14A259D984C00C6CAC5 /* PaginationTests.swift */,
 			);
 			path = EatListTests;
 			sourceTree = "<group>";
@@ -602,10 +614,10 @@
 			);
 			name = EatList;
 			packageProductDependencies = (
-				4FDDD122259D7A4800C6CAC5 /* SwiftPackageProductDependency */,
-				4FDDD127259D7ACC00C6CAC5 /* SwiftPackageProductDependency */,
-				4FDDD12C259D7B3200C6CAC5 /* SwiftPackageProductDependency */,
-				4FDDD133259D7D0F00C6CAC5 /* SwiftPackageProductDependency */,
+				4FDDD122259D7A4800C6CAC5 /* Moya */,
+				4FDDD127259D7ACC00C6CAC5 /* Kingfisher */,
+				4FDDD12C259D7B3200C6CAC5 /* Hero */,
+				4FDDD133259D7D0F00C6CAC5 /* Unrealm */,
 			);
 			productName = EatList;
 			productReference = 4FAF26FE259A2F5C00218656 /* EatList.app */;
@@ -639,10 +651,10 @@
 			);
 			mainGroup = 4FAF26F5259A2F5C00218656;
 			packageReferences = (
-				4FDDD121259D7A4800C6CAC5 /* RemoteSwiftPackageReference */,
-				4FDDD126259D7ACC00C6CAC5 /* RemoteSwiftPackageReference */,
-				4FDDD12B259D7B3200C6CAC5 /* RemoteSwiftPackageReference */,
-				4FDDD132259D7D0F00C6CAC5 /* RemoteSwiftPackageReference */,
+				4FDDD121259D7A4800C6CAC5 /* XCRemoteSwiftPackageReference "Moya" */,
+				4FDDD126259D7ACC00C6CAC5 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				4FDDD12B259D7B3200C6CAC5 /* XCRemoteSwiftPackageReference "Hero" */,
+				4FDDD132259D7D0F00C6CAC5 /* XCRemoteSwiftPackageReference "Unrealm" */,
 			);
 			productRefGroup = 4FAF26FF259A2F5C00218656 /* Products */;
 			projectDirPath = "";
@@ -659,6 +671,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDDD143259D97DE00C6CAC5 /* getTrending-Page1.json in Resources */,
+				4FDDD144259D97DE00C6CAC5 /* getTrending-Page2.json in Resources */,
+				4FDDD145259D97DE00C6CAC5 /* getTrending-Page3.json in Resources */,
 				4F091164259D121F000A11AF /* getTrending-SanFrancisco.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,7 +731,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -769,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F744FEE259C73FB007B79E6 /* TargetDetailsVMTests.swift in Sources */,
+				4FDDD14B259D984C00C6CAC5 /* PaginationTests.swift in Sources */,
 				4FDDD109259D740B00C6CAC5 /* PersistenceTests.swift in Sources */,
 				4F09115D259D113A000A11AF /* XCTestCase.swift in Sources */,
 				4F09116A259D22EE000A11AF /* EatListVMTests.swift in Sources */,
@@ -1088,7 +1104,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4FDDD121259D7A4800C6CAC5 /* RemoteSwiftPackageReference */ = {
+		4FDDD121259D7A4800C6CAC5 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
@@ -1096,7 +1112,7 @@
 				minimumVersion = 14.0.0;
 			};
 		};
-		4FDDD126259D7ACC00C6CAC5 /* RemoteSwiftPackageReference */ = {
+		4FDDD126259D7ACC00C6CAC5 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1104,7 +1120,7 @@
 				minimumVersion = 5.15.8;
 			};
 		};
-		4FDDD12B259D7B3200C6CAC5 /* RemoteSwiftPackageReference */ = {
+		4FDDD12B259D7B3200C6CAC5 /* XCRemoteSwiftPackageReference "Hero" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/HeroTransitions/Hero.git";
 			requirement = {
@@ -1112,7 +1128,7 @@
 				minimumVersion = 1.5.0;
 			};
 		};
-		4FDDD132259D7D0F00C6CAC5 /* RemoteSwiftPackageReference */ = {
+		4FDDD132259D7D0F00C6CAC5 /* XCRemoteSwiftPackageReference "Unrealm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/arturdev/Unrealm.git";
 			requirement = {
@@ -1123,24 +1139,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4FDDD122259D7A4800C6CAC5 /* SwiftPackageProductDependency */ = {
+		4FDDD122259D7A4800C6CAC5 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4FDDD121259D7A4800C6CAC5 /* RemoteSwiftPackageReference */;
+			package = 4FDDD121259D7A4800C6CAC5 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
-		4FDDD127259D7ACC00C6CAC5 /* SwiftPackageProductDependency */ = {
+		4FDDD127259D7ACC00C6CAC5 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4FDDD126259D7ACC00C6CAC5 /* RemoteSwiftPackageReference */;
+			package = 4FDDD126259D7ACC00C6CAC5 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		4FDDD12C259D7B3200C6CAC5 /* SwiftPackageProductDependency */ = {
+		4FDDD12C259D7B3200C6CAC5 /* Hero */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4FDDD12B259D7B3200C6CAC5 /* RemoteSwiftPackageReference */;
+			package = 4FDDD12B259D7B3200C6CAC5 /* XCRemoteSwiftPackageReference "Hero" */;
 			productName = Hero;
 		};
-		4FDDD133259D7D0F00C6CAC5 /* SwiftPackageProductDependency */ = {
+		4FDDD133259D7D0F00C6CAC5 /* Unrealm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4FDDD132259D7D0F00C6CAC5 /* RemoteSwiftPackageReference */;
+			package = 4FDDD132259D7D0F00C6CAC5 /* XCRemoteSwiftPackageReference "Unrealm" */;
 			productName = Unrealm;
 		};
 /* End XCSwiftPackageProductDependency section */
