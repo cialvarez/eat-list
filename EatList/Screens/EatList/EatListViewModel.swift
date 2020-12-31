@@ -41,6 +41,7 @@ class EatListViewModel: NSObject, EatListProvider {
     }
     
     func fetchList() {
+        self.canLoadMore = true
         self.wantsToUpdateState(.loading)
         self.locationService.fetchUserLocation { [weak self] result in
             guard let self = self else { return }
