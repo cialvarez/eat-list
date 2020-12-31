@@ -45,7 +45,7 @@ class RestaurantNetworkService: RestaurantNetworkProvider {
             return
         }
         let target = RestaurantAPI.search(parameters: parameters)
-        
+        completion(.loading)
         requestManager.fetchData(
             target: target,
             provider: provider,

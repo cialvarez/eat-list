@@ -56,7 +56,7 @@ class TargetDetailsViewModel: TargetDetailsProvider {
     private func getBaseDetails(from restaurantDetails: RestaurantDetails) -> BaseDetailsTableViewCell.Parameters {
         let cuisineText = (restaurantDetails.establishment.first ?? "").isEmpty ? "" : "\(restaurantDetails.establishment.first ?? "") - "
         let hasAlcohol = restaurantDetails.highlights.contains("Serves Alcohol")
-        let timings = restaurantDetails.timings.replacingOccurrences(of: ", ", with: "\n")
+        let timings = restaurantDetails.timings.replacingOccurrences(of: "), ", with: ")\n")
         
         return BaseDetailsTableViewCell.Parameters(
             rating: restaurantDetails.userRating.aggregateRating,

@@ -54,12 +54,12 @@ class EatListViewModel: NSObject, EatListProvider {
     }
     
     func nextPage() {
-        fetchTrendingRestaurants(startingAt: max(lastUpdatedList.count - 1, 0))
+        fetchTrendingRestaurants(startingAt: max(lastUpdatedList.count, 0))
     }
     
     private func fetchTrendingRestaurants(startingAt index: Int) {
         guard canLoadMore else {
-            return
+            return 
         }
         guard let currentLocation = locationService.lastReceivedLocation else {
             return
@@ -76,12 +76,13 @@ class EatListViewModel: NSObject, EatListProvider {
                     // We need to make this check due to an API bug wherein even if the results found are much much higher, the cap is actually much lower
                     // and when you reach that cap you get a blank list
                     guard response.resultsShown != 0 else {
+                        self.wantsToUpdateState(.finished(self.lastUpdatedList, source: .network))
                         return
                     }
                     if index == 0 { self.lastUpdatedList = [] }
                     self.lastUpdatedList.append(contentsOf: response.restaurants.asEatListSection(wantsToViewRestaurant: self.wantsToViewRestaurant))
-                    self.wantsToUpdateState(.finished(self.lastUpdatedList,
-                                                      source: source))
+                    let rows = self.canLoadMore ? (self.lastUpdatedList + [.skeletonLoader]) : self.lastUpdatedList
+                    self.wantsToUpdateState(.finished(rows, source: source))
                 case let .error(error):
                     self.wantsToUpdateState(.error(error))
                 case .loading: break
