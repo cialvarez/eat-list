@@ -435,6 +435,287 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    /// This `R.string.localizable` struct is generated, and contains static references to 18 localization keys.
+    struct localizable {
+      /// Value: Close
+      static let buttonTitleClose = Rswift.StringResource(key: "ButtonTitle.Close", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Cost for two
+      static let targetDetailsBaseDetailsCostForTwoPrefix = Rswift.StringResource(key: "TargetDetails.BaseDetails.CostForTwo.Prefix", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Eat List
+      static let appName = Rswift.StringResource(key: "AppName", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Oops!
+      static let errorCommonTitle = Rswift.StringResource(key: "Error.Common.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Please allow Eat List to access your location for the app to work.
+      static let errorLocationPermissionDeniedMessage = Rswift.StringResource(key: "Error.Location.PermissionDenied.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Please try again in a bit.
+      static let errorLocationGeneralFailureMessage = Rswift.StringResource(key: "Error.Location.GeneralFailure.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Review(s)
+      static let targetDetailsBaseDetailsReviewsSuffix = Rswift.StringResource(key: "TargetDetails.BaseDetails.ReviewsSuffix", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Settings
+      static let errorLocationPermissionDeniedPrimaryButtonTitle = Rswift.StringResource(key: "Error.Location.PermissionDenied.PrimaryButtonTitle", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Something went wrong. Please try again in a bit. 
+      static let errorCommonMessage = Rswift.StringResource(key: "Error.Common.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Try again in a bit.
+      static let errorRestaurantAPIGeneralFailureMessage = Rswift.StringResource(key: "Error.RestaurantAPI.GeneralFailure.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: We can't seem to find you!
+      static let errorLocationGeneralFailureTitle = Rswift.StringResource(key: "Error.Location.GeneralFailure.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: We couldn't get your location!
+      static let errorLocationPermissionDeniedTitle = Rswift.StringResource(key: "Error.Location.PermissionDenied.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: We lost the list, boss!
+      static let errorRestaurantAPIGeneralFailureTitle = Rswift.StringResource(key: "Error.RestaurantAPI.GeneralFailure.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: We lost you!
+      static let errorConnectivityTitle = Rswift.StringResource(key: "Error.Connectivity.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: You're currently offline! Please check your internet connection and try again.
+      static let errorConnectivityMessage = Rswift.StringResource(key: "Error.Connectivity.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: approx.
+      static let targetDetailsBaseDetailsCostForTwoApprox = Rswift.StringResource(key: "TargetDetails.BaseDetails.CostForTwo.Approx", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: for two
+      static let eatListPriceDetailsSuffix = Rswift.StringResource(key: "EatList.PriceDetails.Suffix", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: without alcohol
+      static let targetDetailsBaseDetailsCostForTwoWithoutAlcohol = Rswift.StringResource(key: "TargetDetails.BaseDetails.CostForTwo.WithoutAlcohol", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Close
+      static func buttonTitleClose(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("ButtonTitle.Close", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "ButtonTitle.Close"
+        }
+
+        return NSLocalizedString("ButtonTitle.Close", bundle: bundle, comment: "")
+      }
+
+      /// Value: Cost for two
+      static func targetDetailsBaseDetailsCostForTwoPrefix(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("TargetDetails.BaseDetails.CostForTwo.Prefix", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "TargetDetails.BaseDetails.CostForTwo.Prefix"
+        }
+
+        return NSLocalizedString("TargetDetails.BaseDetails.CostForTwo.Prefix", bundle: bundle, comment: "")
+      }
+
+      /// Value: Eat List
+      static func appName(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("AppName", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "AppName"
+        }
+
+        return NSLocalizedString("AppName", bundle: bundle, comment: "")
+      }
+
+      /// Value: Oops!
+      static func errorCommonTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Error.Common.Title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Error.Common.Title"
+        }
+
+        return NSLocalizedString("Error.Common.Title", bundle: bundle, comment: "")
+      }
+
+      /// Value: Please allow Eat List to access your location for the app to work.
+      static func errorLocationPermissionDeniedMessage(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Error.Location.PermissionDenied.Message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Error.Location.PermissionDenied.Message"
+        }
+
+        return NSLocalizedString("Error.Location.PermissionDenied.Message", bundle: bundle, comment: "")
+      }
+
+      /// Value: Please try again in a bit.
+      static func errorLocationGeneralFailureMessage(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Error.Location.GeneralFailure.Message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Error.Location.GeneralFailure.Message"
+        }
+
+        return NSLocalizedString("Error.Location.GeneralFailure.Message", bundle: bundle, comment: "")
+      }
+
+      /// Value: Review(s)
+      static func targetDetailsBaseDetailsReviewsSuffix(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("TargetDetails.BaseDetails.ReviewsSuffix", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "TargetDetails.BaseDetails.ReviewsSuffix"
+        }
+
+        return NSLocalizedString("TargetDetails.BaseDetails.ReviewsSuffix", bundle: bundle, comment: "")
+      }
+
+      /// Value: Settings
+      static func errorLocationPermissionDeniedPrimaryButtonTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Error.Location.PermissionDenied.PrimaryButtonTitle", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Error.Location.PermissionDenied.PrimaryButtonTitle"
+        }
+
+        return NSLocalizedString("Error.Location.PermissionDenied.PrimaryButtonTitle", bundle: bundle, comment: "")
+      }
+
+      /// Value: Something went wrong. Please try again in a bit. 
+      static func errorCommonMessage(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Error.Common.Message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Error.Common.Message"
+        }
+
+        return NSLocalizedString("Error.Common.Message", bundle: bundle, comment: "")
+      }
+
+      /// Value: Try again in a bit.
+      static func errorRestaurantAPIGeneralFailureMessage(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Error.RestaurantAPI.GeneralFailure.Message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Error.RestaurantAPI.GeneralFailure.Message"
+        }
+
+        return NSLocalizedString("Error.RestaurantAPI.GeneralFailure.Message", bundle: bundle, comment: "")
+      }
+
+      /// Value: We can't seem to find you!
+      static func errorLocationGeneralFailureTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Error.Location.GeneralFailure.Title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Error.Location.GeneralFailure.Title"
+        }
+
+        return NSLocalizedString("Error.Location.GeneralFailure.Title", bundle: bundle, comment: "")
+      }
+
+      /// Value: We couldn't get your location!
+      static func errorLocationPermissionDeniedTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Error.Location.PermissionDenied.Title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Error.Location.PermissionDenied.Title"
+        }
+
+        return NSLocalizedString("Error.Location.PermissionDenied.Title", bundle: bundle, comment: "")
+      }
+
+      /// Value: We lost the list, boss!
+      static func errorRestaurantAPIGeneralFailureTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Error.RestaurantAPI.GeneralFailure.Title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Error.RestaurantAPI.GeneralFailure.Title"
+        }
+
+        return NSLocalizedString("Error.RestaurantAPI.GeneralFailure.Title", bundle: bundle, comment: "")
+      }
+
+      /// Value: We lost you!
+      static func errorConnectivityTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Error.Connectivity.Title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Error.Connectivity.Title"
+        }
+
+        return NSLocalizedString("Error.Connectivity.Title", bundle: bundle, comment: "")
+      }
+
+      /// Value: You're currently offline! Please check your internet connection and try again.
+      static func errorConnectivityMessage(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Error.Connectivity.Message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Error.Connectivity.Message"
+        }
+
+        return NSLocalizedString("Error.Connectivity.Message", bundle: bundle, comment: "")
+      }
+
+      /// Value: approx.
+      static func targetDetailsBaseDetailsCostForTwoApprox(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("TargetDetails.BaseDetails.CostForTwo.Approx", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "TargetDetails.BaseDetails.CostForTwo.Approx"
+        }
+
+        return NSLocalizedString("TargetDetails.BaseDetails.CostForTwo.Approx", bundle: bundle, comment: "")
+      }
+
+      /// Value: for two
+      static func eatListPriceDetailsSuffix(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("EatList.PriceDetails.Suffix", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "EatList.PriceDetails.Suffix"
+        }
+
+        return NSLocalizedString("EatList.PriceDetails.Suffix", bundle: bundle, comment: "")
+      }
+
+      /// Value: without alcohol
+      static func targetDetailsBaseDetailsCostForTwoWithoutAlcohol(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("TargetDetails.BaseDetails.CostForTwo.WithoutAlcohol", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "TargetDetails.BaseDetails.CostForTwo.WithoutAlcohol"
+        }
+
+        return NSLocalizedString("TargetDetails.BaseDetails.CostForTwo.WithoutAlcohol", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()

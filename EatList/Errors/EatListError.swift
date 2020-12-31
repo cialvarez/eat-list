@@ -22,9 +22,9 @@ extension EatListError: PresentableError {
             return type.errorTitle
         case .unknown,
              .jsonParsing:
-            return "Oops!"
+            return R.string.localizable.errorCommonTitle()
         case .networkConnectivity:
-            return "We lost you!"
+            return R.string.localizable.errorConnectivityTitle()
         case let .custom(title, _):
             return title
         }
@@ -36,11 +36,11 @@ extension EatListError: PresentableError {
             return type.errorMessage
         case .unknown,
              .jsonParsing:
-            return "Something went wrong. Please try again in a bit. "
+            return R.string.localizable.errorCommonMessage()
         case let .custom(_, message):
             return message
         case .networkConnectivity:
-            return "You're currently offline! Please check your internet connection and try again."
+            return R.string.localizable.errorConnectivityMessage()
         }
     }
     
@@ -50,10 +50,9 @@ extension EatListError: PresentableError {
             return type.primaryButtonTitle
         case .unknown,
              .jsonParsing,
-             .custom:
+             .custom,
+             .networkConnectivity:
             return ""
-        case .networkConnectivity:
-            return "Retry"
         }
     }
     
@@ -65,7 +64,7 @@ extension EatListError: PresentableError {
              .networkConnectivity,
              .jsonParsing,
              .custom:
-            return "Close"
+            return R.string.localizable.buttonTitleClose()
         }
     }
 }

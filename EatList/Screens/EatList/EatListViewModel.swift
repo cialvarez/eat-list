@@ -102,7 +102,7 @@ private extension Array where Element == Restaurant {
                 cuisine: restaurantDetails.cuisines,
                 location: restaurantDetails.location.localityVerbose,
                 rating: "\(restaurantDetails.userRating.aggregateRating) /5",
-                priceDetails: "\(restaurantDetails.currency)\(restaurantDetails.averageCostForTwo) for two",
+                priceDetails: "\(restaurantDetails.currency)\(restaurantDetails.averageCostForTwo) \(R.string.localizable.eatListPriceDetailsSuffix())",
                 containerHeroId: "HeroBackground\(restaurantDetails.id)"
             )
             return .restaurantDetails(parameters: parameters,

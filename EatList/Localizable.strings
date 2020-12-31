@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  EatList
+
+  Created by Christian Alvarez on 12/31/20.
+  
+*/
+
+// Common
+"AppName" = "Eat List";
+
+"ButtonTitle.Close" = "Close";
+
+"Error.Location.GeneralFailure.Title" = "We can't seem to find you!";
+"Error.Location.GeneralFailure.Message" = "Please try again in a bit.";
+
+"Error.Location.PermissionDenied.Title" = "We couldn't get your location!";
+"Error.Location.PermissionDenied.Message" = "Please allow Eat List to access your location for the app to work.";
+"Error.Location.PermissionDenied.PrimaryButtonTitle" = "Settings";
+
+"Error.Common.Title" = "Oops!";
+"Error.Common.Message" = "Something went wrong. Please try again in a bit. ";
+
+"Error.Connectivity.Title" = "We lost you!";
+"Error.Connectivity.Message" = "You're currently offline! Please check your internet connection and try again.";
+
+"Error.RestaurantAPI.GeneralFailure.Title" = "We lost the list, boss!";
+"Error.RestaurantAPI.GeneralFailure.Message" = "Try again in a bit.";
+
+"TargetDetails.BaseDetails.ReviewsSuffix" = "Review(s)";
+"TargetDetails.BaseDetails.CostForTwo.Prefix" = "Cost for two";
+"TargetDetails.BaseDetails.CostForTwo.Approx" = "approx.";
+"TargetDetails.BaseDetails.CostForTwo.WithoutAlcohol" = "without alcohol";
+
+"EatList.PriceDetails.Suffix" = "for two";

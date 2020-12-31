@@ -14,13 +14,13 @@ enum RestaurantAPIError: Error {
 extension RestaurantAPIError: PresentableError {
     var errorTitle: String {
         switch self {
-        case .generalFailure: return "We lost the list, boss!"
+        case .generalFailure: return R.string.localizable.errorRestaurantAPIGeneralFailureTitle()
         }
     }
     
     var errorMessage: String {
         switch self {
-        case .generalFailure: return "Try again in a bit. "
+        case .generalFailure: return R.string.localizable.errorRestaurantAPIGeneralFailureMessage()
         }
     }
 }

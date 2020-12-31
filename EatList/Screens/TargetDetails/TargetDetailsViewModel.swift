@@ -60,12 +60,13 @@ class TargetDetailsViewModel: TargetDetailsProvider {
         
         return BaseDetailsTableViewCell.Parameters(
             rating: restaurantDetails.userRating.aggregateRating,
-            reviewCount: "\(restaurantDetails.userRating.votes) Review(s)",
+            reviewCount: "\(restaurantDetails.userRating.votes) \(R.string.localizable.targetDetailsBaseDetailsReviewsSuffix())",
             restaurantName: restaurantDetails.name,
             cuisine: "\(cuisineText)\(restaurantDetails.cuisines)",
             location: "\(restaurantDetails.location.localityVerbose)",
             operatingHours: "\(timings)",
-            costForTwo: "Cost for two - \(restaurantDetails.currency)\(restaurantDetails.averageCostForTwo) approx." + (hasAlcohol ? "" : "without alcohol"))
+            costForTwo: "\(R.string.localizable.targetDetailsBaseDetailsCostForTwoPrefix()) - \(restaurantDetails.currency)\(restaurantDetails.averageCostForTwo) \(R.string.localizable.targetDetailsBaseDetailsCostForTwoApprox())" +
+                (hasAlcohol ? "" : R.string.localizable.targetDetailsBaseDetailsCostForTwoWithoutAlcohol()))
     }
     
     private func getAddressDetails(from restaurantDetails: RestaurantDetails) -> AddressDetailsTableViewCell.Parameters {

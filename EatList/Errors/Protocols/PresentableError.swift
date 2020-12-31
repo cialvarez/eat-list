@@ -19,6 +19,6 @@ extension PresentableError {
         return ""
     }
     var dismissButtonTitle: String {
-        return "Close"
+        return R.string.localizable.buttonTitleClose()
     }
 }

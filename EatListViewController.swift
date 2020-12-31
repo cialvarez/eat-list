@@ -33,7 +33,7 @@ class EatListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupNavigation(title: "Eat List")
+        setupNavigation(title: R.string.localizable.appName())
     }
     
     private func setupTableView() {

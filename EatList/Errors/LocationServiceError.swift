@@ -15,29 +15,29 @@ enum LocationServiceError: Error {
 extension LocationServiceError: PresentableError {
     var errorTitle: String {
         switch self {
-        case .generalFailure: return "We can't seem to find you!"
-        case .permissionDenied: return "We couldn't get your location!"
+        case .generalFailure: return R.string.localizable.errorLocationGeneralFailureTitle()
+        case .permissionDenied: return R.string.localizable.errorLocationPermissionDeniedTitle()
         }
     }
     
     var errorMessage: String {
         switch self {
-        case .generalFailure: return "Please try again in a bit."
-        case .permissionDenied: return "Please allow Eat List to access your location for the app to work."
+        case .generalFailure: return R.string.localizable.errorLocationGeneralFailureMessage()
+        case .permissionDenied: return R.string.localizable.errorLocationPermissionDeniedMessage()
         }
     }
     
     var primaryButtonTitle: String {
         switch self {
         case .generalFailure: return ""
-        case .permissionDenied: return "Settings"
+        case .permissionDenied: return R.string.localizable.errorLocationPermissionDeniedPrimaryButtonTitle()
         }
     }
     
     var dismissButtonTitle: String {
         switch self {
         case .generalFailure,
-             .permissionDenied: return "Close"
+             .permissionDenied: return R.string.localizable.buttonTitleClose()
         }
     }
 }
